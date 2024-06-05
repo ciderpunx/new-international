@@ -13,7 +13,7 @@ const Page = () => {
 		<div className='w-full max-w-6xl border-2 flex flex-col gap-4 mx-auto'>
 			<div className='flex flex-col gap-2'>
 				<h2
-					className={`${league_gothic.className} uppercase font-bold text-xl first-letter:text-4xl`}>
+					className={`${league_gothic.className} tracking-wide uppercase font-bold text-xl first-letter:text-4xl`}>
 					The Struggle for safe abortion in Ethiopa
 				</h2>
 				<p
