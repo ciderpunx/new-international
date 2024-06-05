@@ -9,13 +9,10 @@ const league_gothic = League_Gothic({
 const Page = () => {
 	return (
 		<header
-			initial={{}}
-			animate={{}}
-			exit={{}}
-			transition={{}}
+			style={{}}
 			className={
 				league_gothic.className +
-				'bg-yellow w-screen h-24 items-center bg-[#dcf3f3] p-4 flex justify-between mb-8'
+				'fixed left-0 right-0 top-0 w-screen h-20 items-center bg-[#dcf3f3] px-4 flex justify-between mb-8'
 			}>
 			<span className='bg-yellow-'>
 				<Image
