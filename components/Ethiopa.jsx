@@ -1,5 +1,8 @@
 import { League_Gothic, Baskervville } from 'next/font/google';
 // import loop_video from '../public/Map Loop Animation.mp4';
+
+import TitlePara from './TitlePara';
+
 const league_gothic = League_Gothic({
 	subsets: ['latin'],
 });
@@ -11,7 +14,17 @@ const baskerville = Baskervville({
 const Page = () => {
 	return (
 		<div className='w-full max-w-6xl border-2 flex flex-col gap-4 mx-auto'>
-			<div className='flex flex-col gap-2'>
+			<TitlePara
+				key='ethiopa'
+				title='The Struggle for safe abortion in Ethiopa'
+				para="In Ethiopia, the fight for women's reproductive rights has been
+					fraught with challenges, despite significant legal advancements. This
+					article delves into the multifaceted issues surrounding abortion laws
+					in Ethiopia, exploring the legal, social, and personal dimensions of
+					this critical issue."
+			/>
+
+			{/* <div className='flex flex-col gap-2'>
 				<h2
 					className={`${league_gothic.className} tracking-wide uppercase font-bold text-xl first-letter:text-4xl`}>
 					The Struggle for safe abortion in Ethiopa
@@ -24,8 +37,11 @@ const Page = () => {
 					in Ethiopia, exploring the legal, social, and personal dimensions of
 					this critical issue.
 				</p>
-			</div>
-			<div className='relative w-full aspect-video bg-gray-500'>
+			</div> */}
+
+			<div
+				className='relative w-full aspect-video
+			 md:aspect-video  border-2 border-red-500'>
 				<div className='absolute inset-0 '>
 					<video
 						autoPlay

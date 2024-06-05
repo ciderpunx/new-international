@@ -1,7 +1,7 @@
 'use client';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
-import Header_hero from '../public/hero-shaky.png';
+import Header_hero from '../public/hero.jpg';
 import { Roboto, Playfair_Display } from 'next/font/google';
 
 const roboto = Roboto({
@@ -16,8 +16,10 @@ const playfair_display = Playfair_Display({
 const Index = () => {
 	return (
 		<div className='flex flex-col w-full gap-4 mx-auto border-2 md:w-10/12'>
-			{/* //? image */}
-			<div className=' w-full aspect-video mx-auto relative '>
+			<div className=' w-full aspect-4/3 mx-auto relative md:aspect-video '>
+				{/* //? overlay */}
+				<div className='absolute w-full h-full bg-gradient-to-r from-gray-950/50 via-slate-800/40 to-gray-700/40 z-30'></div>
+				{/* //? image */}
 				<div className='absolute w-full h-full inset-0'>
 					<Image
 						src={Header_hero}
