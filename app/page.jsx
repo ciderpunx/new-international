@@ -1,15 +1,15 @@
-'use client';
-import React from 'react';
+import Header from '../components/Header';
+import Hero from '../components/Hero';
+import Ethiopa from '../components/Ethiopa';
 
 const Page = () => {
 	return (
-		<div
-			initial={{}}
-			animate={{}}
-			exit={{}}
-			transition={{}}
-			className='w-screen text-sm sm:text-5xl text-gray-600 font-semibold h-screen bg-[#dcdcdc] grid place-items-center'>
-			New International
+		<div className='w-screen min-h-screen h-auto bg-white'>
+			<Header />
+			<main className='w-full px-4 flex flex-col gap-16 md:px-16'>
+				<Hero />
+				<Ethiopa />
+			</main>
 		</div>
 	);
 };
