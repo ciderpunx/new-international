@@ -11,7 +11,7 @@ const Page = ({ title, para }) => {
   return (
     <div className="mx-auto flex w-full max-w-5xl flex-col gap-1">
       <h2
-        className={`${league_gothic.className} text-xl font-bold uppercase tracking-wide first-letter:text-4xl md:text-red-500`}
+        className={`${league_gothic.className} text-xl font-bold uppercase tracking-[0.05em] first-letter:text-4xl md:text-red-500`}
       >
         {title}
       </h2>
