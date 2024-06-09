@@ -48,27 +48,61 @@ const Index = () => {
             // width={200}
             // height={500}
           />
-          <div className="absolute bottom-2 left-0 right-0 z-40 m-auto flex max-w-5xl flex-col px-2 md:bottom-16 md:px-0">
+          <motion.div
+            variants={parentVariant}
+            initial="hidden"
+            animate="show"
+            exit="exit"
+            className="absolute bottom-2 left-0 right-0 z-40 m-auto flex max-w-5xl flex-col px-2 md:bottom-16 md:px-0"
+          >
             <h1
-              className={`${league_gothic.className} text-4xl font-[500] tracking-wide text-white md:text-7xl`}
+              className={`${league_gothic.className} overflow-hidden text-4xl font-[500] tracking-wide text-white md:text-7xl`}
             >
-              FERTILE GROUND
+              <motion.div
+                variants={childVariant}
+                initial="hidden"
+                animate="show"
+                exit="exit"
+              >
+                FERTILE GROUND
+              </motion.div>
             </h1>
-            <div
+            <motion.div
+              transition={{ delay: 1 }}
               className={
                 roboto.className +
-                " flex items-center justify-start gap-1 text-balance text-[8px] text-[#c8c8c8] md:flex-row md:text-2xl"
+                " flex items-center justify-start gap-1 overflow-hidden text-balance text-[8px] text-[#c8c8c8] md:flex-row md:text-2xl"
               }
             >
-              <span className="text-wrap">
+              <motion.div
+                variants={childVariant}
+                initial="hidden"
+                animate="show"
+                exit="exit"
+                className="text-wrap"
+              >
                 By Bethany Rielly, Maxine Beteridge Moes, and Maya Misikir{" "}
-              </span>
-              <span className="">
+              </motion.div>
+              <motion.div
+                variants={childVariant}
+                initial="hidden"
+                animate="show"
+                exit="exit"
+                className=""
+              >
                 <GoDotFill size={15} />
-              </span>
-              <span className="">14 June 2024</span>
-            </div>
-          </div>
+              </motion.div>
+              <motion.div
+                variants={childVariant}
+                initial="hidden"
+                animate="show"
+                exit="exit"
+                className=""
+              >
+                14 June 2024
+              </motion.div>
+            </motion.div>
+          </motion.div>
         </div>
       </div>
       {/* //? para */}
@@ -129,3 +163,36 @@ const Index = () => {
   );
 };
 export default Index;
+
+let parentVariant = {
+  hidden: {},
+  show: {
+    transition: {
+      delayChildren: 0.1,
+      staggerChildren: 0.5,
+      type: "spring",
+      bounce: 0,
+      duration: 1,
+    },
+  },
+  exit: {},
+};
+
+let childVariant = {
+  hidden: {
+    y: 150,
+    skewY: 10,
+  },
+  show: {
+    y: 0,
+    skewY: 0,
+    transition: {
+      type: "spring",
+      bounce: 0,
+      duration: 1,
+
+      delay: 0,
+    },
+  },
+  exit: {},
+};
