@@ -1,9 +1,9 @@
 "use client";
 import Image from "next/image";
-import ParaTitle from "../utils/TitlePara";
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { League_Gothic, Baskervville } from "next/font/google";
+import Interactive_map from "../svgs/Interactive_map";
 const league_gothic = League_Gothic({
   subsets: ["latin"],
 });
@@ -17,13 +17,15 @@ const Page = () => {
     hoverState: false,
     title: " ",
     background: "",
+    textColor: "",
     subtitle: "",
   });
   return (
     <div className="relative mx-auto flex h-auto w-full max-w-7xl flex-col gap-4 border-2">
       {/* //? svg */}
-      <div className="relative aspect-video w-full border-violet-500">
-        <div className="absolute inset-0 h-full w-full">
+      <div className="relative aspect-video w-full">
+        <div className={`absolute inset-0 m-auto h-full w-full object-contain`}>
+          {/* <Interactive_map /> */}
           <Image src="interactive-map.svg" fill="true" alt="interactive-map" />
         </div>
       </div>
@@ -37,6 +39,7 @@ const Page = () => {
                 hoverState: true,
                 background: x.background,
                 subtitle: x.subtitle,
+                textColor: x.textColor,
               });
             }}
             onHoverStart={() => {
@@ -66,7 +69,7 @@ const Page = () => {
               }}
               style={{
                 background: x.background,
-                color: x.text,
+                color: x.textColor,
               }}
               className={`absolute bottom-0 left-0 right-0 grid h-2 w-full place-items-center text-lg`}
             >
@@ -83,7 +86,7 @@ const Page = () => {
                   // layoutId="hover"
                   style={{
                     background: mapState.background,
-                    text: x.text,
+                    textColor: x.textColor,
                     height: "30vh",
                     borderBottomLeftRadius: 12,
                     borderBottomRightRadius: 12,
@@ -125,10 +128,11 @@ const Page = () => {
             <motion.div
               variants={childVariant}
               style={{
-                color: mapState.background,
+                color: mapState.textColor,
                 borderColor: mapState.background,
+                background: mapState.background,
               }}
-              className={`${baskerville.className} absolute bottom-0 left-0 right-0 mx-auto grid h-1/2 w-full place-items-center text-balance rounded-t-2xl border-t-8 bg-white px-2 py-4 text-center text-2xl font-semibold shadow-2xl`}
+              className={`${baskerville.className} absolute bottom-0 left-0 right-0 mx-auto grid h-1/2 w-full place-items-center text-balance rounded-t-2xl border-t-8 px-4 py-4 text-center text-2xl font-bold shadow-2xl`}
             >
               {mapState.subtitle}
             </motion.div>
@@ -174,7 +178,7 @@ let mapInfo = [
     id: "map-one",
     title: "on request",
     background: "#7fbc6e",
-    text: "black",
+    textColor: "black",
     subtitle:
       "662 million(34%) women of reproductive age live in 77 countries that allow abortion on request.",
     para: "The most common gestational limit for countries in this category is 12 weeks. Gestational limits are calculated from the first day of the last menstrual period, which is considered to occur two weeks prior to conception. Where laws specify that gestational age limits are calculated from the date of conception, these limits have been extended by two weeks",
@@ -183,7 +187,7 @@ let mapInfo = [
     id: "map-two",
     title: "prohibited altogether",
     background: "#000000",
-    text: "white",
+    textColor: "white",
     subtitle:
       "457 Million (23%) women of reproductive age  live in 12 countries/territories that allow abortion on broad social or economic grounds.",
     para: " These laws are generally interpreted liberally to permit abortion under a broad range of circumstances. These countries/territories often take into account a pregnant person’s actual or reasonably foreseeable environment and their social or economic circumstances when considering the potential impact of pregnancy and childbearing.",
@@ -192,7 +196,7 @@ let mapInfo = [
     id: "map-three",
     title: "to preserve health",
     background: "#1D357D",
-    text: "white",
+    textColor: "white",
     subtitle:
       "226 Million (12%) women of reproductive age  live in 47 countries where abortion is permitted when pregnancy poses a risk to the person's health.",
     para: "The laws of countries in this category permit abortion on the basis of health or therapeutic grounds. 25 of these countries explicitly permit abortion to preserve mental health.",
@@ -201,7 +205,7 @@ let mapInfo = [
     id: "map-four",
     title: "to save a person's life",
     background: "#b61f26",
-    text: "white",
+    textColor: "white",
     subtitle:
       "416 Million (20%) women of reproductive age live in 44 countries that allow abortion to save the life of the pregnant person",
     para: "The laws of the countries in this category permit abortion when the pregnant person’s life is at risk.",
@@ -211,7 +215,7 @@ let mapInfo = [
     id: "map-five",
     title: "broad social or economic grounds",
     background: "#6CDCDD",
-    text: "black",
+    textColor: "black",
     subtitle:
       "111 Million (6%) women of reproductive age live in 21 countries that prohibit abortion altogether.",
     para: "The laws of the countries in this category do not permit abortion under any circumstances, including when the person's life or health is at risk.",
