@@ -3,14 +3,14 @@ import { useEffect, useRef, useState } from "react";
 
 import { motion, useScroll, useSpring, useTransform } from "framer-motion";
 
-import Image from "next/image";
+// import Image from "next/image";
 import TitlePara from "../utils/TitlePara";
 // import ReligionSVG from "../public/Dominant Religions.svg";
 
-import orthodox from "../public/svgs/Orthodox Christians.svg";
-import muslims from "../public/svgs/Muslims.svg";
-import protestants from "../public/svgs/Protestant Christians.svg";
-import { League_Gothic, Baskervville } from "next/font/google";
+// import orthodox from "../public/svgs/Orthodox Christians.svg";
+// import muslims from "../public/svgs/Muslims.svg";
+// import protestants from "../public/svgs/Protestant Christians.svg";
+import { League_Gothic } from "next/font/google";
 const league_gothic = League_Gothic({
   subsets: ["latin"],
 });
@@ -23,12 +23,12 @@ const Page = () => {
     // value:0
   });
 
-  let { scrollYProgress } = useScroll({
-    target: imageRef,
-    smooth: 1,
-    offset: ["start end", "center end"],
-  });
-  let scale = useTransform(scrollYProgress, [0, 1], [0.5, 1]);
+  // let { scrollYProgress } = useScroll({
+  //   target: imageRef,
+  //   smooth: 1,
+  //   offset: ["start end", "center end"],
+  // });
+  // let scale = useTransform(scrollYProgress, [0, 1], [0.5, 1]);
   return (
     <div className="mx-auto flex w-full max-w-5xl flex-col gap-8">
       <section
