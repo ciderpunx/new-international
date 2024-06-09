@@ -9,14 +9,18 @@ const baskerville = Baskervville({
 
 const Page = ({ title, para }) => {
   return (
-    <div className="mx-auto flex w-full max-w-5xl flex-col gap-1">
-      <h2
-        className={`${league_gothic.className} text-3xl font-bold uppercase tracking-[0.05em] first-letter:text-4xl md:text-red-500`}
+    <div className="mx-auto flex w-full max-w-5xl flex-col gap-1 md:gap-4">
+      <h1
+        style={{
+          // fontSize: "36px",
+          fontWeight: 500,
+        }}
+        className={`${league_gothic.className} uppercase tracking-wide text-[#3c4c54]`}
       >
-        {title}
-      </h2>
+        <span className="text-2xl md:text-4xl">{title}</span>
+      </h1>
       <p
-        className={`${baskerville.className} hyphens-auto text-wrap indent-5 text-base text-[#555555] md:text-balance md:text-xl`}
+        className={`${baskerville.className} text-balance text-left indent-0 text-lg leading-7 text-[#212529] md:text-balance md:text-2xl`}
       >
         {para}
       </p>

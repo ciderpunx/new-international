@@ -1,63 +1,130 @@
 "use client";
+import TitlePara from "../utils/TitlePara";
+import ImageWrapper from "../utils/ImageWrapper";
+import { GoDotFill } from "react-icons/go";
+
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Header_hero from "../public/hero.jpg";
-import { Roboto, Playfair_Display } from "next/font/google";
+import PrayToEnd from "../public/pray-to-end.jpeg";
+import Candle from "../public/candle.jpeg";
+import Candle_two from "../public/candle-2.jpeg";
+import { Roboto, Playfair_Display, League_Gothic } from "next/font/google";
 
+import { Artifika } from "next/font/google";
+
+const artifika = Artifika({
+  subsets: ["latin"],
+  weight: ["400"],
+});
+
+const league_gothic = League_Gothic({
+  subsets: ["latin"],
+});
 const roboto = Roboto({
   subsets: ["latin"],
   weight: ["100", "300", "400", "500", "700", "900"],
 });
-const playfair_display = Playfair_Display({
-  subsets: ["latin"],
-  weight: ["400", "500", "700", "900"],
-  style: "italic",
-});
+// const playfair_display = Playfair_Display({
+//   subsets: ["latin"],
+//   weight: ["400", "500", "700", "900"],
+//   style: "italic",
+// });
 const Index = () => {
   return (
-    <div className="mx-auto flex w-full flex-col gap-4 border-2 md:w-10/12">
+    <div className="mx-auto flex w-full flex-col gap-8 md:w-10/12 md:gap-16">
+      {/* //? hero */}
       <div className="relative mx-auto aspect-4/3 w-full md:aspect-video">
         {/* //? overlay */}
-        <div className="absolute z-30 h-full w-full bg-gradient-to-r from-gray-950/60 to-gray-950/10"></div>
+        <div className="absolute z-30 h-full w-full bg-gradient-to-b from-gray-950/10 to-gray-950/50"></div>
         {/* //? image */}
         <div className="absolute inset-0 h-full w-full">
           <Image
-            src={Header_hero}
+            alt="fertile ground"
+            key="hero-candle-1"
+            src={Candle}
             fill={true}
             priority={true}
             // width={200}
             // height={500}
-            alt="header-hero"
           />
-          <div className="absolute bottom-2 left-0 right-0 z-40 m-auto flex flex-col px-4">
-            <h1 className="text-2xl font-bold text-white">ON SHAKY GROUND</h1>
+          <div className="absolute bottom-2 left-0 right-0 z-40 m-auto flex max-w-5xl flex-col px-2 md:bottom-16 md:px-0">
+            <h1
+              className={`${league_gothic.className} text-4xl font-[500] tracking-wide text-white md:text-7xl`}
+            >
+              FERTILE GROUND
+            </h1>
             <div
               className={
                 roboto.className +
-                " flex justify-start gap-1 text-xs text-[#c8c8c8]"
+                " flex items-center justify-start gap-1 text-balance text-[8px] text-[#c8c8c8] md:flex-row md:text-2xl"
               }
             >
-              <span className="text-xs">By Maxine Beteridge Moes</span>
-              <span className="text-xs">.</span>
-              <span className="text-xs">14 June 2024</span>
+              <span className="text-wrap">
+                By Bethany Rielly, Maxine Beteridge Moes, and Maya Misikir{" "}
+              </span>
+              <span className="">
+                <GoDotFill size={15} />
+              </span>
+              <span className="">14 June 2024</span>
             </div>
           </div>
         </div>
       </div>
-      {/* //? quote */}
-      <div className="container mx-auto flex w-full max-w-5xl flex-col gap-2 border-2 text-left">
-        <blockquote
-          className={`${playfair_display.className} relative text-balance text-center indent-5 text-base`}
+      {/* //? para */}
+      <section
+        className={`mx-auto flex h-auto w-full max-w-5xl flex-col gap-4`}
+      >
+        <h2
+          className={`${artifika.className} text-left text-xl md:text-balance md:text-3xl`}
         >
-          &ldquo; We don&apos;t need a handful of people doing zero waste
-          perfectly. We need millions of people doing it imperfectly.&rdquo;
-        </blockquote>
-        <cite
-          className={`${roboto.className} block text-center indent-5 text-xs text-[#666666]`}
-        >
-          - Anne Marie Bonneau, Zero Waste Chef
-        </cite>
-      </div>
+          Anti-abortion campaigners have their sights set on Ethiopia – a
+          progressive outlier in a region marred by restrictions. Who’s behind
+          the emboldened ‘pro-life’ movement and what’s at stake for women’s
+          rights amid a myriad of other challenges?
+        </h2>
+
+        <TitlePara
+          key="abortion"
+          para="‘Pray to end abortion in Ethiopia’ reads the bumper sticker on a taxi parked outside a family planning clinic in the bustling heart of Addis Ababa. Jarring but easily dismissed, it’s an old tactic which anti-abortion groups have used the world over. "
+        />
+
+        <TitlePara
+          key="abortion-2"
+          para="According to staff at the clinic, the driver used to rent a room in a building across the road. He recruited a worker from a nearby cafe to recite Bible verses to service users at the clinic. Using toy foetuses as props, the duo would implore people to ‘choose life’. The building has since been demolished as part of a massive city-wide redevelopment project, but this seemingly small act of protest is linked to a much larger and sturdier movement taking hold in Ethiopia and elsewhere in Africa."
+        />
+
+        <TitlePara
+          key="abortion-3"
+          para="With deep pockets and loud voices, a growing anti-rights movement is aligning itself with the US Christian Right and gaining access to the halls of power, where it is on a mission to end the right to safe and legal abortion."
+        />
+      </section>
+
+      {/* //? image */}
+      <ImageWrapper
+        alt="pray-to-end"
+        key="key-to-end"
+        // sevenXL={false}
+        imageURL={PrayToEnd}
+      />
+
+      <TitlePara
+        key="outlier"
+        title="A regional outlier"
+        para="It’s the day before Orthodox Easter Sunday, and from the twentieth floor of our rented Addis apartment, faint chanting from a nearby church can be heard over the steady rumble of traffic and construction. In the streets, cars hurtle past with forlorn looking chickens and goats strapped to the roof, ready to be slaughtered and eaten. Women in white shawls and wooden crosses around their necks prepare for the hours of cooking ahead. Orthodox Christians have avoided meat for two months, and tonight they will finally break their fast. "
+      />
+
+      <ImageWrapper
+        key="candle-2"
+        alt="candle-2"
+        // sevenXL={false}
+        imageURL={Candle_two}
+      />
+
+      <TitlePara
+        key="celebrations"
+        para="The celebrations engulfing the city speak to the importance of religion in Africa’s second most populous country, where 43 per cent of around 123 million people identify as Christian Orthodox, 33 per cent as Muslim and 18 per cent as Protestant, according to the most recent census.1 But despite its strong religiosity, in 2005 Ethiopia managed to do what many countries are still struggling to do – liberalize its abortion laws."
+      />
     </div>
   );
 };

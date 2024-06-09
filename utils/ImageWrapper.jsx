@@ -24,22 +24,14 @@ const Page = ({ alt, imageURL, textData, sevenXL }) => {
         </div>
         {/* //? overlay */}
         {textData && (
-          <div className="absolute z-30 h-full w-full bg-gradient-to-r from-gray-950/60 to-gray-950/10">
+          <div className="absolute z-30 h-full w-full bg-gradient-to-b from-gray-950/10 to-gray-950/50">
             <h2
-              className={`${playfair_display.className} absolute bottom-4 left-0 right-0 mx-auto w-2/3 max-w-3xl text-balance border-2 text-center indent-4 text-lg font-semibold text-white md:bottom-0 md:text-3xl`}
+              className={`${playfair_display.className} absolute bottom-4 left-0 right-0 mx-auto max-w-5xl text-balance text-center indent-4 text-sm text-white md:bottom-0 md:text-3xl`}
             >
               {textData}
             </h2>
           </div>
         )}
-
-        {/* <div className="absolute inset-0 z-40 h-full w-full bg-lime-400">
-          <h2
-            className={`${playfair_display.className} absolute bottom-4 left-0 right-0 mx-auto w-2/3 max-w-3xl text-balance indent-4 text-lg text-white`}
-          >
-            {textData}
-          </h2>
-        </div> */}
       </div>
     </div>
   );

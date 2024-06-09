@@ -10,7 +10,7 @@ const artifika = Artifika({
 
 const Page = () => {
   return (
-    <div className="mx-auto flex w-full flex-col gap-8 border-2">
+    <div className="mx-auto flex w-full max-w-7xl flex-col gap-12 border-8 border-orange-600">
       {/* //? nurse 1 */}
       <section className="mx-auto flex w-full flex-col gap-4">
         <TitlePara
@@ -38,6 +38,32 @@ const Page = () => {
           incorporating cradle-to-cradle principles, we can create a truly
           sustainable closed-loop system for fashion.
         </p>
+      </section>
+
+      {/* //** 6 VIDEOS WITH PARAGRAPHS here - check for 7xl images. Make sure to plug in appropriate keys and alt information.  */}
+      <section className="mx-auto flex w-full flex-col gap-4 bg-lime-200">
+        <ImageWrapper />
+        <TitlePara />
+      </section>
+      <section className="mx-auto flex w-full flex-col gap-4 bg-lime-200">
+        <ImageWrapper />
+        <TitlePara />
+      </section>
+      <section className="mx-auto flex w-full flex-col gap-4 bg-lime-200">
+        <ImageWrapper />
+        <TitlePara />
+      </section>
+      <section className="mx-auto flex w-full flex-col gap-4 bg-lime-200">
+        <ImageWrapper />
+        <TitlePara />
+      </section>
+      <section className="mx-auto flex w-full flex-col gap-4 bg-lime-200">
+        <ImageWrapper />
+        <TitlePara />
+      </section>
+      <section className="mx-auto flex w-full flex-col gap-4 bg-lime-200">
+        <ImageWrapper />
+        <TitlePara />
       </section>
     </div>
   );
