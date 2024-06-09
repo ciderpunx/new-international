@@ -22,7 +22,7 @@ const Page = () => {
   return (
     <div className="mx-auto flex h-auto min-h-screen w-screen flex-col bg-white">
       <Header />
-      <main className="flex w-full flex-col gap-24 px-4 md:px-8">
+      <main className="flex w-full flex-col gap-24 px-4 pt-24 md:px-8">
         <Hero />
         <DominantReligions />
         <Ethiopa />

@@ -6,7 +6,6 @@ import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { League_Gothic, Baskervville } from "next/font/google";
 import { IoMailOpenOutline } from "react-icons/io5";
-import TitlePara from "../utils/TitlePara";
 import { useState } from "react";
 
 const baskerville = Baskervville({
@@ -19,7 +18,7 @@ const league_gothic = League_Gothic({
 const Page = () => {
   const [email, setEmail] = useState("");
   return (
-    <footer className="m-auto min-h-[100dvh] w-screen bg-[#6ecad0] px-4 py-4 md:grid md:max-h-[70dvh] md:min-h-[70dvh] md:place-items-center md:px-0">
+    <footer className="m-auto min-h-[120dvh] w-screen bg-[#6ecad0] px-4 py-4 md:grid md:max-h-[70dvh] md:min-h-[70dvh] md:place-items-center md:px-0">
       <section className="flex h-[100dvh] w-full flex-col items-center justify-evenly gap-16 py-4 md:h-3/4 md:w-9/12 md:flex-row">
         {/* slide-1 */}
         <div className="grid h-full w-full grid-rows-3 gap-0 p-2">
@@ -85,8 +84,8 @@ const Page = () => {
         </div>
 
         {/* slide-3 */}
-        <div className="h-1/2 w-full flex-col gap-2 self-center">
-          <span className="grid aspect-square size-14 place-items-center rounded-full border-2 border-gray-800 text-[#3c4c54]">
+        <div className="h-1/2 w-full flex-col gap-4 self-center">
+          <span className="grid aspect-square size-12 place-items-center rounded-full border-2 border-gray-800 text-[#3c4c54]">
             <IoMailOpenOutline size={30} />
           </span>
           <h3
@@ -117,6 +116,21 @@ const Page = () => {
           </div>
         </div>
       </section>
+      <div className="flex w-full flex-col justify-between gap-4 border-2 md:w-9/12 md:flex-row">
+        <span className={`${baskerville.className} text-sm md:text-xl`}>
+          Copyright <strong>&#169; </strong>New Internationalist
+        </span>
+
+        <div
+          className={`${baskerville.className} flex flex-col gap-1 text-sm md:flex-row md:items-center md:gap-4 md:text-xl`}
+        >
+          <span>Privacy Policy</span>
+          <span>Cookie Policy</span>
+          <span>
+            Crafted By <strong>Natural Eye Media</strong>
+          </span>
+        </div>
+      </div>
     </footer>
   );
 };
