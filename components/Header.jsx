@@ -137,14 +137,14 @@ export default Page;
 let hamburgerVariants = {
   hidden: {
     height: 0,
-    skewY: 3,
+    skewY: 6,
   },
   show: {
     height: "50vh",
     skewY: 0,
     transition: {
       type: "spring",
-      bounce: 0.6,
+      bounce: 0.4,
       duration: 1,
       delayChildren: 0.2,
       staggerChildren: 0.1,
@@ -156,8 +156,8 @@ let hamburgerVariants = {
     // height: 0,
     transition: {
       type: "spring",
-      bounce: 0,
-      duration: 0.6,
+      bounce: 0.4,
+      duration: 0.8,
       when: "afterChildren",
       delayChildren: 0.1,
       staggerChildren: 0.1,
