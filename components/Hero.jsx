@@ -32,7 +32,7 @@ const roboto = Roboto({
 // });
 const Index = () => {
   return (
-    <div className="mx-auto flex w-full flex-col gap-8 md:w-10/12 md:gap-16">
+    <div className="mx-auto flex w-full flex-col gap-8 md:w-11/12 md:gap-16">
       {/* //? hero */}
       <div className="relative mx-auto aspect-4/3 w-full md:aspect-video">
         {/* //? overlay */}
