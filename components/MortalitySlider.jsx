@@ -16,11 +16,7 @@ import { useRef } from "react";
 const Page = () => {
   let ref = useRef(null);
   let x = useMotionValue(Infinity);
-  let grayScale = useTransform(
-    x,
-    [-ref?.current?.offsetWidth / 3, ref?.current?.offsetWidth / 3],
-    [1, 0],
-  );
+  let grayScale = useTransform(x, [0, 200], [0, 1]);
   let blackAndWhite = useMotionTemplate`grayScale(${grayScale})`;
   return (
     <div className="mx-auto flex w-full max-w-7xl flex-col gap-4">
