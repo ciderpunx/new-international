@@ -23,6 +23,9 @@ const Page = () => {
     // value:0
   });
 
+  const [orthodoxEnter, setOrthodoxEnter] = useState(false);
+  const [muslimsEnter, setMuslimsEnter] = useState(false);
+  const [protestantsEnter, setprotestantsEnter] = useState(false);
   // let { scrollYProgress } = useScroll({
   //   target: imageRef,
   //   smooth: 1,
@@ -30,16 +33,18 @@ const Page = () => {
   // });
   // let scale = useTransform(scrollYProgress, [0, 1], [0.5, 1]);
   return (
-    <div className="mx-auto flex w-full max-w-5xl flex-col gap-8">
+    <div className="mx-auto flex w-full max-w-5xl flex-col gap-8 md:text-7xl">
       <section
         className={`${league_gothic.className} border- flex h-auto w-full flex-col gap-8 md:aspect-video md:flex-row`}
       >
+        {/* //? orthodox */}
         <motion.div className="grid h-[50vh] w-full grid-rows-[15%_70%_15%]">
           <div className="grid place-items-center text-center align-middle text-3xl text-red-600 md:text-4xl">
             Orthodox Christians
           </div>
           <div className="relative my-auto h-full w-full">
             <motion.div
+              transition={{ type: "spring", bounce: 0 }}
               initial={{ scale: 0.5 }}
               whileInView={{ scale: 1 }}
               // ref={imageRef}
@@ -61,28 +66,16 @@ const Page = () => {
             </motion.div>
           </div>
           <motion.div
-            onViewportEnter={() =>
-              setViewportEnter({
-                religionTitle: "orthodox",
-                state: true,
-              })
-            }
-            onViewportLeave={() =>
-              setViewportEnter({ religionTitle: "", state: false })
-            }
-            className="grid place-items-center text-5xl font-bold text-red-500"
+            onViewportEnter={() => {
+              setOrthodoxEnter(true);
+            }}
+            onViewportLeave={() => {
+              setOrthodoxEnter(false);
+            }}
+            className="grid place-items-center text-5xl font-bold text-red-500 md:text-7xl"
           >
             <span className="">
-              <AnimatedNumber
-                value={
-                  viewportEnter.state
-                    ? // &&
-                      // viewportEnter.religionTitle === "orthodox"
-                      43
-                    : 0
-                }
-              />
-              %
+              <AnimatedNumber value={orthodoxEnter ? 43 : 0} />%
             </span>
           </motion.div>
         </motion.div>
@@ -95,6 +88,7 @@ const Page = () => {
           </div>
           <motion.div className="relative my-auto h-4/5 w-full">
             <motion.div
+              transition={{ type: "spring", bounce: 0 }}
               initial={{ scale: 0.5 }}
               whileInView={{ scale: 1 }}
               // ref={imageRef}
@@ -116,33 +110,21 @@ const Page = () => {
             </motion.div>
           </motion.div>
           <motion.div
-            onViewportEnter={() =>
-              setViewportEnter({
-                religionTitle: "muslims",
-                state: true,
-              })
-            }
-            onViewportLeave={() =>
-              setViewportEnter({ religionTitle: "", state: false })
-            }
-            className="grid place-items-center text-5xl font-bold text-red-500"
+            onViewportEnter={() => {
+              setMuslimsEnter(true);
+            }}
+            onViewportLeave={() => {
+              setMuslimsEnter(false);
+            }}
+            className="grid place-items-center text-5xl font-bold text-red-500 md:text-7xl"
           >
             <span>
-              <AnimatedNumber
-                value={
-                  viewportEnter.state
-                    ? // &&
-                      // viewportEnter.religionTitle === "muslims"
-                      33
-                    : 0
-                }
-              />
-              %
+              <AnimatedNumber value={orthodoxEnter ? 33 : 0} />%
             </span>
           </motion.div>
         </motion.div>
 
-        {/* //? orthodox */}
+        {/* //? protestants */}
 
         <motion.div className="grid h-[50vh] w-full grid-rows-[15%_70%_15%]">
           <div
@@ -152,6 +134,7 @@ const Page = () => {
           </div>
           <div className="relative my-auto h-2/3 w-full">
             <motion.div
+              transition={{ type: "spring", bounce: 0 }}
               initial={{ scale: 0.5 }}
               whileInView={{ scale: 1 }}
               // ref={imageRef}
@@ -175,28 +158,16 @@ const Page = () => {
             </motion.div>
           </div>
           <motion.div
-            onViewportEnter={() =>
-              setViewportEnter({
-                religionTitle: "protestants",
-                state: true,
-              })
-            }
-            onViewportLeave={() =>
-              setViewportEnter({ religionTitle: "", state: false })
-            }
-            className="grid place-items-center text-5xl font-bold text-red-500"
+            onViewportEnter={() => {
+              setprotestantsEnter(true);
+            }}
+            onViewportLeave={() => {
+              setprotestantsEnter(false);
+            }}
+            className="grid place-items-center text-5xl font-bold text-red-500 md:text-7xl"
           >
             <span>
-              <AnimatedNumber
-                value={
-                  viewportEnter.state
-                    ? // &&
-                      // viewportEnter.religionTitle === "protestants"
-                      20
-                    : 0
-                }
-              />
-              %
+              <AnimatedNumber value={orthodoxEnter ? 20 : 0} />%
             </span>
           </motion.div>
         </motion.div>
@@ -227,7 +198,11 @@ function AnimatedNumber({ value }) {
     spring.set(value);
   }, [spring, value]);
 
-  return <motion.span>{display}</motion.span>;
+  return (
+    <motion.span animate={{ scale: display.isAnimating() ? 1.5 : 1 }}>
+      {display}
+    </motion.span>
+  );
 }
 
 // let dominantReligionData = [

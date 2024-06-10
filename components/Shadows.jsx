@@ -142,7 +142,7 @@ const Page = () => {
         para="As concerted efforts by shadowy networks to roll back abortion rights in Africa play out behind the scenes, work in Ethiopia’s family planning clinics continues as normal. In one of MSI’s largest clinics in Addis, we meet Ferket*, 24, who sought a termination after she was impregnated by a colleague who raped her at a work event."
       />
       {/* //? video-narration-2 */}
-      <div className="relative aspect-video w-full border-2 border-red-500 md:aspect-video">
+      <div className="relative aspect-video w-full md:aspect-video">
         <div className="absolute inset-0">
           <video
             // autoPlay
@@ -211,7 +211,7 @@ const Page = () => {
       />
 
       {/* //? video-narration-1 */}
-      <div className="relative aspect-video w-full border-2 border-red-500 md:aspect-video">
+      <div className="relative aspect-video w-full md:aspect-video">
         <div className="absolute inset-0">
           <video
             // autoPlay

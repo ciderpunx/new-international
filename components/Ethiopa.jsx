@@ -5,7 +5,7 @@ import Quote from "../utils/Quote";
 
 const Page = () => {
   return (
-    <div className="mx-auto flex w-full max-w-6xl flex-col gap-8 border-2">
+    <div className="mx-auto flex w-full max-w-6xl flex-col gap-8">
       {/* <div className='flex flex-col gap-2'>
 				<h2
 					className={`${league_gothic.className} tracking-wide uppercase font-bold text-xl first-letter:text-4xl`}>
@@ -21,7 +21,7 @@ const Page = () => {
 				</p>
 			</div> */}
 
-      <div className="relative aspect-video w-full border-2 border-red-500 md:aspect-video">
+      <div className="relative aspect-video w-full md:aspect-video">
         <div className="absolute inset-0">
           <video
             autoPlay

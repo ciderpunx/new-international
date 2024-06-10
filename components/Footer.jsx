@@ -116,7 +116,7 @@ const Page = () => {
           </div>
         </div>
       </section>
-      <div className="flex w-full flex-col justify-between gap-4 border-2 md:w-9/12 md:flex-row">
+      <div className="flex w-full flex-col justify-between gap-4 md:w-9/12 md:flex-row">
         <span className={`${baskerville.className} text-sm md:text-xl`}>
           Copyright <strong>&#169; </strong>New Internationalist
         </span>
