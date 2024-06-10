@@ -20,7 +20,7 @@ const Page = ({ title, para }) => {
         <span className="text-2xl md:text-4xl">{title}</span>
       </h1>
       <p
-        className={`${baskerville.className} text-balance text-left indent-0 text-lg leading-7 text-[#212529] md:text-balance md:text-2xl`}
+        className={`${baskerville.className} text-left indent-0 text-lg leading-7 text-[#212529] md:text-balance md:text-2xl`}
       >
         {para}
       </p>

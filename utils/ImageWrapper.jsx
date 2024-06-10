@@ -10,7 +10,7 @@ const playfair_display = Playfair_Display({
 const Page = ({ alt, imageURL, textData, sevenXL }) => {
   return (
     <div
-      className={`${sevenXL == true ? "max-w-7xl" : ""} mx-auto flex w-full flex-col gap-4 md:w-11/12`}
+      className={`${sevenXL == true ? "md:w-10/12" : ""} mx-auto flex w-full flex-col gap-4 md:w-11/12`}
     >
       {/* //? image */}
       <div className="relative aspect-4/3 w-full md:aspect-video">

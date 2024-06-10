@@ -104,6 +104,7 @@ const Page = () => {
                 type="text"
                 id="email"
                 name="email"
+                placeholder="enter your email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
               />

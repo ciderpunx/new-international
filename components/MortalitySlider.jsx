@@ -15,7 +15,7 @@ import chairs from "../public/chairs.jpg";
 import { useRef } from "react";
 const Page = () => {
   let ref = useRef(null);
-  let x = useMotionValue(Infinity);
+  let x = useMotionValue(0.5);
   let grayScale = useTransform(x, [0, 200], [0, 1]);
   let blackAndWhite = useMotionTemplate`grayScale(${grayScale})`;
   return (

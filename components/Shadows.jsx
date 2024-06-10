@@ -11,7 +11,7 @@ import Shadows_6 from "../public/2024_New_Internationalist_magazine_Addis_Aemero
 
 const Page = () => {
   return (
-    <div className="mx-auto flex h-auto w-full max-w-7xl flex-col gap-8">
+    <div className="mx-auto flex h-auto w-full flex-col gap-8 md:w-10/12">
       <TitlePara
         key="free abortion"
         para="Sustained pressure from the coalition on top of the strong political will of successive Ethiopian governments helped cascade the 2005 legislation into action, and within a decade maternal mortality from unsafe abortion plummeted from 32 per cent to less than 10 per cent.3 Strong political will of successive Ethiopian governments helped cascade the legislation into action, and the law was revised in 2013, shortly after Ethiopia ratified the Maputo Protocol – the first treaty signed by 43 African nations that recognizes abortion, under certain conditions, as a human right. While there is still a way to go to ensure full access to the right to safe abortion on demand, the 2005 reforms have undoubtedly been lifesaving."
