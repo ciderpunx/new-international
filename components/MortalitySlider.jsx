@@ -1,30 +1,63 @@
 "use client";
 import Image from "next/image";
 import TitlePara from "../utils/TitlePara";
-import { motion } from "framer-motion";
+import {
+  motion,
+  useMotionTemplate,
+  useMotionValue,
+  useTransform,
+} from "framer-motion";
+import { VscGrabber } from "react-icons/vsc";
+
 // import Slider from "../svgs/Slider";
 // import ImageWrapper from '../utils/ImageWrapper'
 import chairs from "../public/chairs.jpg";
 import { useRef } from "react";
 const Page = () => {
-  let sliderRef = useRef(null);
+  let ref = useRef(null);
+  let x = useMotionValue(Infinity);
+  let grayScale = useTransform(
+    x,
+    [-ref?.current?.offsetWidth / 3, ref?.current?.offsetWidth / 3],
+    [1, 0],
+  );
+  let blackAndWhite = useMotionTemplate`grayScale(${grayScale})`;
   return (
     <div className="mx-auto flex w-full max-w-7xl flex-col gap-4">
       {/* //? title */}
       <TitlePara key="maternal-mortality" title="Drop in Maternal Mortality" />
       {/* //? past future svg with slider*/}
       {/* //* this is not final!!! */}
-      <div className="relative aspect-video w-full">
-        <div className="z-5 absolute inset-0 h-full w-full">
-          <Image src={chairs} alt="black" fill="true" />
-        </div>
-        <div
-          ref={sliderRef}
-          className="absolute inset-0 z-10 h-full w-full object-contain"
+      <div ref={ref} className="relative aspect-video w-full">
+        <motion.div
+          style={{
+            filter: blackAndWhite,
+          }}
+          className="z-5 absolute inset-0 h-full w-full"
         >
+          <Image src={chairs} alt="black" fill="true" />
+        </motion.div>
+        <div className="absolute inset-0 z-10 h-full w-full object-contain">
           {/* <Slider /> */}
-          <Svg sliderRef={sliderRef} />
+          <Svg ref={ref} />
         </div>
+        <motion.div
+          whileHover={{ cursor: "grab" }}
+          style={{ x }}
+          whileDrag={{ cursor: "grabbing" }}
+          drag="x"
+          dragMomentum={false}
+          dragConstraints={ref}
+          dragElastic={0}
+          className="absolute inset-0 z-20 m-auto h-full w-2 bg-white"
+        >
+          <motion.div
+            initial={{ x: -15 }}
+            className="absolute inset-0 m-auto grid size-10 place-items-center rounded-full bg-white shadow-xl"
+          >
+            <VscGrabber size={40} color="black" />
+          </motion.div>
+        </motion.div>
       </div>
     </div>
   );
@@ -69,10 +102,13 @@ const Svg = (props) => {
         d="M1038.5 97c-.3 0-.5-.2-.5-.5V62.4c0-.3.2-.5.5-.5s.5.2.5.5v34.1c0 .3-.2.5-.5.5zm13.6-5.5c-.3 0-.5-.2-.5-.5V67.9c0-.3.2-.5.5-.5s.5.2.5.5V91c0 .3-.2.5-.5.5zm13.5 0c-.3 0-.5-.2-.5-.5V67.9c0-.3.2-.5.5-.5s.5.2.5.5V91c0 .3-.2.5-.5.5zm13.5 0c-.3 0-.5-.2-.5-.5V67.9c0-.3.2-.5.5-.5s.5.2.5.5V91c0 .3-.2.5-.5.5zm13.6 0c-.3 0-.5-.2-.5-.5V67.9c0-.3.2-.5.5-.5s.5.2.5.5V91c0 .3-.2.5-.5.5zm13.5 0c-.3 0-.5-.2-.5-.5V67.9c0-.3.2-.5.5-.5s.5.2.5.5V91c0 .3-.2.5-.5.5zm13.5 5.5c-.3 0-.5-.2-.5-.5V62.4c0-.3.2-.5.5-.5s.5.2.5.5v34.1c0 .3-.2.5-.5.5zm13.6-5.5c-.3 0-.5-.2-.5-.5V67.9c0-.3.2-.5.5-.5s.5.2.5.5V91c0 .3-.2.5-.5.5zm13.5 0c-.3 0-.5-.2-.5-.5V67.9c0-.3.2-.5.5-.5s.5.2.5.5V91c0 .3-.2.5-.5.5zm13.6 0c-.3 0-.5-.2-.5-.5V67.9c0-.3.2-.5.5-.5s.5.2.5.5V91c0 .3-.2.5-.5.5zm13.5 0c-.3 0-.5-.2-.5-.5V67.9c0-.3.2-.5.5-.5s.5.2.5.5V91c0 .3-.2.5-.5.5zm13.5 0c-.3 0-.5-.2-.5-.5V67.9c0-.3.2-.5.5-.5s.5.2.5.5V91c0 .3-.2.5-.5.5zM1201 97c-.3 0-.5-.2-.5-.5V62.4c0-.3.2-.5.5-.5s.5.2.5.5v34.1c0 .3-.2.5-.5.5zm13.5-5.5c-.3 0-.5-.2-.5-.5V67.9c0-.3.2-.5.5-.5s.5.2.5.5V91c0 .3-.2.5-.5.5zm13.5 0c-.3 0-.5-.2-.5-.5V67.9c0-.3.2-.5.5-.5s.5.2.5.5V91c0 .3-.2.5-.5.5zm13.6 0c-.3 0-.5-.2-.5-.5V67.9c0-.3.2-.5.5-.5s.5.2.5.5V91c0 .3-.2.5-.5.5zm13.5 0c-.3 0-.5-.2-.5-.5V67.9c0-.3.2-.5.5-.5s.5.2.5.5V91c0 .3-.2.5-.5.5zm13.6 0c-.3 0-.5-.2-.5-.5V67.9c0-.3.2-.5.5-.5s.5.2.5.5V91c0 .3-.2.5-.5.5zm13.5 5.5c-.3 0-.5-.2-.5-.5V62.4c0-.3.2-.5.5-.5s.5.2.5.5v34.1c0 .3-.2.5-.5.5zm13.5-5.9c-.3 0-.5-.2-.5-.5V68.1c0-.3.2-.5.5-.5s.5.2.5.5v22.5c0 .3-.2.5-.5.5zm13.6.4c-.3 0-.5-.2-.5-.5V67.9c0-.3.2-.5.5-.5s.5.2.5.5V91c0 .3-.2.5-.5.5zm13.5 0c-.3 0-.5-.2-.5-.5V67.9c0-.3.2-.5.5-.5s.5.2.5.5V91c0 .3-.2.5-.5.5zm13.5 0c-.3 0-.5-.2-.5-.5V67.9c0-.3.2-.5.5-.5s.5.2.5.5V91c0 .3-.2.5-.5.5zm13.6 0c-.3 0-.5-.2-.5-.5V67.9c0-.3.2-.5.5-.5s.5.2.5.5V91c0 .3-.2.5-.5.5zm13.5 0c-.3 0-.5-.2-.5-.5V67.9c0-.3.2-.5.5-.5s.5.2.5.5V91c0 .3-.2.5-.5.5zM1377 97c-.3 0-.5-.2-.5-.5V62.4c0-.3.2-.5.5-.5s.5.2.5.5v34.1c0 .3-.2.5-.5.5zm13.5-5.5c-.3 0-.5-.2-.5-.5V67.9c0-.3.2-.5.5-.5s.5.2.5.5V91c0 .3-.2.5-.5.5zm13.5 0c-.3 0-.5-.2-.5-.5V67.9c0-.3.2-.5.5-.5s.5.2.5.5V91c0 .3-.2.5-.5.5zm13.6 0c-.3 0-.5-.2-.5-.5V67.9c0-.3.2-.5.5-.5s.5.2.5.5V91c0 .3-.2.5-.5.5zm13.5 0c-.3 0-.5-.2-.5-.5V67.9c0-.3.2-.5.5-.5s.5.2.5.5V91c0 .3-.2.5-.5.5zm13.5 0c-.3 0-.5-.2-.5-.5V67.9c0-.3.2-.5.5-.5s.5.2.5.5V91c0 .3-.2.5-.5.5zm13.6 5.5c-.3 0-.5-.2-.5-.5V62.4c0-.3.2-.5.5-.5s.5.2.5.5v34.1c0 .3-.2.5-.5.5zm13.5-5.5c-.3 0-.5-.2-.5-.5V67.9c0-.3.2-.5.5-.5s.5.2.5.5V91c0 .3-.2.5-.5.5zm13.6 0c-.3 0-.5-.2-.5-.5V67.9c0-.3.2-.5.5-.5s.5.2.5.5V91c0 .3-.2.5-.5.5zm13.5 0c-.3 0-.5-.2-.5-.5V67.9c0-.3.2-.5.5-.5s.5.2.5.5V91c0 .3-.2.5-.5.5zm13.5 0c-.3 0-.5-.2-.5-.5V67.9c0-.3.2-.5.5-.5s.5.2.5.5V91c0 .3-.2.5-.5.5zm13.6 0c-.3 0-.5-.2-.5-.5V67.9c0-.3.2-.5.5-.5s.5.2.5.5V91c0 .3-.2.5-.5.5zm13.5 5.5c-.3 0-.5-.2-.5-.5V62.4c0-.3.2-.5.5-.5s.5.2.5.5v34.1c0 .3-.2.5-.5.5zm13.5-5.5c-.3 0-.5-.2-.5-.5V67.9c0-.3.2-.5.5-.5s.5.2.5.5V91c0 .3-.2.5-.5.5zm13.6 0c-.3 0-.5-.2-.5-.5V67.9c0-.3.2-.5.5-.5s.5.2.5.5V91c0 .3-.2.5-.5.5zm13.5 0c-.3 0-.5-.2-.5-.5V67.9c0-.3.2-.5.5-.5s.5.2.5.5V91c0 .3-.2.5-.5.5zm13.6 0c-.3 0-.5-.2-.5-.5V67.9c0-.3.2-.5.5-.5s.5.2.5.5V91c0 .3-.2.5-.5.5zm13.5 0c-.3 0-.5-.2-.5-.5V67.9c0-.3.2-.5.5-.5s.5.2.5.5V91c0 .3-.2.5-.5.5zm13.5 5.5c-.3 0-.5-.2-.5-.5V62.4c0-.3.2-.5.5-.5s.5.2.5.5v34.1c0 .3-.2.5-.5.5zm13.6-5.5c-.3 0-.5-.2-.5-.5V67.9c0-.3.2-.5.5-.5s.5.2.5.5V91c0 .3-.2.5-.5.5zm13.5 0c-.3 0-.5-.2-.5-.5V67.9c0-.3.2-.5.5-.5s.5.2.5.5V91c0 .3-.2.5-.5.5zm13.5 0c-.3 0-.5-.2-.5-.5V67.9c0-.3.2-.5.5-.5s.5.2.5.5V91c0 .3-.2.5-.5.5zm13.6 0c-.3 0-.5-.2-.5-.5V67.9c0-.3.2-.5.5-.5s.5.2.5.5V91c0 .3-.2.5-.5.5zm13.5 0c-.3 0-.5-.2-.5-.5V67.9c0-.3.2-.5.5-.5s.5.2.5.5V91c0 .3-.2.5-.5.5zm13.6 5.5c-.3 0-.5-.2-.5-.5V62.4c0-.3.2-.5.5-.5s.5.2.5.5v34.1c0 .3-.2.5-.5.5z"
         className="sliderst1"
       />
-      <motion.g
+      {/* <motion.g
+        initial={{}}
         drag="x"
         dragElastic={1}
-        dragConstraints={props.sliderRef}
+        dragSnapToOrigin={false}
+        dragMomentum={false}
+        dragConstraints={props.ref}
         className="[stroke-20] cursor-grab"
         // scale={2}
         id="Slider"
@@ -97,7 +133,7 @@ const Svg = (props) => {
             className="[stroke-10] fill-red-500"
           />
         </motion.g>
-      </motion.g>
+      </motion.g> */}
     </svg>
   );
 };
