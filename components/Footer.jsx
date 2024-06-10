@@ -84,7 +84,7 @@ const Page = () => {
         </div>
 
         {/* slide-3 */}
-        <div className="h-1/3 w-full flex-col gap-8 space-y-2 self-start">
+        <div className="border- h-1/2 w-full flex-col gap-8 space-y-1 self-start">
           <span className="grid aspect-square size-12 place-items-center rounded-full border-2 border-gray-800 text-[#3c4c54]">
             <IoMailOpenOutline size={30} />
           </span>
@@ -99,7 +99,7 @@ const Page = () => {
             </p>
             <form className="grid h-14 w-full grid-cols-[70%_30%]">
               <input
-                className="h-full w-full px-2 text-2xl"
+                className="h-full w-full px-2 text-2xl placeholder:text-lg"
                 type="text"
                 id="email"
                 name="email"
@@ -116,6 +116,8 @@ const Page = () => {
           </div>
         </div>
       </section>
+
+      {/* //? copyright */}
       <div className="flex w-full flex-col justify-between gap-4 md:w-9/12 md:flex-row">
         <span className={`${baskerville.className} text-sm md:text-xl`}>
           Copyright <strong>&#169; </strong>New Internationalist
