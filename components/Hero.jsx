@@ -71,7 +71,7 @@ const Index = () => {
               transition={{ delay: 1 }}
               className={
                 roboto.className +
-                " flex items-center justify-start gap-1 overflow-hidden text-balance text-[8px] text-[#c8c8c8] md:flex-row md:text-2xl"
+                " flex items-center justify-start gap-1 overflow-hidden text-balance text-[8px] font-thin text-[#c8c8c8] md:flex-row md:text-2xl"
               }
             >
               <motion.div
@@ -110,7 +110,7 @@ const Index = () => {
         className={`mx-auto flex h-auto w-full max-w-5xl flex-col gap-4`}
       >
         <h2
-          className={`${artifika.className} text-left text-xl md:text-balance md:text-3xl`}
+          className={`${artifika.className} text-left text-xl md:text-balance md:text-4xl`}
         >
           Anti-abortion campaigners have their sights set on Ethiopia – a
           progressive outlier in a region marred by restrictions. Who’s behind

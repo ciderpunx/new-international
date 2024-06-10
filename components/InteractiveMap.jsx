@@ -79,24 +79,27 @@ const Page = () => {
             <AnimatePresence>
               {mapState.hoverState && mapState.title == x.title && x.title && (
                 <motion.div
-                  initial={{ y: -10, height: 0 }}
+                  initial={{ y: -10, height: 0, x: "-30%", opacity: 0 }}
                   // animate={{ opacity: 1 }}
-                  animate={{ height: "40vh" }}
+                  animate={{ height: "40vh", opacity: 1 }}
                   exit={{ height: 0, opacity: 0 }}
                   transition={{ type: "spring", bounce: 0, duration: 0.6 }}
                   // layoutId="hover"
                   style={{
                     background: mapState.background,
-                    textColor: x.textColor,
+                    color: x.textColor,
                     height: "30vh",
                     borderBottomLeftRadius: 12,
                     borderBottomRightRadius: 12,
                   }}
-                  className={`${baskerville.className} absolute left-0 top-full z-40 mx-0 hidden h-[40vh] w-[25vw] flex-col items-center justify-start gap-4 divide-y-2 divide-white px-4 py-4 pt-8 text-white md:visible md:flex`}
+                  className={`${baskerville.className} absolute left-0 top-full z-40 mx-0 hidden h-[25vh] w-[40vw] items-start justify-start gap-4 px-8 py-4 pt-8 text-white md:visible md:flex`}
                 >
-                  <h2 className="font-serif text-2xl">{x.subtitle}</h2>
+                  <h2 className="text-balance font-serif text-3xl font-semibold">
+                    {x.subtitle}
+                  </h2>
+                  <vr />
                   <p
-                    className={`${baskerville.className} text-balance indent-4 text-lg`}
+                    className={`${baskerville.className} text-balance indent-4 text-xl`}
                   >
                     {x.para}
                   </p>
@@ -221,7 +224,7 @@ let mapInfo = [
     id: "map-five",
     title: "broad social or economic grounds",
     background: "#6CDCDD",
-    textColor: "black",
+    textColor: "#000000",
     subtitle:
       "457 Million (23%) women of reproductive age  live in 12 countries/territories that allow abortion on broad social or economic grounds.",
     para: " These laws are generally interpreted liberally to permit abortion under a broad range of circumstances. These countries/territories often take into account a pregnant person’s actual or reasonably foreseeable environment and their social or economic circumstances when considering the potential impact of pregnancy and childbearing.",

@@ -9,8 +9,6 @@ import {
 } from "framer-motion";
 import { VscGrabber } from "react-icons/vsc";
 
-// import Slider from "../svgs/Slider";
-// import ImageWrapper from '../utils/ImageWrapper'
 import chairs from "../public/chairs.jpg";
 import { useRef } from "react";
 const Page = () => {
@@ -22,9 +20,9 @@ const Page = () => {
     <div className="mx-auto flex w-full max-w-7xl flex-col gap-4">
       {/* //? title */}
       <TitlePara key="maternal-mortality" title="Drop in Maternal Mortality" />
-      {/* //? past future svg with slider*/}
-      {/* //* this is not final!!! */}
+      {/* //* mortality svg */}
       <div ref={ref} className="relative aspect-video w-full">
+        {/*  //? image */}
         <motion.div
           style={{
             filter: blackAndWhite,
@@ -33,10 +31,11 @@ const Page = () => {
         >
           <Image src={chairs} alt="black" fill="true" />
         </motion.div>
+        {/* //? svg timeline overlay */}
         <div className="absolute inset-0 z-10 h-full w-full object-contain">
-          {/* <Slider /> */}
           <Svg ref={ref} />
         </div>
+        {/* //? slider */}
         <motion.div
           whileHover={{ cursor: "grab" }}
           style={{ x }}
@@ -54,6 +53,13 @@ const Page = () => {
             <VscGrabber size={40} color="black" />
           </motion.div>
         </motion.div>
+        {/* //? overlay percentages */}
+        <div className="absolute bottom-0 left-5 z-10 text-4xl font-extrabold text-red-700 md:text-9xl">
+          32%
+        </div>
+        <div className="absolute bottom-0 right-5 z-10 text-4xl font-extrabold text-white md:text-9xl">
+          &lt;10%
+        </div>
       </div>
     </div>
   );
