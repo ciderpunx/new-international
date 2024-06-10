@@ -21,10 +21,10 @@ const Page = () => {
     <footer className="m-auto min-h-[120dvh] w-screen bg-[#6ecad0] px-4 py-4 md:grid md:max-h-[70dvh] md:min-h-[70dvh] md:place-items-center md:px-0">
       <section className="flex h-[100dvh] w-full flex-col items-center justify-evenly gap-16 py-4 md:h-3/4 md:w-9/12 md:flex-row">
         {/* slide-1 */}
-        <div className="grid h-full w-full grid-rows-3 gap-0 p-2">
+        <div className="grid h-full w-full grid-rows-3 gap-0">
           <div className="flex h-full w-full flex-col justify-start">
             {/* //image */}
-            <div className="relative m-auto h-full w-full self-start">
+            <div className="relative m-auto h-full w-full place-self-start">
               <div className="absolute inset-0 h-full w-1/2">
                 <Image
                   fill={true}
@@ -58,8 +58,8 @@ const Page = () => {
         </div>
 
         {/* slide-2 */}
-        <div className="bg-teal-00 h-1/3 w-full self-start">
-          <div className="m-auto flex w-full flex-col gap-4">
+        <div className="bg-teal-00 h-1/3 w-full self-start p-2">
+          <div className="m-auto flex w-full flex-col gap-1">
             <h3
               className={`${league_gothic.className} text-2xl font-semibold uppercase text-gray-900 md:text-3xl`}
             >
@@ -84,7 +84,7 @@ const Page = () => {
         </div>
 
         {/* slide-3 */}
-        <div className="h-1/2 w-full flex-col gap-4 self-center">
+        <div className="h-1/3 w-full flex-col gap-8 space-y-2 self-start">
           <span className="grid aspect-square size-12 place-items-center rounded-full border-2 border-gray-800 text-[#3c4c54]">
             <IoMailOpenOutline size={30} />
           </span>
@@ -93,18 +93,17 @@ const Page = () => {
           >
             Subscribe to our newsletter
           </h3>
-          {/* <TitlePara key="newsletter" title="subscribe to our newsletter" /> */}
           <div className="space-y-2">
             <p className={`${baskerville.className} text-sm md:text-xl`}>
               A weekly newsletter with the best of our Journalism
             </p>
             <form className="grid h-14 w-full grid-cols-[70%_30%]">
               <input
-                className="h-full w-full text-2xl"
+                className="h-full w-full px-2 text-2xl"
                 type="text"
                 id="email"
                 name="email"
-                placeholder="enter your email"
+                placeholder="Enter your email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
               />

@@ -92,7 +92,7 @@ const Page = () => {
                     borderBottomLeftRadius: 12,
                     borderBottomRightRadius: 12,
                   }}
-                  className={`${baskerville.className} absolute left-0 top-full z-40 mx-0 hidden h-[25vh] w-[40vw] items-start justify-start gap-4 px-8 py-4 pt-8 text-white md:visible md:flex`}
+                  className={`${baskerville.className} absolute left-0 top-full z-40 mx-0 hidden w-[40vw] items-start justify-start gap-4 px-8 py-4 pt-8 text-white md:visible md:flex`}
                 >
                   <h2 className="text-balance font-serif text-3xl font-semibold">
                     {x.subtitle}

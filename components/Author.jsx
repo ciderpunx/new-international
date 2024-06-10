@@ -47,7 +47,7 @@ const Page = () => {
                   {x.name}
                 </span>
               </div>
-              <p className={`${baskerville.className} max-w-[60ch] md:text-xl`}>
+              <p className={`${baskerville.className} max-w-5xl md:text-2xl`}>
                 {x.info}
               </p>
             </div>
