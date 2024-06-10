@@ -3,7 +3,7 @@ import Image from "next/image";
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { League_Gothic, Baskervville } from "next/font/google";
-import Interactive_map from "../svgs/Interactive_map";
+import Interactive_map from "../svgs/Africa_map";
 const league_gothic = League_Gothic({
   subsets: ["latin"],
 });
@@ -23,10 +23,11 @@ const Page = () => {
   return (
     <div className="relative mx-auto flex h-auto w-full max-w-7xl flex-col gap-4 border-2">
       {/* //? svg */}
-      <div className="relative aspect-video w-full">
+      <div className="relative aspect-video w-full overflow-hidden">
         <div className={`absolute inset-0 m-auto h-full w-full object-contain`}>
-          {/* <Interactive_map /> */}
-          <Image src="interactive-map.svg" fill="true" alt="interactive-map" />
+          <Interactive_map />
+
+          {/* <Image src="interactive-map.svg" fill="true" alt="interactive-map" /> */}
         </div>
       </div>
       {/* //? hover elements */}
@@ -153,6 +154,7 @@ let parentVariant = {
     },
   },
   exit: {
+    opacity: 0,
     transition: {
       when: "afterChildren",
     },
@@ -161,14 +163,18 @@ let parentVariant = {
 let childVariant = {
   hidden: {
     height: 0,
+    opacity: 1,
   },
   show: {
+    opacity: 1,
     height: "40vh",
     transition: {
       duration: 0.3,
     },
   },
   exit: {
+    opacity: 0,
+
     height: 0,
   },
 };
@@ -189,8 +195,8 @@ let mapInfo = [
     background: "#000000",
     textColor: "white",
     subtitle:
-      "457 Million (23%) women of reproductive age  live in 12 countries/territories that allow abortion on broad social or economic grounds.",
-    para: " These laws are generally interpreted liberally to permit abortion under a broad range of circumstances. These countries/territories often take into account a pregnant person’s actual or reasonably foreseeable environment and their social or economic circumstances when considering the potential impact of pregnancy and childbearing.",
+      "111 Million (6%) women of reproductive age live in 21 countries that prohibit abortion altogether.",
+    para: "The laws of the countries in this category do not permit abortion under any circumstances, including when the person's life or health is at risk.",
   },
   {
     id: "map-three",
@@ -217,7 +223,7 @@ let mapInfo = [
     background: "#6CDCDD",
     textColor: "black",
     subtitle:
-      "111 Million (6%) women of reproductive age live in 21 countries that prohibit abortion altogether.",
-    para: "The laws of the countries in this category do not permit abortion under any circumstances, including when the person's life or health is at risk.",
+      "457 Million (23%) women of reproductive age  live in 12 countries/territories that allow abortion on broad social or economic grounds.",
+    para: " These laws are generally interpreted liberally to permit abortion under a broad range of circumstances. These countries/territories often take into account a pregnant person’s actual or reasonably foreseeable environment and their social or economic circumstances when considering the potential impact of pregnancy and childbearing.",
   },
 ];

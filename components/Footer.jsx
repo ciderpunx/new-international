@@ -108,7 +108,7 @@ const Page = () => {
                 onChange={(e) => setEmail(e.target.value)}
               />
               <button
-                className={`${league_gothic.className} h-full w-full bg-black text-xl uppercase text-white md:text-2xl`}
+                className={`${league_gothic.className} h-full w-full bg-black text-lg uppercase text-white md:text-2xl`}
               >
                 Subscribe
               </button>

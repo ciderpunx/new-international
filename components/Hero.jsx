@@ -38,7 +38,7 @@ const Index = () => {
         {/* //? overlay */}
         <div className="absolute z-30 h-full w-full bg-gradient-to-b from-gray-950/10 to-gray-950/50"></div>
         {/* //? image */}
-        <div className="absolute inset-0 h-full w-full">
+        <div className="absolute inset-0 h-full w-full object-cover">
           <Image
             alt="fertile ground"
             key="hero-candle-1"
