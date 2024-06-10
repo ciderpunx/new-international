@@ -19,7 +19,7 @@ const Page = ({ alt, imageURL, textData, sevenXL }) => {
           initial={{ scale: 0.9 }}
           whileInView={{ scale: 1 }}
           viewport={{ amount: "some" }}
-          className="absolute inset-0 h-full w-full"
+          className="absolute inset-0 h-full w-full object-cover"
         >
           <Image
             src={imageURL}

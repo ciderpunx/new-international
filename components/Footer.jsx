@@ -58,7 +58,7 @@ const Page = () => {
         </div>
 
         {/* slide-2 */}
-        <div className="bg-teal-00 h-1/3 w-full self-center">
+        <div className="bg-teal-00 h-1/3 w-full self-start">
           <div className="m-auto flex w-full flex-col gap-4">
             <h3
               className={`${league_gothic.className} text-2xl font-semibold uppercase text-gray-900 md:text-3xl`}
