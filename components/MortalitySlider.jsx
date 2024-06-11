@@ -74,6 +74,9 @@ const Page = () => {
           &lt;10%
         </div>
       </div>
+      <div className="md-text-sm max-7-5xl w-full text-right text-xs">
+        Maternal deaths per 100,000 births
+      </div>
     </div>
   );
 };

@@ -2,7 +2,12 @@
 import Image from "next/image";
 import header_logo from "../public/header_logo.svg";
 import co_op from "../public/co-operative.png";
-import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
+import {
+  FaFacebookF,
+  FaInstagram,
+  FaLinkedinIn,
+  FaWhatsapp,
+} from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { League_Gothic, Baskervville } from "next/font/google";
 import { IoMailOpenOutline } from "react-icons/io5";
@@ -40,7 +45,7 @@ const Page = () => {
           <div className="grid h-full w-full place-items-center">
             <p className={`${baskerville.className} text-sm md:text-xl`}>
               New Internationalist is a multi-stakeholder co-operative owned by
-              its workers and approximately 4,600 co-owners
+              its workers and approximately 4,600 co-owners.
             </p>
           </div>
           <div className="grid h-full w-full grid-cols-[30%_70%]">
@@ -67,17 +72,17 @@ const Page = () => {
             </h3>
 
             <div className="flex w-full justify-start gap-2 text-gray-900 md:gap-4">
-              <span className="grid aspect-square size-14 cursor-pointer place-items-center rounded-full border-2 border-gray-800 hover:text-[#4267B2]">
+              <span className="grid aspect-square size-14 cursor-pointer place-items-center rounded-full border-black bg-gray-50 hover:border-2 hover:text-[#4267B2]">
                 <FaFacebookF size={30} />
               </span>
-              <span className="grid aspect-square size-14 cursor-pointer place-items-center rounded-full border-2 border-gray-800 hover:text-white">
+              <span className="grid aspect-square size-14 cursor-pointer place-items-center rounded-full border-black bg-gray-50 hover:border-2 hover:text-[#000000]">
                 <FaXTwitter size={30} />
               </span>
-              <span className="grid aspect-square size-14 cursor-pointer place-items-center rounded-full border-2 border-gray-800 hover:text-[#FD1D1D]">
+              <span className="grid aspect-square size-14 cursor-pointer place-items-center rounded-full border-black bg-gray-50 hover:border-2 hover:text-[#FD1D1D]">
                 <FaInstagram size={30} />
               </span>
-              <span className="grid aspect-square size-14 cursor-pointer place-items-center rounded-full border-2 border-gray-800 hover:text-[#0077B5]">
-                <FaLinkedinIn size={30} />
+              <span className="grid aspect-square size-14 cursor-pointer place-items-center rounded-full border-black bg-gray-50 hover:border-2 hover:text-[#25D366]">
+                <FaWhatsapp size={30} />
               </span>
             </div>
           </div>
@@ -127,7 +132,6 @@ const Page = () => {
           className={`${baskerville.className} flex flex-col gap-1 text-sm md:flex-row md:items-center md:gap-4 md:text-xl`}
         >
           <span>Privacy Policy</span>
-          <span>Cookie Policy</span>
           <span>
             Crafted By <strong>Natural Eye Media</strong>
           </span>

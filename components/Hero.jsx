@@ -2,6 +2,14 @@
 import TitlePara from "../utils/TitlePara";
 import ImageWrapper from "../utils/ImageWrapper";
 import { GoDotFill } from "react-icons/go";
+import {
+  FaFacebookF,
+  FaInstagram,
+  FaLinkedinIn,
+  FaWhatsapp,
+} from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
+import {} from "react-icons/fa";
 
 import { motion } from "framer-motion";
 import Image from "next/image";
@@ -115,12 +123,35 @@ const Index = () => {
           </motion.div>
         </div>
       </div>
+      {/* //? share with a friend */}
+      <div className="mx-auto flex w-full max-w-5xl flex-col items-baseline gap-2 pt-4 md:flex-row md:justify-between">
+        <h3
+          className={`${league_gothic.className} text-2xl uppercase text-[#3c4c54]`}
+        >
+          share this article
+        </h3>
+
+        <div className="grid w-full grid-cols-4 items-baseline text-gray-500 md:w-1/3">
+          <span className="grid aspect-square size-14 cursor-pointer place-items-center rounded-full border-black bg-gray-50 hover:border-2 hover:text-[#4267B2]">
+            <FaFacebookF size={30} />
+          </span>
+          <span className="grid aspect-square size-14 cursor-pointer place-items-center rounded-full border-black bg-gray-50 hover:border-2 hover:text-[#000000]">
+            <FaXTwitter size={30} />
+          </span>
+          <span className="grid aspect-square size-14 cursor-pointer place-items-center rounded-full border-black bg-gray-50 hover:border-2 hover:text-[#FD1D1D]">
+            <FaInstagram size={30} />
+          </span>
+          <span className="grid aspect-square size-14 cursor-pointer place-items-center rounded-full border-black bg-gray-50 hover:border-2 hover:text-[#25D366]">
+            <FaWhatsapp size={30} />
+          </span>
+        </div>
+      </div>
       {/* //? para */}
       <section
         className={`mx-auto flex h-auto w-full max-w-5xl flex-col gap-4`}
       >
         <h2
-          className={`${baskerville.className} text-left text-xl md:text-balance md:text-4xl`}
+          className={`${baskerville.className} text-left text-xl font-bold md:text-balance md:text-4xl`}
         >
           Anti-abortion campaigners have their sights set on Ethiopia – a
           progressive outlier in a region marred by restrictions. Who’s behind

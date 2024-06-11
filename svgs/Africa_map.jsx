@@ -1104,6 +1104,7 @@ const MyIcon = () => {
           </g>
         </g>
         <g id="Rwanda-2" data-name="Rwanda">
+          <title>Rwanda</title>
           <polyline
             className="cls-15"
             points="1108.88 584.72 1094.42 577.23 1051.6 577.23"
@@ -1258,10 +1259,12 @@ const MyIcon = () => {
             fillOpacity: 0.9,
             scale: [1, 1.05, 1],
           }}
-          className="cls-12"
+          className="cls-12 relative"
           id="Rwanda"
           d="M1122.02,577c-1.24-1.92-3.21-4.51-2.26-6.82-1.36-.47-3.02,1.34-3.79,2.08-.62.59-2.05,2.81-3.04,2.88-1.3.08-1.04-1.82-2.7-1.58-1.48.21-3.39,1.47-4.56,2.22-1.46.93-2.63,2.08-3.17,3.64-.56,1.6-.22,3.05-1.28,4.5-.89,1.21-2.66,2.34-3.05,3.8-.41,1.51.58,3.25,1.75,4.29.17-1.34,1.56-2.18,2.92-1.44,1.71.94,1.48,2.5,3.95,2.44,4.59-.11,4.91-3.11,5.49-6.43,1.58,1.32,2.64.72,4.48.56,1.87-.16,3.71,1.29,5.54.71,4.36-1.37,1.2-8.56-.28-10.84Z"
-        />
+        >
+          {/* <Tooltip country="Rwanda" /> */}
+        </motion.path>
       </motion.svg>
       <AnimatePresence>
         {africaState.tapState && (
@@ -1388,7 +1391,7 @@ let parentVariant = {
   show: {
     opacity: 1,
     transition: {
-      delayChildren: 0.15,
+      delayChildren: 0.1,
     },
   },
   exit: {
@@ -1412,7 +1415,7 @@ let childVariant = {
 
       type: "spring",
       bounce: 0.4,
-      duration: 0.7,
+      duration: 0.6,
     },
   },
   exit: {
@@ -1444,6 +1447,7 @@ let textVariant = {
   },
   exit: {
     x: -100,
+    opacity: 0,
     originX: 0,
     // transition: {
     //   // ease: "anticipate",
@@ -1587,3 +1591,11 @@ let countryData = {
     laws: ["Permitted in cases of Rape"],
   },
 };
+
+// const Tooltip = ({ country }) => {
+//   return (
+//     <motion.div className="absolute bottom-full left-0 right-0 m-auto bg-gray-400 px-4 py-2 text-2xl font-semibold text-black">
+//       {country} Lorem, ipsum.
+//     </motion.div>
+//   );
+// };

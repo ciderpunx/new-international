@@ -23,10 +23,10 @@ const Page = ({ alt, imageURL, textData, sevenXL, bodyWidth }) => {
         >
           <Image
             src={imageURL}
+            style={{ objectFit: "cover" }}
             loading="lazy"
             alt={alt}
             fill={true}
-            style={{ objectFit: "cover" }}
           />
         </motion.div>
         {/* //? overlay */}

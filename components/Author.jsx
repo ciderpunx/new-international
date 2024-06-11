@@ -1,6 +1,7 @@
 import TitlePara from "../utils/TitlePara";
 import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
+import { FaWhatsapp } from "react-icons/fa";
 
 import { League_Gothic, Baskervville } from "next/font/google";
 const league_gothic = League_Gothic({
@@ -15,8 +16,8 @@ const Page = () => {
     <div className="mx-auto flex w-full max-w-5xl flex-col gap-16 divide-y-4 pb-24">
       {/* //* 3 sections */}
 
-      {/* //? 15 links */}
-      <section className="w-full">
+      {/* //? 15 links for hyperlinks - hese should appear as hyperlinks in the indicated body text, not as foot notes */}
+      {/* <section className="w-full">
         <ol
           type="1"
           className="bg-orage-500 flex w-full list-inside list-decimal flex-col gap-4 text-xs hover:text-gray-900 md:text-sm"
@@ -27,7 +28,7 @@ const Page = () => {
             </li>
           ))}
         </ol>
-      </section>
+      </section> */}
 
       {/* //? author heading title and  info */}
       <section className="flex w-full flex-col gap-8">
@@ -60,21 +61,21 @@ const Page = () => {
         <h3
           className={`${league_gothic.className} text-2xl uppercase text-[#3c4c54]`}
         >
-          like what you see? share with a friend:
+          share this article
         </h3>
 
         <div className="grid w-full grid-cols-4 items-baseline text-gray-500 md:w-1/3">
-          <span className="grid aspect-square size-14 cursor-pointer place-items-center rounded-full bg-gray-50 hover:text-[#4267B2]">
+          <span className="grid aspect-square size-14 cursor-pointer place-items-center rounded-full border-black bg-gray-50 hover:border-2 hover:text-[#4267B2]">
             <FaFacebookF size={30} />
           </span>
-          <span className="grid aspect-square size-14 cursor-pointer place-items-center rounded-full bg-gray-50 hover:text-[#000000]">
+          <span className="grid aspect-square size-14 cursor-pointer place-items-center rounded-full border-black bg-gray-50 hover:border-2 hover:text-[#000000]">
             <FaXTwitter size={30} />
           </span>
-          <span className="grid aspect-square size-14 cursor-pointer place-items-center rounded-full bg-gray-50 hover:text-[#FD1D1D]">
+          <span className="grid aspect-square size-14 cursor-pointer place-items-center rounded-full border-black bg-gray-50 hover:border-2 hover:text-[#FD1D1D]">
             <FaInstagram size={30} />
           </span>
-          <span className="grid aspect-square size-14 cursor-pointer place-items-center rounded-full bg-gray-50 hover:text-[#0077B5]">
-            <FaLinkedinIn size={30} />
+          <span className="grid aspect-square size-14 cursor-pointer place-items-center rounded-full border-black bg-gray-50 hover:border-2 hover:text-[#25D366]">
+            <FaWhatsapp size={30} />
           </span>
         </div>
       </div>
