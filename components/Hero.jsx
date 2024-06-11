@@ -62,6 +62,7 @@ const Index = () => {
             key="hero-candle-1"
             src={Candle}
             fill={true}
+            objectFit="cover"
             priority={true}
             // width={200}
             // height={500}
