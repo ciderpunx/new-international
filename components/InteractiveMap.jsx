@@ -4,6 +4,8 @@ import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { League_Gothic, Baskervville } from "next/font/google";
 import Interactive_map from "../svgs/Africa_map";
+import TitlePara from "../utils/TitlePara";
+
 const league_gothic = League_Gothic({
   subsets: ["latin"],
 });
@@ -21,7 +23,8 @@ const Page = () => {
     subtitle: "",
   });
   return (
-    <div className="relative mx-auto flex h-auto w-full max-w-7xl flex-col gap-4 border-2">
+    <div className="relative mx-auto flex h-auto w-full max-w-7xl flex-col gap-4">
+      <TitlePara key="abortion access" title="Abortion access in east africa" />
       {/* //? svg */}
       <div className="relative aspect-video w-full overflow-hidden">
         <div className={`absolute inset-0 m-auto h-full w-full object-contain`}>
@@ -92,14 +95,14 @@ const Page = () => {
                     borderBottomLeftRadius: 12,
                     borderBottomRightRadius: 12,
                   }}
-                  className={`${baskerville.className} absolute left-0 top-full z-40 mx-0 hidden w-[40vw] items-start justify-start gap-4 px-8 py-4 pt-8 text-white md:visible md:flex`}
+                  className={`${baskerville.className} absolute left-0 top-full z-40 mx-0 hidden w-[40vw] items-baseline justify-between gap-4 px-8 py-4 pt-16 text-white md:visible md:flex`}
                 >
                   <h2 className="text-balance font-serif text-3xl font-semibold">
                     {x.subtitle}
                   </h2>
                   <vr />
                   <p
-                    className={`${baskerville.className} text-balance indent-4 text-xl`}
+                    className={`${baskerville.className} text-balance text-xl`}
                   >
                     {x.para}
                   </p>

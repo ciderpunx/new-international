@@ -34,6 +34,10 @@ const Page = () => {
   // let scale = useTransform(scrollYProgress, [0, 1], [0.5, 1]);
   return (
     <div className="mx-auto flex w-full max-w-5xl flex-col gap-4 md:text-7xl">
+      <TitlePara
+        key="dominant religion"
+        title="Dominant religions of ethiopa"
+      />
       <section
         className={`${league_gothic.className} flex h-auto w-full flex-col gap-8 max-sm:divide-y-2 md:aspect-video md:flex-row`}
       >
@@ -172,6 +176,11 @@ const Page = () => {
           </motion.div>
         </motion.div>
       </section>
+      <div
+        className={`${league_gothic.className} w-full text-xl font-bold text-red-500 md:text-2xl`}
+      >
+        Rest - 4%
+      </div>
       <TitlePara
         key="success-story"
         para="It’s a rare success story in a region where the procedure is largely prohibited except to save a pregnant person’s life. But where recent feminist movements to legalize abortion have been characterized by large and vibrant street protests, such as those in Latin America, Ethiopia’s journey was more subtle. Led by local doctors, women’s groups and lawyers, a determined coalition successfully pressured parliamentarians to reform the 1957 law in order to legally permit abortion in cases of rape, incest and foetal impairment, as well as for women with disabilities and minors."

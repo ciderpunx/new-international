@@ -9,13 +9,23 @@ import Header_hero from "../public/hero.jpg";
 import PrayToEnd from "../public/pray-to-end.jpeg";
 import Candle from "../public/candle.jpeg";
 import Candle_two from "../public/candle-2.jpeg";
-import { Roboto, Playfair_Display, League_Gothic } from "next/font/google";
+import {
+  Roboto,
+  Playfair_Display,
+  League_Gothic,
+  Baskervville,
+} from "next/font/google";
 
-import { Artifika } from "next/font/google";
+// import { Artifika } from "next/font/google";
 
-const artifika = Artifika({
+// const artifika = Artifika({
+//   subsets: ["latin"],
+//   weight: ["400"],
+// });
+const baskerville = Baskervville({
   subsets: ["latin"],
   weight: ["400"],
+  style: "italic",
 });
 
 const league_gothic = League_Gothic({
@@ -110,7 +120,7 @@ const Index = () => {
         className={`mx-auto flex h-auto w-full max-w-5xl flex-col gap-4`}
       >
         <h2
-          className={`${artifika.className} text-left text-xl md:text-balance md:text-4xl`}
+          className={`${baskerville.className} text-left text-xl md:text-balance md:text-4xl`}
         >
           Anti-abortion campaigners have their sights set on Ethiopia – a
           progressive outlier in a region marred by restrictions. Who’s behind
@@ -138,7 +148,8 @@ const Index = () => {
       <ImageWrapper
         alt="pray-to-end"
         key="key-to-end"
-        // sevenXL={false}
+        bodyWidth={true}
+        // sevenXL={true}
         imageURL={PrayToEnd}
       />
 

@@ -7,10 +7,10 @@ const playfair_display = Playfair_Display({
   weight: ["400", "500", "700", "900"],
   // style: 'italic',
 });
-const Page = ({ alt, imageURL, textData, sevenXL }) => {
+const Page = ({ alt, imageURL, textData, sevenXL, bodyWidth }) => {
   return (
     <div
-      className={`${sevenXL == true ? "md:w-10/12" : ""} mx-auto flex w-full flex-col gap-4 md:w-11/12`}
+      className={`${sevenXL == true ? "max-w-7xl" : ""} ${bodyWidth ? "max-w-5xl" : ""} mx-auto flex w-full flex-col gap-4 md:w-11/12`}
     >
       {/* //? image */}
       <div className="relative aspect-4/3 w-full md:aspect-video">

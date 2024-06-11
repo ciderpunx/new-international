@@ -7,9 +7,15 @@ import {
   useMotionValue,
   useTransform,
 } from "framer-motion";
+
 import { VscGrabber } from "react-icons/vsc";
 
 import chairs from "../public/chairs.jpg";
+
+import { League_Gothic } from "next/font/google";
+const league_gothic = League_Gothic({
+  subsets: ["latin"],
+});
 import { useRef } from "react";
 const Page = () => {
   let ref = useRef(null);
@@ -19,7 +25,10 @@ const Page = () => {
   return (
     <div className="mx-auto flex w-full max-w-7xl flex-col gap-4">
       {/* //? title */}
-      <TitlePara key="maternal-mortality" title="Drop in Maternal Mortality" />
+      <TitlePara
+        key="maternal-mortality"
+        title="Maternal Mortality rates in Ethiopia pre- and post- 2005 abortion law"
+      />
       {/* //* mortality svg */}
       <div ref={ref} className="relative aspect-video w-full">
         {/*  //? image */}
@@ -54,10 +63,14 @@ const Page = () => {
           </motion.div>
         </motion.div>
         {/* //? overlay percentages */}
-        <div className="absolute bottom-0 left-5 z-10 text-4xl font-extrabold text-red-700 md:text-9xl">
+        <div
+          className={`${league_gothic.className} absolute bottom-0 left-5 z-10 text-4xl font-extrabold text-red-700 md:text-9xl`}
+        >
           32%
         </div>
-        <div className="absolute bottom-0 right-5 z-10 text-4xl font-extrabold text-white md:text-9xl">
+        <div
+          className={`${league_gothic.className} absolute bottom-0 right-5 z-10 text-4xl font-extrabold text-white md:text-9xl`}
+        >
           &lt;10%
         </div>
       </div>
