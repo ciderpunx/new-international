@@ -6,22 +6,44 @@ import {
   useMotionTemplate,
   useMotionValue,
   useTransform,
+  animate,
+  useMotionValueEvent,
+  useScroll,
 } from "framer-motion";
 
 import { VscGrabber } from "react-icons/vsc";
 
 import chairs from "../public/chairs.jpg";
-
+import localfont from "next/font/local";
 import { League_Gothic } from "next/font/google";
 const league_gothic = League_Gothic({
   subsets: ["latin"],
 });
-import { useRef } from "react";
+const airolon = localfont({
+  src: "../app/Aileron-Regular.woff2",
+  // weight: "400",
+  // style: "normal",
+  // display:'auto',
+});
+import { useRef, useState } from "react";
 const Page = () => {
   let ref = useRef(null);
-  let x = useMotionValue(0.5);
-  let grayScale = useTransform(x, [0, 200], [0, 1]);
-  let blackAndWhite = useMotionTemplate`grayScale(${grayScale})`;
+
+  const [sliderWidth, setSliderWidth] = useState(0);
+
+  let x = useMotionValue(0);
+  let grayScale = useTransform(x, [-sliderWidth / 2, sliderWidth / 2], [1, 0]);
+  let blur = useTransform(x, [-sliderWidth / 2, sliderWidth / 2], [5, 0]);
+  let bw_and_blur = useMotionTemplate`grayScale(${grayScale}) blur(${blur}px)`;
+  let scale1 = useTransform(x, [-sliderWidth / 2, 0], [1.2, 1]);
+  let scale2 = useTransform(x, [0, sliderWidth / 2], [1, 1.2]);
+
+  useMotionValueEvent(x, "change", (latestX) => {
+    let slider = ref?.current?.getBoundingClientRect();
+    let { width } = slider;
+    setSliderWidth(width);
+  });
+
   return (
     <div className="mx-auto flex w-full max-w-7xl flex-col gap-4">
       {/* //? title */}
@@ -30,11 +52,11 @@ const Page = () => {
         title="Maternal Mortality rates in Ethiopia pre- and post- 2005 abortion law"
       />
       {/* //* mortality svg */}
-      <div ref={ref} className="relative aspect-video w-full">
+      <div ref={ref} className="relative aspect-video w-full shadow-xl">
         {/*  //? image */}
         <motion.div
           style={{
-            filter: blackAndWhite,
+            filter: bw_and_blur,
           }}
           className="z-5 absolute inset-0 h-full w-full"
         >
@@ -48,7 +70,7 @@ const Page = () => {
         <motion.div
           whileHover={{ cursor: "grab" }}
           style={{ x }}
-          whileDrag={{ cursor: "grabbing" }}
+          whileDrag={{ cursor: "grabbing", scale: 0.95 }}
           drag="x"
           dragMomentum={false}
           dragConstraints={ref}
@@ -63,19 +85,33 @@ const Page = () => {
           </motion.div>
         </motion.div>
         {/* //? overlay percentages */}
-        <div
-          className={`${league_gothic.className} absolute bottom-0 left-5 z-10 text-4xl font-extrabold text-red-700 md:text-9xl`}
+        <motion.div
+          style={{
+            scale: scale1,
+          }}
+          className={`${airolon.className} absolute bottom-0 left-5 z-10 text-4xl font-extrabold text-red-700 md:text-9xl`}
         >
           32%
-        </div>
-        <div
-          className={`${league_gothic.className} absolute bottom-0 right-5 z-10 text-4xl font-extrabold text-white md:text-9xl`}
+        </motion.div>
+        <motion.div
+          style={{
+            scale: scale2,
+          }}
+          className={`${airolon.className} absolute bottom-0 right-5 z-10 text-4xl font-extrabold text-white md:text-9xl`}
         >
           &lt;10%
-        </div>
+          {/* {sliderWidth?.toString()} */}
+          {/* <motion.span>{useTransform(() => Math.floor(x.get()))}</motion.span> */}
+        </motion.div>
       </div>
-      <div className="md-text-sm max-7-5xl w-full text-right text-xs">
-        Maternal deaths per 100,000 births
+      {/* info */}
+      <div className="flex w-full max-w-7xl items-center justify-between">
+        <span className={`${airolon.className} md-text-sm text-right text-xs`}>
+          Maternal deaths per 100,000 births
+        </span>
+        <span className={`${airolon.className} md-text-sm text-right text-xs`}>
+          Maternal deaths per 100,000 births
+        </span>
       </div>
     </div>
   );

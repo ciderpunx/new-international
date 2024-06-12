@@ -4,6 +4,7 @@ import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { League_Gothic, Baskervville } from "next/font/google";
 import Interactive_map from "../svgs/Africa_map";
+import UpdatedAfricaMap from "../svgs/Updated_africa";
 import TitlePara from "../utils/TitlePara";
 
 const league_gothic = League_Gothic({
@@ -28,7 +29,8 @@ const Page = () => {
       {/* //? svg */}
       <div className="relative aspect-video w-full overflow-hidden">
         <div className={`absolute inset-0 m-auto h-full w-full object-contain`}>
-          <Interactive_map />
+          <UpdatedAfricaMap />
+          {/* <Interactive_map /> */}
 
           {/* <Image src="interactive-map.svg" fill="true" alt="interactive-map" /> */}
         </div>
@@ -68,7 +70,8 @@ const Page = () => {
               animate={{
                 height:
                   mapState.hoverState && mapState.title == x.title
-                    ? "100%"
+                    ? // ? "100%"
+                      "8px"
                     : "8px",
               }}
               style={{
@@ -77,9 +80,9 @@ const Page = () => {
               }}
               className={`absolute bottom-0 left-0 right-0 grid h-2 w-full place-items-center text-lg`}
             >
-              {mapState.hoverState && mapState.title == x.title && x.title}
+              {/* {mapState.hoverState && mapState.title == x.title && x.title} */}
             </motion.div>
-            <AnimatePresence>
+            {/* <AnimatePresence>
               {mapState.hoverState && mapState.title == x.title && x.title && (
                 <motion.div
                   initial={{ y: -10, height: 0, x: "-30%", opacity: 0 }}
@@ -108,7 +111,7 @@ const Page = () => {
                   </p>
                 </motion.div>
               )}
-            </AnimatePresence>
+            </AnimatePresence> */}
           </motion.div>
         ))}
       </div>

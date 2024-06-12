@@ -20,7 +20,7 @@ import Quote from "../utils/Quote";
 
 const Page = () => {
   return (
-    <div className="mx-auto flex h-auto min-h-screen w-screen flex-col bg-white">
+    <div className="mx-auto flex h-auto min-h-screen w-screen flex-col overflow-x-hidden bg-white">
       <Header />
       <main className="flex w-full flex-col gap-24 px-4 pt-24 md:px-8">
         <Hero />

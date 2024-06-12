@@ -14,15 +14,14 @@ const MyIcon = () => {
       <motion.svg
         onTap={() => setTapState(!tapState)}
         animate={{
-          scale: tapState ? 2 : tapState ? 2 : 1,
-          x: tapState ? -100 : tapState ? -100 : 0,
-          y: tapState ? 20 : tapState ? 20 : 0,
+          scale: tapState ? 2 : 1,
+          x: tapState ? -100 : 0,
+          y: tapState ? 20 : 0,
           transition: {
-            type: "spring",
-            bounce: 0,
+            // type: "spring",
+            // bounce: 0.4,
           },
         }}
-        onViewportLeave={() => setTapState(false)}
         // viewport={{ amount: "some" }}
         // whileInView={{
         //   scale: 2,
@@ -1266,9 +1265,11 @@ const MyIcon = () => {
           {/* <Tooltip country="Rwanda" /> */}
         </motion.path>
       </motion.svg>
+      {/* //? side modal */}
       <AnimatePresence>
         {africaState.tapState && (
           <motion.div
+            onViewportLeave={() => setTapState(false)}
             variants={parentVariant}
             initial="hidden"
             animate="show"
@@ -1283,17 +1284,18 @@ const MyIcon = () => {
               zIndex: 99999,
               background: "rgba(0,0,0,0.4)",
             }}
-            className="absolute inset-0 z-40 h-full w-full bg-black/50"
+            className="absolute inset-0 z-10 h-full w-full bg-black/50"
           >
             <motion.div
               layout
               variants={childVariant}
               style={{
+                zIndex: 10,
                 // borderLeft: 16,
                 borderColor:
                   countryData[africaState?.countryName]?.["backgroundColor"],
               }}
-              className="flex h-full flex-col justify-center gap-4 divide-gray-600 border-t-8 bg-black px-4 py-2 text-gray-500 md:w-1/2 md:gap-16 md:px-8 md:py-8"
+              className="flex h-full flex-col justify-center gap-2 divide-gray-600 border-t-8 bg-black px-4 py-2 leading-tight text-gray-500 md:w-1/2 md:gap-16 md:px-8 md:py-8"
             >
               <motion.div
                 variants={textVariant}
@@ -1324,14 +1326,14 @@ const MyIcon = () => {
                           "backgroundColor"
                         ],
                     }}
-                    className="text-center text-sm text-white md:text-4xl"
+                    className="text-center text-sm font-bold text-white md:text-4xl"
                   >
                     {countryData[africaState.countryName]?.["countryName"]}
                   </div>
                 </div>
 
                 {/* //? blocks */}
-                <div className="flex gap-2">
+                {/* <div className="flex gap-2">
                   {countryData[africaState.countryName]?.["tags"].map(
                     (x, index) => (
                       <span
@@ -1342,14 +1344,16 @@ const MyIcon = () => {
                       </span>
                     ),
                   )}
-                </div>
+                </div> */}
               </motion.div>
 
               <motion.div
                 variants={textVariant}
                 className="flex flex-col gap-1 text-white md:gap-4"
               >
-                <h2 className="text-xs text-gray-100 md:text-3xl">Category:</h2>
+                <h2 className="text-xs font-semibold text-gray-100 md:text-3xl">
+                  Category:
+                </h2>
                 <h4 className="text-[8px] text-gray-400 md:text-2xl">
                   {countryData[africaState?.countryName]["category"]}{" "}
                 </h4>
@@ -1357,7 +1361,7 @@ const MyIcon = () => {
 
               <motion.div
                 variants={textVariant}
-                className="flex flex-col text-xs md:gap-4 md:text-3xl"
+                className="flex flex-col text-xs font-semibold md:gap-4 md:text-3xl"
               >
                 <div className="text-white">
                   Laws in{" "}
@@ -1368,14 +1372,30 @@ const MyIcon = () => {
 
                 {countryData[africaState.countryName]?.["laws"].map(
                   (x, index) => (
-                    <span
+                    <div
                       key={index}
-                      className="text-[8px] text-white md:text-2xl"
+                      style={{ gridTemplateColumns: "5% 90%" }}
+                      className="grid w-full grid-cols-[1fr_1fr] gap-4 text-[8px] text-white md:text-2xl"
                     >
-                      {x}
-                    </span>
+                      <span className="inline h-4/5 w-full place-self-center bg-white text-center text-[4px] text-black md:text-xl">
+                        {countryData[africaState.countryName]?.["tags"][index]}
+                      </span>
+                      <span className="inline w-full text-left">{x}</span>
+                    </div>
                   ),
                 )}
+                {/* <div className="flex gap-2">
+                  {countryData[africaState.countryName]?.["tags"].map(
+                    (x, index) => (
+                      <span
+                        key={index}
+                        className="flex place-self-start bg-white p-2 text-center text-[8px] font-semibold text-black md:text-xl"
+                      >
+                        {x}
+                      </span>
+                    ),
+                  )}
+                </div> */}
               </motion.div>
             </motion.div>
           </motion.div>
@@ -1397,7 +1417,7 @@ let parentVariant = {
   exit: {
     opacity: 0,
     transition: {
-      when: "afterChildren",
+      // when: "afterChildren",
     },
   },
 };

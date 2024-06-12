@@ -11,7 +11,7 @@ import {
 import { FaXTwitter } from "react-icons/fa6";
 import {} from "react-icons/fa";
 
-import { motion } from "framer-motion";
+import { motion, useScroll, useTransform, useSpring } from "framer-motion";
 import Image from "next/image";
 import Header_hero from "../public/hero.jpg";
 import PrayToEnd from "../public/pray-to-end.jpeg";
@@ -48,13 +48,19 @@ const roboto = Roboto({
 //   weight: ["400", "500", "700", "900"],
 //   style: "italic",
 // });
+
 const Index = () => {
+  let { scrollY } = useScroll();
+  let y = useSpring(useTransform(scrollY, [100, 200], [0, 200]), { bounce: 0 });
+  let skewY = useSpring(useTransform(scrollY, [100, 200], [0, 10]), {
+    bounce: 0,
+  });
   return (
     <div className="mx-auto flex w-full flex-col gap-8 md:w-11/12 md:gap-16">
       {/* //? hero */}
       <div className="relative mx-auto aspect-4/3 w-full md:aspect-video">
         {/* //? overlay */}
-        <div className="absolute z-30 h-full w-full bg-gradient-to-b from-gray-950/10 to-gray-950/50"></div>
+        <div className="absolute z-30 h-full w-full bg-gradient-to-b from-transparent to-gray-950/50"></div>
         {/* //? image */}
         <div className="absolute inset-0 h-full w-full object-cover">
           <Image
@@ -72,12 +78,13 @@ const Index = () => {
             initial="hidden"
             animate="show"
             exit="exit"
-            className="absolute bottom-2 left-0 right-0 z-40 m-auto flex max-w-5xl flex-col px-2 md:bottom-16 md:px-0"
+            className="absolute bottom-2 left-0 right-0 z-40 m-auto flex max-w-5xl flex-col overflow-hidden px-2 md:bottom-16 md:px-0"
           >
             <h1
               className={`${league_gothic.className} overflow-hidden text-4xl font-[500] tracking-wide text-white md:text-7xl`}
             >
               <motion.div
+                style={{ y, skewY }}
                 variants={childVariant}
                 initial="hidden"
                 animate="show"
@@ -86,21 +93,24 @@ const Index = () => {
                 FERTILE GROUND
               </motion.div>
             </h1>
-            <motion.div
-              transition={{ delay: 1 }}
-              className={
-                roboto.className +
-                " flex items-center justify-start gap-1 overflow-hidden text-balance text-[8px] font-thin text-[#c8c8c8] md:flex-row md:text-2xl"
-              }
-            >
+            <motion.div className="h-6 w-full overflow-hidden md:h-12">
               <motion.div
-                variants={childVariant}
-                initial="hidden"
-                animate="show"
-                exit="exit"
-                className="text-wrap"
+                style={{ y, skewY }}
+                transition={{ delay: 1 }}
+                className={
+                  roboto.className +
+                  " flex items-center justify-start gap-1 overflow-hidden text-balance text-[8px] font-thin text-[#c8c8c8] md:flex-row md:text-2xl"
+                }
               >
-                By Bethany Rielly, Maxine Beteridge Moes, and Maya Misikir{" "}
+                <motion.div
+                  variants={childVariant}
+                  initial="hidden"
+                  animate="show"
+                  exit="exit"
+                  className="text-wrap"
+                >
+                  By Bethany Rielly, Maxine Beteridge Moes, and Maya Misikir{" "}
+                </motion.div>
               </motion.div>
               <motion.div
                 variants={childVariant}

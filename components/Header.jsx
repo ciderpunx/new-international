@@ -4,10 +4,10 @@ import header_logo from "../public/header_logo.svg";
 import Image from "next/image";
 import {
   AnimatePresence,
-  animate,
-  delay,
   motion,
+  useMotionValueEvent,
   useScroll,
+  useSpring,
   useTransform,
 } from "framer-motion";
 import { useState } from "react";
@@ -16,10 +16,27 @@ const league_gothic = League_Gothic({
 });
 const Page = () => {
   const [isNavbarOpen, setIsNavbarOpen] = useState(false);
+  const [isScrollingDown, setIsScrollingDown] = useState(false);
+  let { scrollY } = useScroll();
+
+  useMotionValueEvent(scrollY, "change", (latestScrollY) => {
+    if (scrollY.getPrevious() - latestScrollY < 0) {
+      setIsScrollingDown(true);
+    } else setIsScrollingDown(false);
+  });
 
   return (
     <motion.header
-      style={{ zIndex: 9999, position: "fixed" }}
+      animate={{
+        // height: isScrollingDown ? 0 : 96,
+        scaleY: isScrollingDown ? 0 : 1,
+        opacity: isScrollingDown ? 0 : 1,
+      }}
+      style={{
+        originY: 0,
+        zIndex: 99999,
+        position: "fixed",
+      }}
       className={
         league_gothic.className +
         "fixed left-0 right-0 top-0 z-40 mb-24 h-24 w-full bg-[#dcf3f3] px-0 py-2"
@@ -120,6 +137,9 @@ const Page = () => {
               ))}
 
               <motion.button
+                animate={{
+                  opacity: isScrollingDown ? 0 : 1,
+                }}
                 variants={linksVariants}
                 className={`${league_gothic.className} place-self-start bg-[#c72e21] px-4 py-2 text-2xl uppercase text-white hover:bg-red-500`}
               >

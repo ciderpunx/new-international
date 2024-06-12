@@ -5,33 +5,21 @@ import { motion, useScroll, useSpring, useTransform } from "framer-motion";
 
 // import Image from "next/image";
 import TitlePara from "../utils/TitlePara";
-// import ReligionSVG from "../public/Dominant Religions.svg";
 
-// import orthodox from "../public/svgs/Orthodox Christians.svg";
-// import muslims from "../public/svgs/Muslims.svg";
-// import protestants from "../public/svgs/Protestant Christians.svg";
-import { League_Gothic } from "next/font/google";
+import { League_Gothic, Roboto } from "next/font/google";
 const league_gothic = League_Gothic({
   subsets: ["latin"],
 });
+const roboto_light = Roboto({
+  subsets: ["latin"],
+  weight: "300",
+});
 
 const Page = () => {
-  let imageRef = useRef(null);
-  const [viewportEnter, setViewportEnter] = useState({
-    state: false,
-    religionTitle: "",
-    // value:0
-  });
-
   const [orthodoxEnter, setOrthodoxEnter] = useState(false);
   const [muslimsEnter, setMuslimsEnter] = useState(false);
   const [protestantsEnter, setprotestantsEnter] = useState(false);
-  // let { scrollYProgress } = useScroll({
-  //   target: imageRef,
-  //   smooth: 1,
-  //   offset: ["start end", "center end"],
-  // });
-  // let scale = useTransform(scrollYProgress, [0, 1], [0.5, 1]);
+
   return (
     <div className="mx-auto flex w-full max-w-5xl flex-col gap-4 md:text-7xl">
       <TitlePara
@@ -123,7 +111,7 @@ const Page = () => {
             className="grid place-items-center text-5xl font-bold text-red-500 md:text-7xl"
           >
             <span>
-              <AnimatedNumber value={orthodoxEnter ? 33 : 0} />%
+              <AnimatedNumber value={muslimsEnter ? 33 : 0} />%
             </span>
           </motion.div>
         </motion.div>
@@ -171,13 +159,13 @@ const Page = () => {
             className="grid place-items-center text-5xl font-bold text-red-500 md:text-7xl"
           >
             <span>
-              <AnimatedNumber value={orthodoxEnter ? 20 : 0} />%
+              <AnimatedNumber value={protestantsEnter ? 20 : 0} />%
             </span>
           </motion.div>
         </motion.div>
       </section>
       <div
-        className={`${league_gothic.className} w-full text-xl font-bold text-red-500 md:text-2xl`}
+        className={`${roboto_light.className} w-full text-xl font-bold text-red-500 md:text-2xl`}
       >
         Rest - 4%
       </div>
