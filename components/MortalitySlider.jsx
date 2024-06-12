@@ -55,7 +55,7 @@ const Page = () => {
       <div ref={ref} className="relative aspect-video w-full shadow-xl">
         {/*  //? image */}
         <motion.div
-          initial={{ filter: "blur(2px) grayscale(0.5)" }}
+          initial={{ filter: "blur(2.5px) grayscale(0.5)" }}
           style={{
             filter: bw_and_blur,
           }}
