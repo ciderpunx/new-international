@@ -212,7 +212,7 @@ const Page = () => {
         </AnimatePresence>
         <div
           style={{ zIndex: 99999 }}
-          onClick={() => setCount(count === 0 ? length - 1 : count - 1)}
+          onClick={() => setCount(count === 0 ? 0 : count - 1)}
           className="absolute bottom-0 left-0 top-0 z-40 m-auto grid size-16 cursor-pointer rounded-full bg-black/30"
         >
           <svg
@@ -232,7 +232,9 @@ const Page = () => {
         </div>
         {/* right arrow */}
         <div
-          onClick={() => setCount(count === length - 1 ? 0 : count + 1)}
+          onClick={() =>
+            setCount(count === length - 1 ? length - 1 : count + 1)
+          }
           className="absolute bottom-0 right-0 top-0 z-40 m-auto grid size-16 cursor-pointer rounded-full bg-black/30"
         >
           <svg
@@ -371,13 +373,13 @@ let slideData = [
 const itemContainerVariants = {
   enter: ({ direction, width }) => ({
     x: direction * width,
-    scale: 0.8,
+    scale: 1,
   }),
   center: { x: 0, scale: 1 },
 
   exit: ({ direction, width }) => ({
     x: direction * -width,
-    scale: 0.8,
+    scale: 1,
   }),
 };
 const usePrevious = (state) => {
