@@ -374,12 +374,14 @@ const itemContainerVariants = {
   enter: ({ direction, width }) => ({
     x: direction * width,
     scale: 1,
+    rotateY: 5,
   }),
   center: { x: 0, scale: 1 },
 
   exit: ({ direction, width }) => ({
     x: direction * -width,
     scale: 1,
+    rotateY: 0,
   }),
 };
 const usePrevious = (state) => {

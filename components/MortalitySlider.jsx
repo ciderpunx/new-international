@@ -31,7 +31,7 @@ const Page = () => {
 
   const [sliderWidth, setSliderWidth] = useState(0);
 
-  let x = useMotionValue(0);
+  let x = useMotionValue(sliderWidth / 2);
   let grayScale = useTransform(x, [-sliderWidth / 2, sliderWidth / 2], [1, 0]);
   let blur = useTransform(x, [-sliderWidth / 2, sliderWidth / 2], [5, 0]);
   let bw_and_blur = useMotionTemplate`grayScale(${grayScale}) blur(${blur}px)`;
@@ -55,6 +55,7 @@ const Page = () => {
       <div ref={ref} className="relative aspect-video w-full shadow-xl">
         {/*  //? image */}
         <motion.div
+          initial={{ filter: "blur(2px) grayscale(0.5)" }}
           style={{
             filter: bw_and_blur,
           }}
