@@ -7,12 +7,25 @@ const SVGComponent = (props) => {
     tapState: false,
     countryName: "",
   });
-  const [tapState, setTapState] = useState(false);
+  const [zoomSVG, setZoomSVG] = useState(false);
 
   return (
     <div className="h-full w-full">
       <motion.svg
+        onTap={() => {
+          setZoomSVG(!zoomSVG);
+        }}
+        animate={{
+          scale: zoomSVG ? 2 : 1,
+          x: zoomSVG ? -100 : 0,
+          y: zoomSVG ? 20 : 0,
+          transition: {
+            // type: "spring",
+            // bounce: 0.4,
+          },
+        }}
         style={{
+          strokeWidth: 0,
           outline: 0,
           border: 0,
         }}
@@ -205,6 +218,7 @@ const SVGComponent = (props) => {
           />
         </g>
         <motion.path
+          stroke="none"
           onClick={() =>
             setAfricaState({
               tapState: !africaState.tapState,
@@ -217,6 +231,7 @@ const SVGComponent = (props) => {
             fillOpacity: 0.9,
             scale: [1, 1.05, 1],
           }}
+          // className="stroke-none"
           id="Ethiopa"
           d="M1337.4 455.4c-4.2-1-7.6-2.7-11.6-4.2-8.6-3.1-16.4-6.3-25.1-9.3-2.2-.8-4.7-3.5-6.4-4.8-1.1-.8-1.9-.6-2.9-1.6-.9-1-2.3-4.7-3.2-5.8-2.4-3.3-4.2-4.3-6.1-8-1.5-3.1 1.9-5.2 2.2-7.8-1.7.5-2.4-1-4.2-.6-2.3.5-4.6 1.4-7 1.5-4 .1-2.8-2.9-3.2-5.4-.7-5.1 3-7.3 5.7-11.4 2.3-3.4.9-5.3-2.4-7.7-2-1.4-2.4-3-3.5-5-1.7-3-5.8-4.3-7.9-7.1-2.2-2.9-3.5-5.2-6.9-6.9-1.6-.8-3-1.9-4.7-2.7-1.8-.9-3.1-.9-5.1-.9-2.9 0-6.5-2.7-8.9-.1-.2-.8-1.3-3.3-2.4-3.2-.6.1-1 1.5-1.4 1.8-.9.8-2.6 1-3.8 1-2.5.1-3.1-.8-4.5-2.4-.8-.9-1.3-.7-2.3-1.1-1.3-.5-2-1.5-2.7-2.6-1.1 3.5-2.7 6.9-4.3 10.3-1-1.3-2.7-5.3-5-4.1-.8.4-1 1.3-2 1.5-1 .2-2.3-.2-3.2-.3-2.4-.2-3.3.9-3.8 3-.4 1.6-.4 3.3-.8 4.9-.4 1.5-1.4 2.8-1.9 4.2-.5 1.4-.6 2.9-.8 4.4-.1 1.1 0 3.6-.9 4.4-1.3 1.2-4-.2-5.6.6-1.1.6-1.7 2.2-2.3 3.2-.8 1.5-1.6 3-2.7 4.4-.8 1.1-2.3 2-2.9 3.2-.7 1.3-.1 2.8-.4 4.1-.3 1-1.3 2-1.3 3s.8 1.5.7 2.6c-.2 1.9-1.8 4.1-3.2 5.4.1-1.2-1.1-2.8-2.7-2.6-1.7.2-3.1 3.1-3.3 4.4-.4 1.7.5 3.4.1 5.1-.5 2.2-2.2 4-2.7 6.2-1 3.9.3 7.7.4 11.5.1 3.7-2.4 5.5-6.3 4.8-1.4-.3-3.1-.7-4.6-.3-1.8.5-1.8 1.8-2.2 3.2-.3 1.4-1.8 2.3-2.1 3.6-.3 1.5 1.7 2.1 3.1 2.4 4.3.8 7.4 1.7 9.9 5.2.9 1.3 1.9 2.7 2.7 4.1.3.6.5 1.2 1.1 1.6.7.5 1.5.6 2.2 1.3.6.6.8 1.1 1.6 1.7.9.6 1.5 1 2 2 1 2 1.6 4.2 2.3 6.3 1.2 3.4 2.3 7.8 5.2 10.4 1.4-1.5 4.8-.5 5.8 1 1.5 2.3-1.1 5 .5 7.5a8.6 8.6 0 0 0 6.1 4.5c1.7.2 3.4 0 5.1 0 2 .1 3.3.7 5 1.7 3.8 2.2 7.5 4.6 10.6 7.5a6.8 6.8 0 0 0 3.9 2.1c1.2.2 2.4.1 3.7 0 2.2-.2 3.2.5 5.1 1.2 2.9 1 6.6-.3 9.1 2 1.6-2.2 3.2-4.9 5.6-6.5 2.3-1.6 5.2-2.8 8-3.6 1.2-.4 2.6-.6 3.8 0 1.2.7 1.7 2.1 2.8 2.9 2.4 1.7 5.5.1 8.2.7 3.2.7 3.1-1.3 5.5-2.4 2.3-1 4.8-.9 7.2-1.3 2.6-.4 3.3-2.2 5.1-3.7 6.9-5.4 14.2-5 19.4-4.2 3.2.5 4.9.3 7.2-2l37.7-38c-4.3-.3-9.4.1-13.4-.8h0z"
           className="mapst8"
@@ -524,20 +539,22 @@ const SVGComponent = (props) => {
         </g>
       </motion.svg>
       {/* //? side modal */}
-      <AnimatePresence>
+      <AnimatePresence
+      // onExitComplete={() => setZoomSVG(false)}
+      >
         {africaState.tapState && (
           <motion.div
-            onViewportLeave={() => setTapState(false)}
+            onViewportLeave={() => setZoomSVG(false)}
             variants={parentVariant}
             initial="hidden"
             animate="show"
             exit="exit"
-            onClick={() =>
-              setAfricaState({
-                tapState: !africaState.tapState,
-                countryName: "",
-              })
-            }
+            // onClick={() =>
+            //   setAfricaState({
+            //     tapState: !africaState.tapState,
+            //     countryName: "",
+            //   })
+            // }
             style={{
               zIndex: 99999,
               background: "rgba(0,0,0,0.4)",
@@ -549,6 +566,7 @@ const SVGComponent = (props) => {
               variants={childVariant}
               style={{
                 zIndex: 10,
+                // gap: 8,
                 // borderLeft: 16,
                 borderColor:
                   countryData[africaState?.countryName]?.["backgroundColor"],
@@ -578,9 +596,12 @@ const SVGComponent = (props) => {
                     {countryData[africaState.countryName]?.["countryName"]}
                   </div>
                   <span
-                    onTap={() => {
-                      setTapState(false);
-                    }}
+                    onClick={() =>
+                      setAfricaState({
+                        tapState: !africaState.tapState,
+                        countryName: "",
+                      })
+                    }
                     className="grid size-14 place-items-center"
                   >
                     <svg
