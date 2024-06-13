@@ -337,7 +337,9 @@ const Page = () => {
         </div>
         <TitlePara
           key="scared"
-          para="‘I was so scared when I found out I was pregnant.’ she says. ‘After the abortion I felt relieved from the burden,’ Despite meeting the legal criteria for abortion, the young woman says she still feels like a sinner, and kept it a secret from her family. Abortion remains highly stigmatized in Ethiopia, and a lack of awareness about legal rights to the procedure is a huge barrier to accessing care, particularly in rural areas."
+          para="‘I was so scared when I found out I was pregnant,’ she says. ‘After the abortion I felt relieved from the burden.’ Despite
+        meeting the legal criteria for abortion, the young woman says she still
+        feels like a sinner, and kept it a secret from her family. Abortion remains highly stigmatized in Ethiopia, and a lack of awareness about legal rights to the procedure is a huge barrier to accessing care, particularly in rural areas."
         />
         <TitlePara
           key="stigma"
@@ -386,18 +388,16 @@ const Page = () => {
         />
         {/* //? change aspect of this image */}
         <ImageWrapper key="clinic" alt="nurse" imageURL={Shadows_4} />
-        {/* <div className="relative mx-auto h-auto w-[500px] max-w-5xl">
+        <div className="relative mx-auto h-[60vh] w-[500px] max-w-5xl">
           <div className="absolute h-full w-full">
             <Image alt="family ward" src={Shadows_4} fill />
           </div>
-        </div> */}
-
+        </div>
         <TitlePara
           key="Eskedar"
           para="Eskedar Melesse, the clinic coordinator for FGAE in Adama, says she often hears sermons on the ‘evils’ of abortion at church. ‘It shames you, and makes you feel that you are doing something wrong,’ she says. ‘But I know that I am saving lives.’"
         />
         {/* ??//* replace this image */}
-
         <ImageWrapper
           // sevenXL={true}
           key="family ward"
@@ -456,7 +456,6 @@ const Page = () => {
             </>
           }
         />
-
         <TitlePara
           key="nearly"
           para=" Nearly one million people are displaced in
