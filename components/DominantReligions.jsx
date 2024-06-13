@@ -25,17 +25,17 @@ const Page = () => {
   const [protestantsEnter, setprotestantsEnter] = useState(false);
 
   return (
-    <div className="mx-auto flex w-full max-w-5xl flex-col gap-4 md:gap-6 md:text-7xl">
+    <div className="mx-auto flex w-full max-w-5xl flex-col gap-8 md:gap-12 md:text-7xl">
       <TitlePara
         key="dominant religion"
         title="Dominant religions of ethiopia"
         textCenter
       />
       <section
-        className={`${league_gothic.className} flex h-auto w-full flex-col gap-8 max-sm:divide-y-2 md:aspect-video md:flex-row`}
+        className={`${league_gothic.className} flex h-auto w-full flex-col gap-16 max-sm:divide-y-2 md:aspect-video md:flex-row`}
       >
         {/* //? orthodox */}
-        <motion.div className="grid h-[60vh] w-full grid-rows-[10%_70%_20%]">
+        <motion.div className="grid h-[50vh] w-full grid-rows-[10%_70%_20%]">
           <div className="grid place-items-center text-center align-middle text-3xl text-red-600 md:text-4xl">
             Orthodox Christians
           </div>
@@ -79,7 +79,7 @@ const Page = () => {
 
         {/* //? muslims */}
 
-        <motion.div className="grid h-[60vh] w-full grid-rows-[10%_70%_20%]">
+        <motion.div className="grid h-[50vh] w-full grid-rows-[10%_70%_20%]">
           <div className="grid place-items-center text-center align-middle text-3xl text-red-600 md:text-4xl">
             Muslims
           </div>

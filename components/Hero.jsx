@@ -178,7 +178,7 @@ const Index = () => {
       </div>
       {/* //? para */}
       <section
-        className={`mx-auto flex h-auto w-full max-w-5xl flex-col gap-8 border-2 border-lime-400 md:gap-12`}
+        className={`mx-auto flex h-auto w-full max-w-5xl flex-col gap-8 md:gap-12`}
       >
         <p
           className={`${libre_baskerville_italic.className} text-left text-xl font-bold md:text-xl`}
@@ -218,7 +218,7 @@ const Index = () => {
           imageURL={PrayToEnd}
         />
       </div>
-      <section className="mx-auto flex w-full flex-col gap-8 border-4 border-lime-500 md:gap-12">
+      <section className="mx-auto flex w-full flex-col gap-8 md:gap-12">
         <TitlePara
           key="outlier"
           title="A regional outlier"
