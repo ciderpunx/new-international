@@ -16,12 +16,12 @@ const SVGComponent = (props) => {
           setZoomSVG(!zoomSVG);
         }}
         animate={{
-          scale: zoomSVG ? 2 : 1,
+          scale: zoomSVG ? 1.5 : 1,
           x: zoomSVG ? -100 : 0,
           y: zoomSVG ? 20 : 0,
           transition: {
-            // type: "spring",
-            // bounce: 0.4,
+            type: "spring",
+            bounce: 0.5,
           },
         }}
         style={{
@@ -193,7 +193,7 @@ const SVGComponent = (props) => {
               countryName: "Somalia",
             })
           }
-          whileTap={{ scale: 0.95 }}
+          // whileTap={{ scale: 0.95 }}
           whileHover={{
             cursor: "pointer",
             fillOpacity: 0.9,
@@ -222,27 +222,27 @@ const SVGComponent = (props) => {
           onClick={() =>
             setAfricaState({
               tapState: !africaState.tapState,
-              countryName: "Ethiopa",
+              countryName: "Ethiopia",
             })
           }
-          whileTap={{ scale: 0.95 }}
+          // whileTap={{ scale: 0.95 }}
           whileHover={{
             cursor: "pointer",
             fillOpacity: 0.9,
             scale: [1, 1.05, 1],
           }}
           // className="stroke-none"
-          id="Ethiopa"
+          id="Ethiopia"
           d="M1337.4 455.4c-4.2-1-7.6-2.7-11.6-4.2-8.6-3.1-16.4-6.3-25.1-9.3-2.2-.8-4.7-3.5-6.4-4.8-1.1-.8-1.9-.6-2.9-1.6-.9-1-2.3-4.7-3.2-5.8-2.4-3.3-4.2-4.3-6.1-8-1.5-3.1 1.9-5.2 2.2-7.8-1.7.5-2.4-1-4.2-.6-2.3.5-4.6 1.4-7 1.5-4 .1-2.8-2.9-3.2-5.4-.7-5.1 3-7.3 5.7-11.4 2.3-3.4.9-5.3-2.4-7.7-2-1.4-2.4-3-3.5-5-1.7-3-5.8-4.3-7.9-7.1-2.2-2.9-3.5-5.2-6.9-6.9-1.6-.8-3-1.9-4.7-2.7-1.8-.9-3.1-.9-5.1-.9-2.9 0-6.5-2.7-8.9-.1-.2-.8-1.3-3.3-2.4-3.2-.6.1-1 1.5-1.4 1.8-.9.8-2.6 1-3.8 1-2.5.1-3.1-.8-4.5-2.4-.8-.9-1.3-.7-2.3-1.1-1.3-.5-2-1.5-2.7-2.6-1.1 3.5-2.7 6.9-4.3 10.3-1-1.3-2.7-5.3-5-4.1-.8.4-1 1.3-2 1.5-1 .2-2.3-.2-3.2-.3-2.4-.2-3.3.9-3.8 3-.4 1.6-.4 3.3-.8 4.9-.4 1.5-1.4 2.8-1.9 4.2-.5 1.4-.6 2.9-.8 4.4-.1 1.1 0 3.6-.9 4.4-1.3 1.2-4-.2-5.6.6-1.1.6-1.7 2.2-2.3 3.2-.8 1.5-1.6 3-2.7 4.4-.8 1.1-2.3 2-2.9 3.2-.7 1.3-.1 2.8-.4 4.1-.3 1-1.3 2-1.3 3s.8 1.5.7 2.6c-.2 1.9-1.8 4.1-3.2 5.4.1-1.2-1.1-2.8-2.7-2.6-1.7.2-3.1 3.1-3.3 4.4-.4 1.7.5 3.4.1 5.1-.5 2.2-2.2 4-2.7 6.2-1 3.9.3 7.7.4 11.5.1 3.7-2.4 5.5-6.3 4.8-1.4-.3-3.1-.7-4.6-.3-1.8.5-1.8 1.8-2.2 3.2-.3 1.4-1.8 2.3-2.1 3.6-.3 1.5 1.7 2.1 3.1 2.4 4.3.8 7.4 1.7 9.9 5.2.9 1.3 1.9 2.7 2.7 4.1.3.6.5 1.2 1.1 1.6.7.5 1.5.6 2.2 1.3.6.6.8 1.1 1.6 1.7.9.6 1.5 1 2 2 1 2 1.6 4.2 2.3 6.3 1.2 3.4 2.3 7.8 5.2 10.4 1.4-1.5 4.8-.5 5.8 1 1.5 2.3-1.1 5 .5 7.5a8.6 8.6 0 0 0 6.1 4.5c1.7.2 3.4 0 5.1 0 2 .1 3.3.7 5 1.7 3.8 2.2 7.5 4.6 10.6 7.5a6.8 6.8 0 0 0 3.9 2.1c1.2.2 2.4.1 3.7 0 2.2-.2 3.2.5 5.1 1.2 2.9 1 6.6-.3 9.1 2 1.6-2.2 3.2-4.9 5.6-6.5 2.3-1.6 5.2-2.8 8-3.6 1.2-.4 2.6-.6 3.8 0 1.2.7 1.7 2.1 2.8 2.9 2.4 1.7 5.5.1 8.2.7 3.2.7 3.1-1.3 5.5-2.4 2.3-1 4.8-.9 7.2-1.3 2.6-.4 3.3-2.2 5.1-3.7 6.9-5.4 14.2-5 19.4-4.2 3.2.5 4.9.3 7.2-2l37.7-38c-4.3-.3-9.4.1-13.4-.8h0z"
           className="mapst8"
         />
-        <g id="Ethiopa-Text">
+        <g id="Ethiopia-Text">
           <path
-            id="Ethiopa-Name"
+            id="Ethiopia-Name"
             d="M1233 449.7h-4.6v-6.9h4.5v.7h-3.6v2.4h3.3v.7h-3.3v2.4h3.7v.7zm2-1.6v.4c0 .5.2.6.9.5v.6h-.7c-.7 0-1-.3-1.1-.9v-3.8h-.7v-.7h.7V443h.9v1.2h1v.7h-1v3.2zm6.6-1.4v3h-.9V446c-.1-.6-.4-1.1-1.2-1.1-.8 0-1.5.6-1.5 2.4v2.3h-.9v-7.4h.9v3l.3-.6c.4-.4.8-.4 1.4-.4 1.2 0 1.8.6 1.9 1.5v1zm6.3.3c0 1.5-.8 2.8-2.6 2.8s-2.6-1.3-2.6-2.8.8-2.8 2.6-2.8 2.6 1.3 2.6 2.8zm-1 0c0-1.2-.6-2.1-1.7-2.1s-1.7.9-1.7 2.1.6 2.1 1.7 2.1 1.7-.8 1.7-2.1zm7.1 0c0 2-1.2 2.9-2.6 2.9-.4 0-1-.1-1.3-.4l-.3-.5v2.7h-.9v-7.3h.9v.9l.4-.6c.3-.2.9-.4 1.4-.4 1.5 0 2.4 1.1 2.4 2.7zm-1 .1c0-1.2-.5-2.1-1.6-2.1-.9 0-1.7.6-1.7 2.1v.3c0 1.4.9 1.9 1.6 1.9 1-.1 1.7-.8 1.7-2.2zm3-3.9c0 .3-.2.5-.6.5s-.6-.2-.6-.5.2-.5.6-.5.6.2.6.5zm-1 6.5v-5.3h.9v5.3h-.9zm5.3-.8-.3.6c-.4.2-.8.3-1.3.3-1 0-1.7-.5-1.7-1.5 0-1.2.9-1.8 3-1.8h.3v-.7c0-.5-.3-.8-1-.8s-1.1.4-1.1 1.1h-.9c.1-1.1.9-1.8 2-1.8 1.3 0 1.8.5 1.9 1.4v2.7l.1 1.4h-.9l-.1-.9zm0-1.2v-.5c-1.5-.1-2.4.2-2.4 1.1 0 .6.4.9 1.1.9.8 0 1.3-.6 1.3-1.5z"
           />
           <circle
-            id="Ethiopa-pointer"
+            id="Ethiopia-pointer"
             cx={1222.8}
             cy={446.5}
             r={1}
@@ -256,7 +256,7 @@ const SVGComponent = (props) => {
               countryName: "Kenya",
             })
           }
-          whileTap={{ scale: 0.95 }}
+          // whileTap={{ scale: 0.95 }}
           whileHover={{
             cursor: "pointer",
             fillOpacity: 0.9,
@@ -287,7 +287,7 @@ const SVGComponent = (props) => {
               countryName: "Djibouti",
             })
           }
-          whileTap={{ scale: 0.95 }}
+          // whileTap={{ scale: 0.95 }}
           whileHover={{
             cursor: "pointer",
             fillOpacity: 0.9,
@@ -315,7 +315,7 @@ const SVGComponent = (props) => {
               countryName: "Eritrea",
             })
           }
-          whileTap={{ scale: 0.95 }}
+          // whileTap={{ scale: 0.95 }}
           whileHover={{
             cursor: "pointer",
             fillOpacity: 0.9,
@@ -350,7 +350,7 @@ const SVGComponent = (props) => {
               countryName: "Tanzania",
             })
           }
-          whileTap={{ scale: 0.95 }}
+          // whileTap={{ scale: 0.95 }}
           whileHover={{
             cursor: "pointer",
             fillOpacity: 0.9,
@@ -396,7 +396,7 @@ const SVGComponent = (props) => {
               countryName: "Uganda",
             })
           }
-          whileTap={{ scale: 0.95 }}
+          // whileTap={{ scale: 0.95 }}
           whileHover={{
             cursor: "pointer",
             fillOpacity: 0.9,
@@ -428,7 +428,7 @@ const SVGComponent = (props) => {
               countryName: "South Sudan",
             })
           }
-          whileTap={{ scale: 0.95 }}
+          // whileTap={{ scale: 0.95 }}
           whileHover={{
             cursor: "pointer",
             fillOpacity: 0.9,
@@ -459,7 +459,7 @@ const SVGComponent = (props) => {
               countryName: "Sudan",
             })
           }
-          whileTap={{ scale: 0.95 }}
+          // whileTap={{ scale: 0.95 }}
           whileHover={{
             cursor: "pointer",
             fillOpacity: 0.9,
@@ -490,7 +490,7 @@ const SVGComponent = (props) => {
               countryName: "Burundi",
             })
           }
-          whileTap={{ scale: 0.95 }}
+          // whileTap={{ scale: 0.95 }}
           whileHover={{
             cursor: "pointer",
             fillOpacity: 0.9,
@@ -517,7 +517,7 @@ const SVGComponent = (props) => {
               countryName: "Rwanda",
             })
           }
-          whileTap={{ scale: 0.95 }}
+          // whileTap={{ scale: 0.95 }}
           whileHover={{
             cursor: "pointer",
             fillOpacity: 0.9,
@@ -571,7 +571,7 @@ const SVGComponent = (props) => {
                 borderColor:
                   countryData[africaState?.countryName]?.["backgroundColor"],
               }}
-              className="flex h-full flex-col justify-center gap-2 divide-gray-600 border-t-8 bg-black px-4 py-2 leading-tight text-gray-500 md:w-1/2 md:gap-16 md:px-8 md:py-8"
+              className="flex h-full flex-col justify-center gap-2 divide-gray-600 border-t-8 bg-black px-4 py-2 leading-tight text-gray-500 md:w-20 md:gap-16 md:px-8 md:py-8"
             >
               <motion.div
                 variants={textVariant}
@@ -591,7 +591,7 @@ const SVGComponent = (props) => {
                           "backgroundColor"
                         ],
                     }}
-                    className="text-center text-sm font-bold text-white md:text-4xl"
+                    className="text-center text-sm font-bold md:text-4xl"
                   >
                     {countryData[africaState.countryName]?.["countryName"]}
                   </div>
@@ -649,10 +649,10 @@ const SVGComponent = (props) => {
                   (x, index) => (
                     <div
                       key={index}
-                      style={{ gridTemplateColumns: "5% 90%" }}
+                      style={{ gridTemplateColumns: "5% 95%" }}
                       className="grid w-full grid-cols-[1fr_1fr] gap-4 text-[8px] text-white md:text-2xl"
                     >
-                      <span className="inline h-4/5 w-full place-self-center bg-white text-center text-[4px] text-black md:text-xl">
+                      <span className="grid h-4/5 w-full place-self-center bg-white text-center text-[4px] text-black md:text-xl">
                         {countryData[africaState.countryName]?.["tags"][index]}
                       </span>
                       <span className="inline w-full text-left">{x}</span>
@@ -743,8 +743,8 @@ let textVariant = {
 
 let countryData = {
   //? light blue countries
-  Ethiopa: {
-    countryName: "Ethiopa",
+  Ethiopia: {
+    countryName: "Ethiopia",
 
     backgroundColor: "#6CDCDD",
     textColor: "#000000",

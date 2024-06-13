@@ -5,7 +5,12 @@ import { AnimatePresence, motion } from "framer-motion";
 import { League_Gothic, Baskervville } from "next/font/google";
 import Interactive_map from "../svgs/Africa_map";
 import UpdatedAfricaMap from "../svgs/Updated_africa";
+import EthiopioUpdatedAfrica from "../svgs/Ethiopia_updated_Africa";
 import TitlePara from "../utils/TitlePara";
+import localfont from "next/font/local";
+const airolon = localfont({
+  src: "../app/Aileron-Regular.woff2",
+});
 
 const league_gothic = League_Gothic({
   subsets: ["latin"],
@@ -25,64 +30,70 @@ const Page = () => {
   });
   return (
     <div className="relative mx-auto flex h-auto w-full max-w-7xl flex-col gap-4">
-      <TitlePara key="abortion access" title="Abortion access in east africa" />
+      <TitlePara
+        key="abortion access"
+        title="Abortion access in east africa"
+        textCenter
+      />
       {/* //? svg */}
       <div className="relative aspect-video w-full overflow-hidden">
         <div className={`absolute inset-0 m-auto h-full w-full object-contain`}>
-          <UpdatedAfricaMap />
           {/* <Interactive_map /> */}
+          {/* <UpdatedAfricaMap /> */}
+          <EthiopioUpdatedAfrica />
 
           {/* <Image src="interactive-map.svg" fill="true" alt="interactive-map" /> */}
         </div>
       </div>
       {/* //? hover elements */}
-      <div className="md:auto-rows-auto-[160px] relative grid h-auto min-h-24 w-full auto-rows-[64px] grid-cols-2 gap-2 md:grid-cols-5 md:gap-4">
-        {mapInfo.map((x, index) => (
-          <motion.div
-            onTap={() => {
-              setMapState({
-                title: x.title,
-                hoverState: true,
-                background: x.background,
-                subtitle: x.subtitle,
-                textColor: x.textColor,
-              });
-            }}
-            onHoverStart={() => {
-              setMapState({
-                title: x.title,
-                hoverState: true,
-                background: x.background,
-              });
-            }}
-            onHoverEnd={() => {
-              setMapState({
-                title: "",
-                hoverState: false,
-                background: "",
-              });
-            }}
-            key={index}
-            className={`relative flex h-full w-full cursor-pointer items-center rounded-sm bg-[#ebf7f7] px-1 py-2 text-sm font-semibold capitalize last:col-span-2 md:text-lg md:last:col-span-1`}
-          >
-            <span>{x.title}</span>
+      <div className="flex w-full flex-col gap-1">
+        <div className="md:auto-rows-auto-[160px] relative grid h-auto min-h-24 w-full auto-rows-[64px] grid-cols-2 gap-2 md:grid-cols-5 md:gap-4">
+          {mapInfo.map((x, index) => (
             <motion.div
-              animate={{
-                height:
-                  mapState.hoverState && mapState.title == x.title
-                    ? // ? "100%"
-                      "8px"
-                    : "8px",
+              onTap={() => {
+                setMapState({
+                  title: x.title,
+                  hoverState: true,
+                  background: x.background,
+                  subtitle: x.subtitle,
+                  textColor: x.textColor,
+                });
               }}
-              style={{
-                background: x.background,
-                color: x.textColor,
+              onHoverStart={() => {
+                setMapState({
+                  title: x.title,
+                  hoverState: true,
+                  background: x.background,
+                });
               }}
-              className={`absolute bottom-0 left-0 right-0 grid h-2 w-full place-items-center text-lg`}
+              onHoverEnd={() => {
+                setMapState({
+                  title: "",
+                  hoverState: false,
+                  background: "",
+                });
+              }}
+              key={index}
+              className={`relative flex h-full w-full items-center rounded-sm bg-[#ebf7f7] px-1 py-2 text-sm font-semibold capitalize last:col-span-2 md:text-lg md:last:col-span-1`}
             >
-              {/* {mapState.hoverState && mapState.title == x.title && x.title} */}
-            </motion.div>
-            {/* <AnimatePresence>
+              <span>{x.title}</span>
+              <motion.div
+                animate={{
+                  height:
+                    mapState.hoverState && mapState.title == x.title
+                      ? // ? "100%"
+                        "8px"
+                      : "8px",
+                }}
+                style={{
+                  background: x.background,
+                  color: x.textColor,
+                }}
+                className={`absolute bottom-0 left-0 right-0 grid h-2 w-full place-items-center text-lg`}
+              >
+                {/* {mapState.hoverState && mapState.title == x.title && x.title} */}
+              </motion.div>
+              {/* <AnimatePresence>
               {mapState.hoverState && mapState.title == x.title && x.title && (
                 <motion.div
                   initial={{ y: -10, height: 0, x: "-30%", opacity: 0 }}
@@ -112,8 +123,22 @@ const Page = () => {
                 </motion.div>
               )}
             </AnimatePresence> */}
-          </motion.div>
-        ))}
+            </motion.div>
+          ))}
+        </div>
+        <div
+          className={`${airolon.className} w-full max-w-5xl text-xs md:text-sm`}
+        >
+          Data from the Center for Reproductive Rights &apos;The World&apos;s
+          Abortion Laws&apos;. To explore the full map,
+          <a
+            className="underline"
+            href=" https://reproductiverights.org/maps/worlds-abortion-laws/"
+          >
+            {" "}
+            click here{" "}
+          </a>
+        </div>
       </div>
       {/* //? title and para */}
 
@@ -199,14 +224,15 @@ let mapInfo = [
     para: "The most common gestational limit for countries in this category is 12 weeks. Gestational limits are calculated from the first day of the last menstrual period, which is considered to occur two weeks prior to conception. Where laws specify that gestational age limits are calculated from the date of conception, these limits have been extended by two weeks",
   },
   {
-    id: "map-two",
-    title: "prohibited altogether",
-    background: "#000000",
-    textColor: "white",
+    id: "map-five",
+    title: "broad social or economic grounds",
+    background: "#6CDCDD",
+    textColor: "#000000",
     subtitle:
-      "111 Million (6%) women of reproductive age live in 21 countries that prohibit abortion altogether.",
-    para: "The laws of the countries in this category do not permit abortion under any circumstances, including when the person's life or health is at risk.",
+      "457 Million (23%) women of reproductive age  live in 12 countries/territories that allow abortion on broad social or economic grounds.",
+    para: " These laws are generally interpreted liberally to permit abortion under a broad range of circumstances. These countries/territories often take into account a pregnant person’s actual or reasonably foreseeable environment and their social or economic circumstances when considering the potential impact of pregnancy and childbearing.",
   },
+
   {
     id: "map-three",
     title: "to preserve health",
@@ -227,12 +253,12 @@ let mapInfo = [
   },
 
   {
-    id: "map-five",
-    title: "broad social or economic grounds",
-    background: "#6CDCDD",
-    textColor: "#000000",
+    id: "map-two",
+    title: "prohibited altogether",
+    background: "#000000",
+    textColor: "white",
     subtitle:
-      "457 Million (23%) women of reproductive age  live in 12 countries/territories that allow abortion on broad social or economic grounds.",
-    para: " These laws are generally interpreted liberally to permit abortion under a broad range of circumstances. These countries/territories often take into account a pregnant person’s actual or reasonably foreseeable environment and their social or economic circumstances when considering the potential impact of pregnancy and childbearing.",
+      "111 Million (6%) women of reproductive age live in 21 countries that prohibit abortion altogether.",
+    para: "The laws of the countries in this category do not permit abortion under any circumstances, including when the person's life or health is at risk.",
   },
 ];

@@ -12,18 +12,14 @@ import {
 } from "framer-motion";
 
 import { VscGrabber } from "react-icons/vsc";
+//? delete chairs from public
+// import chairs from "../public/chairs.jpg";
+import left_image from "../public/Slider Image Left.jpg";
+import right_image from "../public/Slider Image Right.jpg";
 
-import chairs from "../public/chairs.jpg";
 import localfont from "next/font/local";
-import { League_Gothic } from "next/font/google";
-const league_gothic = League_Gothic({
-  subsets: ["latin"],
-});
 const airolon = localfont({
   src: "../app/Aileron-Regular.woff2",
-  // weight: "400",
-  // style: "normal",
-  // display:'auto',
 });
 import { useRef, useState } from "react";
 const Page = () => {
@@ -31,7 +27,7 @@ const Page = () => {
 
   const [sliderWidth, setSliderWidth] = useState(0);
 
-  let x = useMotionValue(sliderWidth / 2);
+  let x = useMotionValue(0);
   let grayScale = useTransform(x, [-sliderWidth / 2, sliderWidth / 2], [1, 0]);
   let blur = useTransform(x, [-sliderWidth / 2, sliderWidth / 2], [5, 0]);
   let bw_and_blur = useMotionTemplate`grayScale(${grayScale}) blur(${blur}px)`;
@@ -43,76 +39,162 @@ const Page = () => {
     let { width } = slider;
     setSliderWidth(width);
   });
+  // left
+
+  let leftImageGrayScale = useTransform(
+    x,
+    [-sliderWidth / 2, 0, sliderWidth / 2],
+    [1, 1, 1],
+  );
+  let leftImageBlur = useTransform(
+    x,
+    [-sliderWidth / 2, 0, sliderWidth / 2],
+    [0, 2, 7],
+  );
+
+  let rightImageGrayScale = useTransform(
+    x,
+    [-sliderWidth / 2, 0, sliderWidth / 2],
+    [0, 0, 0],
+  );
+  let rightImageBlur = useTransform(
+    x,
+    [-sliderWidth / 2, 0, sliderWidth / 2],
+    [7, 2, 0],
+  );
+
+  let LEFTbw_and_blur = useMotionTemplate`grayScale(${leftImageGrayScale}) blur(${leftImageBlur}px)`;
+  let RIGHTbw_and_blur = useMotionTemplate`grayScale(${rightImageGrayScale}) blur(${rightImageBlur}px)`;
+
+  // let SliderBlur = useTransform(x, [-sliderWidth/2,0, sliderWidth / 2], [0,0, 5]);
 
   return (
     <div className="mx-auto flex w-full max-w-7xl flex-col gap-4">
       {/* //? title */}
       <TitlePara
+        textCenter={true}
         key="maternal-mortality"
         title="Maternal Mortality rates in Ethiopia pre- and post- 2005 abortion law"
       />
       {/* //* mortality svg */}
-      <div ref={ref} className="relative aspect-video w-full shadow-xl">
-        {/*  //? image */}
-        <motion.div
-          initial={{ filter: "blur(2.5px) grayscale(0.5)" }}
-          style={{
-            filter: bw_and_blur,
-          }}
+      <div className="flex w-full flex-col gap-2">
+        <div
+          ref={ref}
+          className="relative aspect-video w-full overflow-hidden p-8 text-4xl"
+        >
+          {/* <div className="absolute left-0 top-0 z-40 bg-lime-500 font-bold text-black">
+          {sliderWidth.toString()}
+          <br></br>
+          <motion.span>{useTransform(() => Math.floor(x.get()))}</motion.span>
+        </div> */}
+          {/* <motion.div
+          // initial={{ filter: "blur(0px) grayscale(0.5)" }}
+          style={
+            {
+              // filter: bw_and_blur,
+            }
+          }
           className="z-5 absolute inset-0 h-full w-full"
         >
           <Image src={chairs} alt="black" fill="true" />
-        </motion.div>
-        {/* //? svg timeline overlay */}
-        <div className="absolute inset-0 z-10 h-full w-full object-contain">
-          <Svg ref={ref} />
-        </div>
-        {/* //? slider */}
-        <motion.div
-          whileHover={{ cursor: "grab" }}
-          style={{ x }}
-          whileDrag={{ cursor: "grabbing", scale: 0.95 }}
-          drag="x"
-          dragMomentum={false}
-          dragConstraints={ref}
-          dragElastic={0}
-          className="absolute inset-0 z-20 m-auto h-full w-2 bg-white"
-        >
+        </motion.div> */}
+          {/*  //! images */}
+          {/* //? left */}
           <motion.div
-            initial={{ x: -15 }}
-            className="absolute inset-0 m-auto grid size-10 place-items-center rounded-full bg-white shadow-xl"
+            initial={{
+              filter: "blur(2px)",
+            }}
+            style={{
+              filter: LEFTbw_and_blur,
+            }}
+            // initial={{ filter: "blur(0px) grayscale(0.5)" }}
+
+            className="absolute bottom-0 left-0 top-0 z-10 h-full w-1/2"
           >
-            <VscGrabber size={40} color="black" />
+            <Image src={left_image} alt="black" fill="true" />
           </motion.div>
-        </motion.div>
-        {/* //? overlay percentages */}
-        <motion.div
-          style={{
-            scale: scale1,
-          }}
-          className={`${airolon.className} absolute bottom-0 left-5 z-10 text-4xl font-extrabold text-red-700 md:text-9xl`}
-        >
-          32%
-        </motion.div>
-        <motion.div
-          style={{
-            scale: scale2,
-          }}
-          className={`${airolon.className} absolute bottom-0 right-5 z-10 text-4xl font-extrabold text-white md:text-9xl`}
-        >
-          &lt;10%
-          {/* {sliderWidth?.toString()} */}
-          {/* <motion.span>{useTransform(() => Math.floor(x.get()))}</motion.span> */}
-        </motion.div>
+
+          {/* //? right */}
+          <motion.div
+            initial={{
+              filter: "blur(2px)",
+            }}
+            style={{
+              filter: RIGHTbw_and_blur,
+            }}
+            // initial={{ filter: "blur(0px) grayscale(0.5)" }}
+
+            className="absolute bottom-0 left-1/2 top-0 z-10 h-full w-1/2"
+          >
+            <Image src={right_image} alt="black" fill="true" />
+          </motion.div>
+          {/* //? svg timeline overlay */}
+          <div className="absolute inset-0 z-20 h-full w-full object-contain">
+            <Svg ref={ref} />
+          </div>
+          {/* //? slider */}
+          <motion.div
+            whileHover={{ cursor: "grab" }}
+            style={{ x }}
+            whileDrag={{
+              cursor: "grabbing",
+              background: "lightgrey",
+            }}
+            drag="x"
+            dragMomentum={false}
+            dragConstraints={ref}
+            dragElastic={0}
+            className="group absolute inset-0 z-30 m-auto h-full w-2 bg-white"
+          >
+            <motion.div
+              whileHover={{ scale: [1, 1.5, 1] }}
+              initial={{ x: -15 }}
+              className="absolute inset-0 m-auto grid size-10 place-items-center rounded-full bg-white shadow-xl transition-all group-hover:scale-150"
+            >
+              <VscGrabber size={40} color="black" />
+            </motion.div>
+          </motion.div>
+          {/* //? overlay percentages */}
+          <motion.div
+            style={{}}
+            className={`${airolon.className} absolute bottom-0 left-5 z-20 text-4xl font-extrabold text-red-700 md:text-9xl`}
+          >
+            32%
+          </motion.div>
+          <motion.div
+            style={
+              {
+                // scale: scale2,
+              }
+            }
+            className={`${airolon.className} absolute bottom-0 right-5 z-20 text-4xl font-extrabold text-white md:text-9xl`}
+          >
+            &lt;10%
+          </motion.div>
+        </div>
+        {/* info */}
+        <div className="flex w-full max-w-7xl items-center justify-between">
+          <span className={`${airolon.className} text-left text-xs md:text-sm`}>
+            Maternal deaths per 100,000 births
+          </span>
+          <span
+            className={`${airolon.className} text-right text-xs md:text-sm`}
+          >
+            Maternal deaths per 100,000 births
+          </span>
+        </div>
       </div>
-      {/* info */}
-      <div className="flex w-full max-w-7xl items-center justify-between">
-        <span className={`${airolon.className} md-text-sm text-right text-xs`}>
-          Maternal deaths per 100,000 births
-        </span>
-        <span className={`${airolon.className} md-text-sm text-right text-xs`}>
-          Maternal deaths per 100,000 births
-        </span>
+
+      <div
+        className={`${airolon.className} md-text-sm text-xs} w-full max-w-5xl`}
+      >
+        Within a decade of the 2005 abortion law being passed, maternal
+        mortality rates linked to unsafe abortion dropped from
+        <a href="https://reproductive-health-journal.biomedcentral.com/articles/10.1186/s12978-022-01457-z#:~:text=Within%20a%20decade%20of%20liberalizing,political%2C%20and%20women's%20rights%20communities ">
+          32 per cent to less than 10 per cent
+        </a>
+        . Maternal mortality refers to deaths due to complications from
+        pregnancy or childbirth.
       </div>
     </div>
   );

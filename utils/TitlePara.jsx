@@ -15,23 +15,29 @@ const libre_baskerville = Libre_Baskerville({
   weight: "400",
 });
 
-const Page = ({ title, para }) => {
+const Page = ({ title, para, text20Px, textCenter }) => {
   return (
     <div className="mx-auto flex w-full max-w-5xl flex-col gap-1 md:gap-4">
-      <h1
-        style={{
-          // fontSize: "36px",
-          fontWeight: 500,
-        }}
-        className={`${league_gothic.className} uppercase tracking-wide text-[#3c4c54]`}
-      >
-        <span className="text-2xl md:text-4xl">{title}</span>
-      </h1>
-      <p
-        className={`${libre_baskerville.className} text-left indent-0 text-lg leading-7 text-[#212529] md:text-pretty md:text-2xl`}
-      >
-        {para}
-      </p>
+      {title && (
+        <h1
+          style={{
+            fontSize: "48px",
+            fontWeight: 500,
+          }}
+          className={`${league_gothic.className} ${textCenter ? "text-center" : ""} w-full text-2xl uppercase tracking-wide text-[#3c4c54] md:text-5xl`}
+        >
+          {/* <span className=""> */}
+          {/* </span> */}
+          {title}
+        </h1>
+      )}
+      {para && (
+        <p
+          className={`${libre_baskerville.className} text-left ${text20Px ? "md:text-xl" : "md:text-2xl"} indent-0 text-lg leading-7 text-[#212529] md:text-pretty md:text-xl`}
+        >
+          {para}
+        </p>
+      )}
     </div>
   );
 };

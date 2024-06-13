@@ -15,11 +15,16 @@
     --background-end-rgb: 0, 0, 0;
   }
 } */
+svg g,
+path {
+  outline: none;
+}
 
 body {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  outline: none;
   /* color: rgb(var(--foreground-rgb));
   background: linear-gradient(
       to bottom,
@@ -39,3 +44,6 @@ body {
   outline-width: 0;
   border: 0; */
 /* } */
+svg g {
+  outline: none;
+}

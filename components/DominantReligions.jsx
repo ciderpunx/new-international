@@ -7,6 +7,10 @@ import { motion, useScroll, useSpring, useTransform } from "framer-motion";
 import TitlePara from "../utils/TitlePara";
 
 import { League_Gothic, Roboto } from "next/font/google";
+import localfont from "next/font/local";
+const airolon = localfont({
+  src: "../app/Aileron-Regular.woff2",
+});
 const league_gothic = League_Gothic({
   subsets: ["latin"],
 });
@@ -30,7 +34,7 @@ const Page = () => {
         className={`${league_gothic.className} flex h-auto w-full flex-col gap-8 max-sm:divide-y-2 md:aspect-video md:flex-row`}
       >
         {/* //? orthodox */}
-        <motion.div className="grid h-[60vh] w-full grid-rows-[15%_70%_15%]">
+        <motion.div className="grid h-[60vh] w-full grid-rows-[10%_70%_20%]">
           <div className="grid place-items-center text-center align-middle text-3xl text-red-600 md:text-4xl">
             Orthodox Christians
           </div>
@@ -41,7 +45,7 @@ const Page = () => {
               whileInView={{ scale: 1 }}
               // ref={imageRef}
               // style={{ scale }}
-              className={`absolute inset-0 m-auto h-full w-full object-contain`}
+              className={`absolute inset-0 m-auto h-4/5 w-full object-contain`}
             >
               <svg
                 className="h-full w-full fill-yellow-600"
@@ -64,7 +68,7 @@ const Page = () => {
             onViewportLeave={() => {
               setOrthodoxEnter(false);
             }}
-            className="grid place-items-center text-5xl font-bold text-red-500 md:text-7xl"
+            className="grid place-items-center text-[96px] font-bold text-red-500 md:text-7xl"
           >
             <span className="">
               <AnimatedNumber value={orthodoxEnter ? 43 : 0} />%
@@ -74,11 +78,11 @@ const Page = () => {
 
         {/* //? muslims */}
 
-        <motion.div className="grid h-[60vh] w-full grid-rows-[15%_70%_15%]">
+        <motion.div className="grid h-[60vh] w-full grid-rows-[10%_70%_20%]">
           <div className="grid place-items-center text-center align-middle text-3xl text-red-600 md:text-4xl">
             Muslims
           </div>
-          <motion.div className="relative my-auto h-4/5 w-full">
+          <motion.div className="relative my-auto h-2/3 w-full">
             <motion.div
               transition={{ type: "spring", bounce: 0 }}
               initial={{ scale: 0.5 }}
@@ -108,7 +112,7 @@ const Page = () => {
             onViewportLeave={() => {
               setMuslimsEnter(false);
             }}
-            className="grid place-items-center text-5xl font-bold text-red-500 md:text-7xl"
+            className="grid place-items-center text-[96px] font-bold text-red-500 md:text-7xl"
           >
             <span>
               <AnimatedNumber value={muslimsEnter ? 33 : 0} />%
@@ -118,7 +122,7 @@ const Page = () => {
 
         {/* //? protestants */}
 
-        <motion.div className="grid h-[60vh] w-full grid-rows-[15%_70%_15%]">
+        <motion.div className="grid h-[60vh] w-full grid-rows-[10%_70%_20%]">
           <div
             className={`${league_gothic.className} grid place-items-center text-center align-middle text-3xl text-red-600 md:text-4xl`}
           >
@@ -131,7 +135,7 @@ const Page = () => {
               whileInView={{ scale: 1 }}
               // ref={imageRef}
               // style={{ scale }}
-              className={`absolute inset-0 m-auto h-2/3 w-full fill-yellow-600 object-contain`}
+              className={`absolute inset-0 m-auto h-2/4 w-full fill-yellow-600 object-contain`}
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -156,7 +160,7 @@ const Page = () => {
             onViewportLeave={() => {
               setprotestantsEnter(false);
             }}
-            className="grid place-items-center text-5xl font-bold text-red-500 md:text-7xl"
+            className="grid place-items-center text-[96px] font-bold text-red-500 md:text-7xl"
           >
             <span>
               <AnimatedNumber value={protestantsEnter ? 20 : 0} />%
@@ -165,7 +169,7 @@ const Page = () => {
         </motion.div>
       </section>
       <div
-        className={`${roboto_light.className} w-full text-xl font-bold text-red-500 md:text-2xl`}
+        className={`${airolon.className} w-full text-sm font-bold text-red-500 md:text-2xl`}
       >
         Rest - 4%
       </div>

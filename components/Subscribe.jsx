@@ -1,12 +1,13 @@
 import Image from "next/image";
-import new_international from "../public/new-international.jpg";
-import { League_Gothic, Baskervville } from "next/font/google";
+// import new_international from "../public/new-international.jpg";
+import new_magazine_cover from "../public/NI550_Abortion_Cover_large.jpg";
+import { League_Gothic, Libre_Baskerville } from "next/font/google";
 import { FaLongArrowAltRight } from "react-icons/fa";
 
 const league_gothic = League_Gothic({
   subsets: ["latin"],
 });
-const baskerville = Baskervville({
+const libre_baskerville = Libre_Baskerville({
   subsets: ["latin"],
   weight: ["400"],
 });
@@ -19,7 +20,7 @@ const Page = () => {
         <div className="relative h-[500px] w-full max-w-sm bg-red-500">
           <div className="absolute inset-0 h-full w-full">
             <Image
-              src={new_international}
+              src={new_magazine_cover}
               alt="new international magazine"
               fill="true"
               loading="lazy"
@@ -36,11 +37,11 @@ const Page = () => {
           </h2>
           {/* //links */}
           <ul
-            className={`${baskerville.className} my-auto grid h-full w-full cursor-pointer grid-rows-[auto] divide-y-2 divide-gray-600 border-b-2 border-t-2 border-b-slate-800 border-t-gray-600`}
+            className={`${libre_baskerville.className} my-auto grid h-full w-full cursor-pointer grid-rows-[auto] divide-y-2 divide-gray-600 border-b-2 border-t-2 border-b-slate-800 border-t-gray-600`}
           >
             {linkArrowData.map((x, index) => (
               <li
-                className="flex items-center gap-2 text-lg font-semibold text-[#212529] hover:text-red-800 md:gap-4 md:text-2xl"
+                className="flex items-center gap-2 text-lg font-semibold text-[#212529] md:gap-4 md:text-2xl"
                 key={index}
               >
                 <span className="size-6 text-[#212529]">
@@ -54,7 +55,7 @@ const Page = () => {
           <button
             className={`${league_gothic.className} self-center bg-[#c72e21] px-4 py-2 text-2xl uppercase text-white hover:bg-red-500 md:self-start md:px-8 md:py-4 md:text-3xl`}
           >
-            Subscribe today
+            <a href="https://subscribe.newint.org/">Subscribe today</a>
           </button>
         </div>
       </section>

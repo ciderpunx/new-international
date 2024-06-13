@@ -1,7 +1,8 @@
 "use client";
 import Image from "next/image";
 import header_logo from "../public/header_logo.svg";
-import co_op from "../public/co-operative.png";
+// import co_op from "../public/co-operative.png";
+import co_op_new from "../public/CoopLogoblack-padding.png";
 import {
   FaFacebookF,
   FaInstagram,
@@ -9,11 +10,11 @@ import {
   FaWhatsapp,
 } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
-import { League_Gothic, Baskervville } from "next/font/google";
 import { IoMailOpenOutline } from "react-icons/io5";
 import { useState } from "react";
 
-const baskerville = Baskervville({
+import { League_Gothic, Libre_Baskerville } from "next/font/google";
+const libre_baskerville = Libre_Baskerville({
   subsets: ["latin"],
   weight: ["400"],
 });
@@ -43,21 +44,21 @@ const Page = () => {
           {/* //para */}
 
           <div className="grid h-full w-full place-items-center">
-            <p className={`${baskerville.className} text-sm md:text-xl`}>
+            <p className={`${libre_baskerville.className} text-sm md:text-xl`}>
               New Internationalist is a multi-stakeholder co-operative owned by
               its workers and approximately 4,600 co-owners.
             </p>
           </div>
           <div className="grid h-full w-full grid-cols-[30%_70%]">
-            <div className="relative h-full w-full">
+            <div className="relative flex h-full w-full items-center justify-center gap-0">
               <div className="absolute inset-0 aspect-square h-full w-auto">
-                <Image src={co_op} fill={true} alt="co-operative" />
+                <Image src={co_op_new} fill={true} alt="co-operative" />
               </div>
             </div>
             <div
-              className={`${baskerville.className} m-auto grid h-full w-full place-items-center text-start text-sm md:text-lg`}
+              className={`${libre_baskerville.className} m-auto flex h-full w-full items-center justify-start text-left text-sm md:text-lg`}
             >
-              Members of Co-operative UK
+              Member of Co-operative UK
             </div>
           </div>
         </div>
@@ -72,18 +73,30 @@ const Page = () => {
             </h3>
 
             <div className="flex w-full justify-start gap-2 text-gray-900 md:gap-4">
-              <span className="grid aspect-square size-14 cursor-pointer place-items-center rounded-full border-black bg-gray-50 hover:border-2 hover:text-[#4267B2]">
+              <a
+                href="https://www.facebook.com/newint"
+                className="grid aspect-square size-14 cursor-pointer place-items-center rounded-full border-black bg-gray-50 hover:border-2 hover:text-[#4267B2]"
+              >
                 <FaFacebookF size={30} />
-              </span>
-              <span className="grid aspect-square size-14 cursor-pointer place-items-center rounded-full border-black bg-gray-50 hover:border-2 hover:text-[#000000]">
+              </a>
+              <a
+                href="https://twitter.com/newint"
+                className="grid aspect-square size-14 cursor-pointer place-items-center rounded-full border-black bg-gray-50 hover:border-2 hover:text-[#000000]"
+              >
                 <FaXTwitter size={30} />
-              </span>
-              <span className="grid aspect-square size-14 cursor-pointer place-items-center rounded-full border-black bg-gray-50 hover:border-2 hover:text-[#FD1D1D]">
-                <FaInstagram size={30} />
-              </span>
-              <span className="grid aspect-square size-14 cursor-pointer place-items-center rounded-full border-black bg-gray-50 hover:border-2 hover:text-[#25D366]">
-                <FaWhatsapp size={30} />
-              </span>
+              </a>
+              <a
+                href="https://www.instagram.com/newinternationalist"
+                className="grid aspect-square size-14 cursor-pointer place-items-center rounded-full border-black bg-gray-50 hover:border-2 hover:text-[#FD1D1D]"
+              >
+                <IoMailOpenOutline size={35} />
+              </a>
+              <a
+                href="#"
+                className="grid aspect-square size-14 cursor-pointer place-items-center rounded-full border-black bg-gray-50 hover:border-2 hover:text-blue-500"
+              >
+                <FaLinkedinIn size={30} />
+              </a>
             </div>
           </div>
         </div>
@@ -99,8 +112,8 @@ const Page = () => {
             Subscribe to our newsletter
           </h3>
           <div className="space-y-2">
-            <p className={`${baskerville.className} text-sm md:text-xl`}>
-              A weekly newsletter with the best of our Journalism
+            <p className={`${libre_baskerville.className} text-sm md:text-xl`}>
+              A weekly newsletter with the best of our journalism
             </p>
             <form className="grid h-14 w-full grid-cols-[70%_30%]">
               <input
@@ -115,7 +128,13 @@ const Page = () => {
               <button
                 className={`${league_gothic.className} h-full w-full bg-black text-lg uppercase text-white md:text-2xl`}
               >
-                Subscribe
+                <a
+                  href="
+                https://subscribe.newint.org/
+                "
+                >
+                  Subscribe
+                </a>
               </button>
             </form>
           </div>
@@ -124,12 +143,12 @@ const Page = () => {
 
       {/* //? copyright */}
       <div className="flex w-full flex-col justify-between gap-4 md:w-9/12 md:flex-row">
-        <span className={`${baskerville.className} text-sm md:text-xl`}>
+        <span className={`${libre_baskerville.className} text-sm md:text-xl`}>
           Copyright <strong>&#169; </strong>New Internationalist
         </span>
 
         <div
-          className={`${baskerville.className} flex flex-col gap-1 text-sm md:flex-row md:items-center md:gap-4 md:text-xl`}
+          className={`${libre_baskerville.className} flex flex-col gap-1 text-sm md:flex-row md:items-center md:gap-4 md:text-xl`}
         >
           <span>Privacy Policy</span>
           <span>
