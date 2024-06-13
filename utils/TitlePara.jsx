@@ -16,7 +16,7 @@ const Page = ({ title, para, text20Px, textCenter }) => {
           // style={{
           //   fontSize: 24,
           // }}
-          className={`${league_gothic.className} ${textCenter ? "text-center" : ""} w-full text-2xl uppercase tracking-wide text-[#3c4c54] md:text-5xl`}
+          className={`${league_gothic.className} ${textCenter ? "text-center" : "text-left"} w-full text-2xl uppercase tracking-wide text-[#3c4c54] md:text-5xl`}
         >
           {title}
         </h2>

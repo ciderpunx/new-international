@@ -546,7 +546,7 @@ const SvgComponent = (props) => {
                 borderColor:
                   countryData[africaState?.countryName]?.["backgroundColor"],
               }}
-              className="flex h-full flex-col justify-start gap-2 divide-gray-600 border-t-8 bg-black px-2 py-8 leading-tight text-gray-500 md:gap-16 md:px-8 md:py-8"
+              className="flex h-full flex-col justify-start gap-2 divide-gray-600 border-t-8 bg-white px-2 py-8 leading-tight text-gray-800 md:gap-16 md:px-8 md:py-8"
             >
               <motion.div
                 variants={textVariant}
@@ -586,7 +586,7 @@ const SvgComponent = (props) => {
                       viewBox="0 0 24 24"
                       strokeWidth={1.5}
                       stroke="currentColor"
-                      className="size-6 cursor-pointer text-white md:size-12"
+                      className="size-6 cursor-pointer text-black md:size-12"
                     >
                       <path
                         strokeLinecap="round"
@@ -600,11 +600,9 @@ const SvgComponent = (props) => {
 
               <motion.div
                 variants={textVariant}
-                className="flex flex-col gap-1 text-white md:gap-4"
+                className="flex flex-col gap-1 text-gray-800 md:gap-4"
               >
-                <h2 className="text-xs font-semibold text-gray-100 md:text-3xl">
-                  Category:
-                </h2>
+                <h2 className="text-xs font-semibold md:text-3xl">Category:</h2>
                 <h4 className="text-[8px] font-semibold text-gray-400 md:text-2xl">
                   {countryData[africaState?.countryName]["category"]}{" "}
                 </h4>
@@ -666,7 +664,7 @@ let childVariant = {
   },
   show: {
     opacity: 1,
-    width: "40%",
+    width: "30%",
     transition: {
       delayChildren: 0.1,
       staggerChildren: 0.1,
@@ -681,7 +679,6 @@ let childVariant = {
     originX: 0,
     width: 0,
     transition: {
-      // ease: "anticipate",
       type: "spring",
       bounce: 0,
       duration: 0.6,
@@ -697,22 +694,11 @@ let textVariant = {
   show: {
     x: 0,
     opacity: 1,
-    // transition: {
-    //   type: "spring",
-    //   bounce: 0.4,
-    //   duration: 0.7,
-    // },
   },
   exit: {
     x: -100,
     opacity: 0,
     originX: 0,
-    // transition: {
-    //   // ease: "anticipate",
-    //   type: "spring",
-    //   bounce: 0,
-    //   duration: 0.6,
-    // },
   },
 };
 

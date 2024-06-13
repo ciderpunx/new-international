@@ -18,8 +18,8 @@ import Image from "next/image";
 import { Libre_Baskerville } from "next/font/google";
 import { Hyperlinks } from "../utils/Hyperlinks";
 import localfont from "next/font/local";
-const airolon = localfont({
-  src: "../app/Aileron-Regular.woff2",
+const aileron = localfont({
+  src: "../app/aileron-Regular.woff2",
 });
 const libre_baskerville = Libre_Baskerville({
   subsets: ["latin"],
@@ -37,7 +37,7 @@ const Page = () => {
   // let previous = usePrevious(count);
   // let direction = count > previous ? 1 : -1;
   return (
-    <div className="mx-auto flex h-auto w-full flex-col gap-8 md:w-10/12">
+    <div className="mx-auto flex h-auto w-full flex-col gap-4 md:w-10/12">
       <TitlePara
         key="in the shadows"
         title="in the shadows"
@@ -51,7 +51,7 @@ const Page = () => {
           imageURL={Shadows_1}
         />
         <div
-          className={`${airolon.className} mx-auto w-full max-w-7xl border-none text-left text-xs md:text-sm`}
+          className={`${aileron.className} mx-auto w-full max-w-7xl border-none text-left text-xs md:text-sm`}
         >
           The Ethiopia director of Marie Stopes International Abebe Shibru warns
           that anti-abortion groups are trying to ‘cripple the system’ of
@@ -174,7 +174,7 @@ const Page = () => {
       <div className="mx-auto flex w-full max-w-7xl flex-col gap-2">
         <ImageWrapper key="seyoum" alt="seyoum" imageURL={Seyoum} sevenXL />
         <div
-          className={`${airolon.className} w-full max-w-7xl text-center text-sm`}
+          className={`${aileron.className} w-full max-w-7xl text-center text-sm`}
         >
           In 2019, the Arizona-based Mormon organization Family Watch
           International (FWI) appointed the celebrity surgeon Dr Seyoum Antonios
@@ -291,7 +291,7 @@ const Page = () => {
           </div>
         </div>
         <div
-          className={`${airolon.className} md-text-sm text-xs} w-full max-w-5xl`}
+          className={`${aileron.className} md-text-sm text-xs} w-full max-w-5xl`}
         >
           Read by a voice actor
         </div>
@@ -327,7 +327,7 @@ const Page = () => {
       {/* //?  following pic needs replacing */}
       <div className="gap2 mx-auto flex w-full flex-col">
         <ImageWrapper key="siyane" alt="Siyane" imageURL={Siyane} />
-        <div className={`${airolon.className} w-full text-xs md:text-sm`}>
+        <div className={`${aileron.className} w-full text-xs md:text-sm`}>
           - Siyane Aniley, an Ethiopian sexual and reproductive rights
           researcher, says anti-right figures on social media have accused her
           of promoting a &apos;hidden agenda&apos;. AMANUEL SILESHI
@@ -525,7 +525,7 @@ const Page = () => {
           imageURL={Shadows_6}
         />
         <div
-          className={`${airolon.className} mx-auto w-full max-w-7xl text-xs md:text-sm`}
+          className={`${aileron.className} mx-auto w-full max-w-7xl text-xs md:text-sm`}
         >
           A health worker does her daily rounds at an MSI clinic in Addis Ababa.
           Foreign donors, including the United States, account for 70 per cent

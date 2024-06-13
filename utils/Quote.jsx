@@ -19,13 +19,13 @@ const Page = ({ quote }) => {
       style={{
         paddingTop: 72,
         paddingBottom: 72,
-        background: "#efffeff",
+        background: "#effeff",
         borderColor: "#6ecad0",
-        borderWidth: 4,
+        borderWidth: 2,
         borderLeft: 0,
         borderRight: 0,
       }}
-      className={`${bagnard.className} mx-auto flex h-auto w-full max-w-5xl flex-col text-pretty border-b-4 border-t-4 border-b-sky-200 border-t-sky-200 bg-sky-100 px-4 py-16 md:py-32`}
+      className={`${bagnard.className} b mx-auto flex h-auto w-full max-w-5xl flex-col text-pretty border-b-2 border-t-2 px-4 py-16 md:py-32`}
     >
       {/* <span className="place-self-center text-center text-3xl md:text-4xl">
         &ldquo;{" "}

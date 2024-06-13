@@ -28,7 +28,8 @@ const Page = () => {
     <div className="mx-auto flex w-full max-w-5xl flex-col gap-4 md:text-7xl">
       <TitlePara
         key="dominant religion"
-        title="Dominant religions of ethiopa"
+        title="Dominant religions of ethiopia"
+        textCenter
       />
       <section
         className={`${league_gothic.className} flex h-auto w-full flex-col gap-8 max-sm:divide-y-2 md:aspect-video md:flex-row`}
@@ -169,7 +170,7 @@ const Page = () => {
         </motion.div>
       </section>
       <div
-        className={`${airolon.className} w-full text-sm font-bold text-red-500 md:text-2xl`}
+        className={`${airolon.className} w-full text-sm font-bold text-[#3c4c54] md:text-2xl`}
       >
         Rest - 4%
       </div>

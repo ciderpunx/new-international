@@ -21,7 +21,7 @@ const Page = () => {
 					this critical issue.
 				</p>
 			</div> */}
-      <TitlePara key="maputo protocol" title="maputo protocol" />
+      <TitlePara key="maputo protocol" textCenter title="maputo protocol" />
       <div className="relative aspect-video w-full md:aspect-video">
         <div className="absolute inset-0">
           <video
@@ -73,23 +73,21 @@ const Page = () => {
         key="sustained pressure"
         para={
           <>
-            {" "}
             Sustained pressure from the coalition on top of the strong political
             will of successive Ethiopian governments helped cascade the 2005
             legislation into action, and within a decade maternal mortality from
-            unsafe abortion plummeted from 32% to less than 10%
+            unsafe abortion plummeted from
             <Hyperlinks
               key="percent"
-              word="32% to less than 1%"
+              word="32% to less than 10%."
               linkNumber={2}
             />
-            Strong political will of successive Ethiopian governments helped
-            cascade the legislation into action, and the law was revised in
-            2013, shortly after Ethiopia ratified the Maputo Protocol – the
-            first treaty signed by 43 African nations that recognizes abortion,
-            under certain conditions, as a human right. While there is still a
-            way to go to ensure full access to the right to safe abortion on
-            demand, the 2005 reforms have undoubtedly been lifesaving.
+            The law was revised in 2013, shortly after Ethiopia ratified the
+            Maputo Protocol – the first treaty signed by 43 African nations that
+            recognizes abortion, under certain conditions, as a human right.
+            While there is still a way to go to ensure full access to the right
+            to safe abortion on demand, the 2005 reforms have undoubtedly been
+            lifesaving. https://https//a.nin.tl/plummet
           </>
         }
       />
@@ -97,3 +95,4 @@ const Page = () => {
   );
 };
 export default Page;
+<Hyperlinks key="percent" word="32% to less than 1%" linkNumber={2} />;

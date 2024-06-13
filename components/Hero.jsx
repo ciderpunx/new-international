@@ -133,7 +133,7 @@ const Index = () => {
                   exit="exit"
                   className=""
                 >
-                  14 June 2024
+                  8 June 2024
                 </motion.div>
               </motion.div>
             </motion.div>
@@ -148,7 +148,7 @@ const Index = () => {
       </div>
 
       {/* //? share with a friend */}
-      <div className="mx-auto flex w-full max-w-5xl flex-col items-baseline gap-2 pt-4 md:flex-row md:justify-between">
+      <div className="mx-auto flex w-full max-w-5xl items-baseline justify-between gap-2 pt-4 md:flex-row md:justify-between">
         <h3
           className={`${league_gothic.className} text-2xl uppercase text-[#3c4c54]`}
         >
@@ -158,27 +158,27 @@ const Index = () => {
         <div className="grid w-full grid-cols-4 items-baseline text-gray-500 md:w-1/3">
           <a
             href="https://www.facebook.com/sharer/sharer.php?u=https%3A//newint.org/stories/fertile-ground"
-            className="grid aspect-square size-14 cursor-pointer place-items-center rounded-full border-black bg-gray-50 hover:border-2 hover:text-[#4267B2]"
+            className="grid aspect-square size-8 cursor-pointer place-items-center rounded-full border-black bg-gray-50 hover:border-2 hover:text-[#4267B2]"
           >
-            <FaFacebookF size={30} />
+            <FaFacebookF size={20} />
           </a>
           <a
             href="https://twitter.com/intent/tweet?text=Fertile%20Ground%20on%20New%20Internationalist&url=https%3A%2F%2Fnewint.org%2Fstories%2Ffertile-ground"
-            className="grid aspect-square size-14 cursor-pointer place-items-center rounded-full border-black bg-gray-50 hover:border-2 hover:text-[#000000]"
+            className="grid aspect-square size-8 cursor-pointer place-items-center rounded-full border-black bg-gray-50 hover:border-2 hover:text-[#000000]"
           >
-            <FaXTwitter size={30} />
+            <FaXTwitter size={20} />
           </a>
           <a
             href="mailto:?body=https://newint.org/stories/fertile-ground"
-            className="grid aspect-square size-14 cursor-pointer place-items-center rounded-full border-black bg-gray-50 hover:border-2 hover:text-[#FD1D1D]"
+            className="grid aspect-square size-8 cursor-pointer place-items-center rounded-full border-black bg-gray-50 hover:border-2 hover:text-[#FD1D1D]"
           >
-            <IoMailOpenOutline size={35} />
+            <IoMailOpenOutline size={20} />
           </a>
           <a
             href="https://api.whatsapp.com/send?text=https%3A%2F%2Fnewint.org%2Fstories%2Ffertile-ground"
-            className="grid aspect-square size-14 cursor-pointer place-items-center rounded-full border-black bg-gray-50 hover:border-2 hover:text-[#25D366]"
+            className="grid aspect-square size-8 cursor-pointer place-items-center rounded-full border-black bg-gray-50 hover:border-2 hover:text-[#25D366]"
           >
-            <FaWhatsapp size={30} />
+            <FaWhatsapp size={20} />
           </a>
         </div>
       </div>
