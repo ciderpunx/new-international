@@ -186,11 +186,15 @@ const Page = () => {
       </div>
 
       <div
-        className={`${airolon.className} md-text-sm text-xs} w-full max-w-5xl`}
+        className={`${airolon.className} w-full max-w-7xl text-xs md:text-base`}
       >
         Within a decade of the 2005 abortion law being passed, maternal
         mortality rates linked to unsafe abortion dropped from
-        <a href="https://reproductive-health-journal.biomedcentral.com/articles/10.1186/s12978-022-01457-z#:~:text=Within%20a%20decade%20of%20liberalizing,political%2C%20and%20women's%20rights%20communities ">
+        <a
+          className="inline underline"
+          href="https://reproductive-health-journal.biomedcentral.com/articles/10.1186/s12978-022-01457-z#:~:text=Within%20a%20decade%20of%20liberalizing,political%2C%20and%20women's%20rights%20communities "
+        >
+          {" "}
           32 per cent to less than 10 per cent
         </a>
         . Maternal mortality refers to deaths due to complications from

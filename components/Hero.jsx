@@ -117,15 +117,7 @@ const Index = () => {
                     By Bethany Rielly, Maxine Beteridge Moes, and Maya Misikir{" "}
                   </motion.div>
                 </motion.div>
-                <motion.div
-                  variants={childVariant}
-                  initial="hidden"
-                  animate="show"
-                  exit="exit"
-                  className=""
-                >
-                  <GoDotFill size={15} />
-                </motion.div>
+
                 <motion.div
                   variants={childVariant}
                   initial="hidden"

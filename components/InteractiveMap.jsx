@@ -74,7 +74,7 @@ const Page = () => {
                 });
               }}
               key={index}
-              className={`relative flex h-full w-full items-center rounded-sm bg-[#ebf7f7] px-1 py-2 text-sm font-semibold capitalize last:col-span-2 md:text-lg md:last:col-span-1`}
+              className={`roundedxs textxs relative flex h-full w-full items-center bg-[#ebf7f7] px-1 py-2 font-semibold capitalize last:col-span-2 md:text-lg md:last:col-span-1`}
             >
               <span>{x.title}</span>
               <motion.div
@@ -127,7 +127,7 @@ const Page = () => {
           ))}
         </div>
         <div
-          className={`${airolon.className} w-full max-w-5xl text-xs md:text-sm`}
+          className={`${airolon.className} w-full max-w-5xl text-xs md:text-base`}
         >
           Data from the Center for Reproductive Rights &apos;The World&apos;s
           Abortion Laws&apos;. To explore the full map,
