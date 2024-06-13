@@ -391,8 +391,8 @@ const Page = () => {
         {/* //? change aspect of this image */}
         {/* <ImageWrapper key="clinic" alt="nurse" imageURL={Shadows_4} /> */}
 
-        <div className="relative mx-auto h-[60vh] w-full max-w-[375px]">
-          <div className="absolute h-full w-full">
+        <div className="relative mx-auto h-[80vh] w-full max-w-5xl">
+          <div className="absolute h-full w-full object-contain">
             <Image alt="family ward" src={Shadows_4} fill />
           </div>
         </div>
