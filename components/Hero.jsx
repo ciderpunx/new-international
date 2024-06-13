@@ -35,6 +35,10 @@ const libre_baskerville_italic = Libre_Baskerville({
   weight: ["400"],
   style: "italic",
 });
+const libre_baskerville = Libre_Baskerville({
+  subsets: ["latin"],
+  weight: ["400"],
+});
 
 const league_gothic = League_Gothic({
   subsets: ["latin"],
@@ -99,7 +103,7 @@ const Index = () => {
                   // style={{ y, skewY }}
                   transition={{ delay: 1 }}
                   className={
-                    roboto.className +
+                    libre_baskerville.className +
                     " flex items-center justify-start gap-1 overflow-hidden text-balance text-[8px] font-thin text-[#c8c8c8] md:flex-row md:text-2xl"
                   }
                 >
@@ -135,7 +139,7 @@ const Index = () => {
             </motion.div>
           </div>
         </div>
-        <div className={`${airolon.className} w-full text-center text-sm`}>
+        <div className={`${airolon.className} w-full text-left text-sm`}>
           A girl holds a candle during a ceremony for Orthodox Easter in Addis
           Ababa on May 5, 2024. While Ethiopia is considered a regional leader
           on abortion provision in East Africa, strong religious views in the
@@ -153,25 +157,25 @@ const Index = () => {
 
         <div className="grid w-full grid-cols-4 items-baseline text-gray-500 md:w-1/3">
           <a
-            href="https://www.facebook.com/newint"
+            href="https://www.facebook.com/sharer/sharer.php?u=https%3A//newint.org/stories/fertile-ground"
             className="grid aspect-square size-14 cursor-pointer place-items-center rounded-full border-black bg-gray-50 hover:border-2 hover:text-[#4267B2]"
           >
             <FaFacebookF size={30} />
           </a>
           <a
-            href="https://twitter.com/newint"
+            href="https://twitter.com/intent/tweet?text=Fertile%20Ground%20on%20New%20Internationalist&url=https%3A%2F%2Fnewint.org%2Fstories%2Ffertile-ground"
             className="grid aspect-square size-14 cursor-pointer place-items-center rounded-full border-black bg-gray-50 hover:border-2 hover:text-[#000000]"
           >
             <FaXTwitter size={30} />
           </a>
           <a
-            href="https://www.instagram.com/newinternationalist"
+            href="mailto:?body=https://newint.org/stories/fertile-ground"
             className="grid aspect-square size-14 cursor-pointer place-items-center rounded-full border-black bg-gray-50 hover:border-2 hover:text-[#FD1D1D]"
           >
             <IoMailOpenOutline size={35} />
           </a>
           <a
-            href="#"
+            href="https://api.whatsapp.com/send?text=https%3A%2F%2Fnewint.org%2Fstories%2Ffertile-ground"
             className="grid aspect-square size-14 cursor-pointer place-items-center rounded-full border-black bg-gray-50 hover:border-2 hover:text-[#25D366]"
           >
             <FaWhatsapp size={30} />
@@ -244,7 +248,7 @@ const Index = () => {
             cent as Muslim and 18 per cent as Protestant, according to the most
             recent{" "}
             <Hyperlinks key="census" word="census." linkNumber={0}></Hyperlinks>{" "}
-            1 But despite its strong religiosity, in 2005 Ethiopia managed to do
+            But despite its strong religiosity, in 2005 Ethiopia managed to do
             what many countries are still struggling to do – liberalize its
             abortion laws.
           </>

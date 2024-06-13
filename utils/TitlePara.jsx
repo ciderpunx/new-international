@@ -17,19 +17,19 @@ const libre_baskerville = Libre_Baskerville({
 
 const Page = ({ title, para, text20Px, textCenter }) => {
   return (
-    <div className="mx-auto flex w-full max-w-5xl flex-col gap-2 md:gap-4">
+    <div className="mx-auto flex w-full max-w-5xl flex-col gap-4 md:gap-8">
       {title && (
-        <h1
-          style={{
-            fontSize: 30,
-            fontWeight: 500,
-          }}
+        <h2
+          style={
+            {
+              // fontSize: 48,
+              // fontWeight: 500,
+            }
+          }
           className={`${league_gothic.className} ${textCenter ? "text-center" : ""} w-full text-3xl uppercase tracking-wide text-[#3c4c54] md:text-5xl`}
         >
-          {/* <span className=""> */}
-          {/* </span> */}
-          {title}
-        </h1>
+          ]{title}
+        </h2>
       )}
       {para && (
         <p
