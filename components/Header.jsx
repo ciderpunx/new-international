@@ -34,8 +34,8 @@ const Page = () => {
       }}
       transition={{
         type: "spring",
-        bounce: 0.4,
-        // duration: 0.6,
+        bounce: 0.2,
+        duration: 0.4,
       }}
       style={{
         originY: 0,
