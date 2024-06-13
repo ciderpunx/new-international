@@ -61,11 +61,11 @@ const Page = () => {
             <>
               Shibru noticed the shift around the same time as the seismic Dobbs
               ruling that overturned the constitutional right to abortion in the
-              US. Early
-              <Hyperlinks key="Research" word="research" linkNumber={3} />
-              into the global impact of this decision has linked it to the
-              reversal of positive steps towards liberalizing abortion policies
-              in Kenya and Nigeria.
+              US. Early{" "}
+              <Hyperlinks key="Research" word="research" linkNumber={3} /> into
+              the global impact of this decision has linked it to the reversal
+              of positive steps towards liberalizing abortion policies in Kenya
+              and Nigeria.
             </>
           }
         />
@@ -76,12 +76,12 @@ const Page = () => {
               One of the US Christian Right groups that’s pushing its influence
               into Africa is Family Watch International (FWI), an Arizona-based
               Mormon organization that describes its work as ‘strengthening the
-              family’. FWI has a
+              family’. FWI has a{" "}
               <Hyperlinks
                 key=" track record"
                 word=" track record"
                 linkNumber={4}
-              />
+              />{" "}
               of influencing regressive policies on SRHR in several Countries.
               In 2019, it appointed an Ethiopian celebrity physician named
               Seyoum Antonios as its Africa director. As the home of the African
@@ -108,7 +108,7 @@ const Page = () => {
               group in 2007. United for Life Ethiopia(ULE) is listed in the
               world registry of Heartbeat International, a US-based network of
               ‘crisis pregnancy centres’ (CPCs). These centres have been found
-              by a series of global investigations
+              by a series of global investigations{" "}
               <Hyperlinks
                 key="
               global investigations
@@ -119,7 +119,7 @@ const Page = () => {
               
               "
                 linkNumber={5}
-              />
+              />{" "}
               to provide ‘deliberate disinformation’ to vulnerable women to
               coerce them into continuing unwanted pregnancies.
             </>
@@ -153,12 +153,12 @@ const Page = () => {
               Ethiopia’. A practising physician at a private hospital in Addis
               and an assistant professor at a medical college, Antonios uses
               YouTube and TikTok to spread harmful pseudo-science, claiming that
-              abortion causes infertility, cancer and depression. The doctor has
+              abortion causes infertility, cancer and depression. The doctor has{" "}
               <Hyperlinks
                 key="amassed over one million views"
                 word="amassed over one million views"
                 linkNumber={6}
-              />
+              />{" "}
               on his channels since 2018, where he claims to have ‘prayed with
               the prime minister’ – himself an converted evangelical Christian –
               and has made appearances several times on national TV.
@@ -185,12 +185,12 @@ const Page = () => {
               have found links between FWI and several anti-LGBTQI+ bills in
               Africa. Africa. organization has been accused of helping Uganda
               pass one of the harshest anti-gay laws in the world last year, and
-              is
+              is{" "}
               <Hyperlinks
                 key="actively lobbying"
                 word="actively lobbying"
                 linkNumber={4}
-              />
+              />{" "}
               politicians in Kenya and Ghana to pass similar legislation FWI has
               repeatedly denied these accusations.
             </>
@@ -219,12 +219,12 @@ const Page = () => {
             <>
               {" "}
               Ongoing social and political tensions in Ethiopia from the fallout
-              of the war in the northern Tigray region, including
+              of the war in the northern Tigray region, including{" "}
               <Hyperlinks
                 key="active fighting"
                 word="active fighting"
                 linkNumber={7}
-              />
+              />{" "}
               in many parts of the country, make issues like abortion an easy
               scapegoat for religious conservative groups.
             </>
@@ -260,7 +260,7 @@ const Page = () => {
               erosion, so I think one day we [could] wake up and a woman will
               find out she can no longer have an abortion.’ Research shows that
               religious language has recently been seeping into mainstream
-              media, cultivating a platform for anti-abortion
+              media, cultivating a platform for anti-abortion{" "}
               <Hyperlinks
                 key="
                 
@@ -268,7 +268,7 @@ const Page = () => {
                 "
                 word=" cultivating a platform for anti-abortion"
                 linkNumber={8}
-              />
+              />{" "}
               reforms to Ethiopia’s media law in 2021 mean that religious
               organizations can now receive broadcasting licences for the first
               time in the country’s history.
@@ -292,7 +292,7 @@ const Page = () => {
               bodies are mutilated in the guise of subduing their sexual
               promiscuity.’ Despite being criminalized, harmful traditional
               practices like female genital mutilation persist in Ethiopia. In
-              the Amhara region,
+              the Amhara region,{" "}
               <Hyperlinks
                 key="
               45 per cent of girls
@@ -303,7 +303,7 @@ const Page = () => {
               
               "
                 linkNumber={9}
-              />
+              />{" "}
               are married before the age of 18.
             </>
           }
@@ -353,9 +353,9 @@ const Page = () => {
           key="stigma"
           para={
             <>
-              And it’s not just clients who face stigma – according to a recent
-              <Hyperlinks key=" report " word="report" linkNumber={11} />
-              from Amnesty International, providers, advocates and activists
+              And it’s not just clients who face stigma – according to a recent{" "}
+              <Hyperlinks key=" report " word="report" linkNumber={11} /> from
+              Amnesty International, providers, advocates and activists
               defending abortion worldwide are increasingly facing physical and
               verbal attacks, intimidation, threats and criminalization, with
               little to no accountability Siyane Aniley, an Ethiopian SRHR
@@ -454,12 +454,8 @@ const Page = () => {
             <>
               But not everyone is able to access these lifesaving services.
               Women living in Ethiopia’s conflict zones are particularly
-              vulnerable to any rollbacks in abortion access. It has been widely
-              <Hyperlinks
-                key="documented "
-                word="documented "
-                linkNumber={11}
-              />
+              vulnerable to any rollbacks in abortion access. It has been widely{" "}
+              <Hyperlinks key="documented" word="documented" linkNumber={11} />{" "}
               that over the course of the two-year war in Tigray, troops
               fighting in support of the federal government committed widespread
               rape against Tigrayan women and girls. Today the healthcare
@@ -498,13 +494,12 @@ const Page = () => {
           key="a third of"
           para={
             <>
-              {" "}
-              A
+              A{" "}
               <Hyperlinks
                 key="third of abortions"
                 word="third of abortions"
                 linkNumber={13}
-              />
+              />{" "}
               in Ethiopia are performed in public hospitals, where the procedure
               is free of charge. The rest take place in private clinics,
               predominantly run by international NGOs like MSI and IPPF. Unlike
@@ -549,13 +544,13 @@ const Page = () => {
               While NGO workers we spoke to stress that the opposition is so far
               not impacting the provision of safe abortion care in their
               clinics, funding is a more pressing worry. Foreign donors,
-              including the United States, account for
+              including the United States, account for{" "}
               <Hyperlinks
                 key="budget"
-                word=" 70 per cent of Ethiopia’s
+                word="70 per cent of Ethiopia’s
               family planning budget"
                 linkNumber={13}
-              />
+              />{" "}
               , making the country highly susceptible to cuts. When then-US
               President Donald Trump implemented the ‘global gag rule’ – a
               policy that prohibits foreign NGOs that receive US funding from
@@ -578,12 +573,12 @@ const Page = () => {
           key="FWI"
           para={
             <>
-              Meanwhile, groups like FWI have
+              Meanwhile, groups like FWI have{" "}
               <Hyperlinks
-                key=" funneled millions of dollars"
-                word="  funneled millions of dollars"
+                key="funneled millions of dollars"
+                word="funneled millions of dollars"
                 linkNumber={14}
-              />
+              />{" "}
               into anti-rights advocacy efforts in Africa and around the world.
               As Ethiopia continues to face a myriad of social, political and
               economic challenges, abortion rights – and sexual and reproductive

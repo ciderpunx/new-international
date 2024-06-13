@@ -1,17 +1,14 @@
 export const Hyperlinks = ({ word, linkNumber }) => {
   // console.log(dataJSON);
   return (
-    <>
-      {" "}
-      <a
-        title={dataArray[linkNumber]?.name}
-        href={dataArray[linkNumber]?.href}
-        className="relative underline"
-        style={{ color: "darkblue" }}
-      >
-        {word}
-      </a>{" "}
-    </>
+    <a
+      title={dataArray[linkNumber]?.name}
+      href={dataArray[linkNumber]?.href}
+      className="relative underline"
+      style={{ color: "darkblue" }}
+    >
+      {word}
+    </a>
   );
 };
 

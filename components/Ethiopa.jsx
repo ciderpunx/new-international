@@ -41,7 +41,7 @@ const Page = () => {
           <>
             Campaigners wanted a change for one reason: to end the epidemic of
             women dying from unsafe abortions, the leading cause of maternal
-            death in Ethiopia at the
+            death in Ethiopia at the{" "}
             <Hyperlinks key="campaigners" linkNumber={1} word="time" />. Entire
             hospital wards were dedicated to treating women who had developed
             sepsis or other life-threatening complications from botched
@@ -69,7 +69,7 @@ const Page = () => {
             Sustained pressure from the coalition on top of the strong political
             will of successive Ethiopian governments helped cascade the 2005
             legislation into action, and within a decade maternal mortality from
-            unsafe abortion plummeted from
+            unsafe abortion plummeted from{" "}
             <Hyperlinks
               key="percent"
               word="32% to less than 10%"
