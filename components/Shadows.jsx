@@ -159,8 +159,8 @@ const Page = () => {
                 word="amassed over one million views"
                 linkNumber={6}
               />
-              . on his channels since 2018, where he claims to have ‘prayed with
-              the prime minister’ – himself a converted evangelical Christian –
+              on his channels since 2018, where he claims to have ‘prayed with
+              the prime minister’ – himself an converted evangelical Christian –
               and has made appearances several times on national TV.
             </>
           }
@@ -181,22 +181,18 @@ const Page = () => {
               It would be easy to dismiss these unfounded ramblings if Antonios
               and his wife were not key figures in Africa’s anti-rights
               ecosystem, touring the continent and coordinating campaigns to
-              halt any semblance of progress on SRHR. Multiple have found links
-              between FWI and several anti-LGBTQI+ bills in
+              halt any semblance of progress on SRHR. Multiple investigations
+              have found links between FWI and several anti-LGBTQI+ bills in
+              Africa. Africa. organization has been accused of helping Uganda
+              pass one of the harshest anti-gay laws in the world last year, and
+              is
               <Hyperlinks
-                key="investigations"
-                word="investigations"
-                linkNumber={5}
-              />
-              Africa. organization has been accused of helping Uganda pass one
-              of the harshest anti-gay laws in the world last year, and is
-              actively lobbying politicians in Kenya and Ghana to pass similar
-              <Hyperlinks
-                key="legislation"
-                word="legislation."
+                key="actively lobbying"
+                word="actively lobbying"
                 linkNumber={4}
               />
-              FWI has repeatedly denied these accusations.
+              politicians in Kenya and Ghana to pass similar legislation FWI has
+              repeatedly denied these accusations.
             </>
           }
         />

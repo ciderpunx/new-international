@@ -112,7 +112,7 @@ const Page = () => {
                 href="https://www.instagram.com/newinternationalist"
                 className="grid aspect-square size-14 cursor-pointer place-items-center rounded-full border-2 border-black text-black"
               >
-                <IoMailOpenOutline size={35} />
+                <FaInstagram size={35} />
               </a>
               <a className="borde grid aspect-square size-14 cursor-pointer place-items-center rounded-full border-2 border-black text-black">
                 <FaLinkedinIn size={30} />
