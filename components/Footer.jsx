@@ -23,6 +23,29 @@ const league_gothic = League_Gothic({
 });
 const Page = () => {
   const [email, setEmail] = useState("");
+  const handleSubmit = (event) => {
+    event.preventDefault();
+
+    const form = event.target;
+    const formData = new FormData(form);
+
+    // Perform the form submission
+    fetch(form.action, {
+      method: form.method,
+      body: formData,
+    })
+      .then((response) => {
+        if (response.ok) {
+          window.location.href = formData.get("goto");
+        } else {
+          // Handle error case
+          console.error("Form submission error");
+        }
+      })
+      .catch((error) => {
+        console.error("Form submission error", error);
+      });
+  };
   return (
     <footer className="m-auto min-h-[120dvh] w-screen bg-[#6ecad0] px-4 py-4 md:grid md:max-h-[70dvh] md:min-h-[70dvh] md:place-items-center md:px-0">
       <section className="flex h-[100dvh] w-full flex-col items-center justify-evenly gap-16 py-4 md:h-3/4 md:w-9/12 md:flex-row">
@@ -112,7 +135,40 @@ const Page = () => {
             <p className={`${libre_baskerville.className} text-sm md:text-xl`}>
               A weekly newsletter with the best of our journalism
             </p>
-            <form className="grid h-14 w-full grid-cols-[70%_30%]">
+            <form
+              action="//secure.whatcounts.com/bin/listctrl"
+              method="post"
+              onSubmit={handleSubmit}
+              className="grid h-14 w-full grid-cols-[70%_30%]"
+            >
+              <input
+                name="slid"
+                value="6B5869DC547D3D46650B4D6780487885"
+                type="hidden"
+              />
+              <input name="cmd" value="subscribe" type="hidden" />
+              <input
+                name="goto"
+                value="https://newint.org/newsletter/success/"
+                type="hidden"
+              />
+              <input
+                name="custom_source_web_quickjoin"
+                value="1"
+                type="hidden"
+              />
+              <input name="custom_is_double_optin" value="1" type="hidden" />
+              <input
+                name="custom_source_web_sub_page"
+                value="Interactive feature: abortion in Ethiopia"
+                type="hidden"
+              />
+              <input
+                name="custom_pref_monthly_edition"
+                value="1"
+                type="hidden"
+              />
+              <input name="format" value="html" type="hidden" />
               <input
                 className="h-full w-full px-2 text-2xl placeholder:text-lg"
                 type="text"
@@ -123,16 +179,17 @@ const Page = () => {
                 onChange={(e) => setEmail(e.target.value)}
               />
               <button
-                onSubmit={async () => {}}
+                type="submit"
+                // onSubmit={async () => {}}
                 className={`${league_gothic.className} h-full w-full bg-black text-lg uppercase text-white md:text-2xl`}
               >
-                <a
+                {/* <a
                   href="
                 https://subscribe.newint.org/
                 "
                 >
-                  Subscribe
-                </a>
+                </a> */}
+                Subscribe
               </button>
             </form>
           </div>
