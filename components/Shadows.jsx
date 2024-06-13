@@ -13,6 +13,7 @@ import { Libre_Baskerville } from "next/font/google";
 import Quote from "../utils/Quote";
 import { Hyperlinks } from "../utils/Hyperlinks";
 import localfont from "next/font/local";
+import Image from "next/image";
 const aileron = localfont({
   src: "../app/Aileron-Regular.woff2",
 });
@@ -180,7 +181,7 @@ const Page = () => {
                 linkNumber={4}
               />{" "}
               have found links between FWI and several anti-LGBTQI+ bills in
-              Africa. The Organization has been accused of helping Uganda pass
+              Africa. The organization has been accused of helping Uganda pass
               one of the harshest anti-gay laws in the world last year, and is{" "}
               <Hyperlinks
                 key="actively lobbying"
@@ -192,6 +193,7 @@ const Page = () => {
             </>
           }
         />
+
         <ImageWrapper
           caption=" In 2019, the Arizona-based Mormon organization Family Watch International (FWI) appointed the celebrity surgeon Seyoum Antonios (L) as its Africa director. Antonios is pictured here with FWI founder Sharon Slater (in purple) and Ugandan President Yoweri Museveni (in white) outside Uganda's State House in April 202
            during a conference on 'family values'."
@@ -388,11 +390,12 @@ const Page = () => {
         />
         {/* //? change aspect of this image */}
         <ImageWrapper key="clinic" alt="nurse" imageURL={Shadows_4} />
+        {/* 
         <div className="relative mx-auto h-[60vh] w-[500px] max-w-5xl">
           <div className="absolute h-full w-full">
             <Image alt="family ward" src={Shadows_4} fill />
           </div>
-        </div>
+        </div> */}
         <TitlePara
           key="Eskedar"
           para="Eskedar Melesse, the clinic coordinator for FGAE in Adama, says she often hears sermons on the ‘evils’ of abortion at church. ‘It shames you, and makes you feel that you are doing something wrong,’ she says. ‘But I know that I am saving lives.’"
@@ -604,46 +607,3 @@ const Page = () => {
   );
 };
 export default Page;
-
-// let slideData = [
-//   {
-//     slideImageURL: Shadows_3,
-//     key: "abortion",
-//     alt: "contraceptive pills",
-//     sevenXL: "true",
-//   },
-//   {
-//     slideImageURL: Shadows_4,
-//     key: "clinic",
-//     alt: "nurse",
-//     sevenXL: "true",
-//   },
-//   {
-//     slideImageURL: Shadows_5,
-//     key: "family ward",
-//     alt: "family ward",
-//     sevenXL: "true",
-//   },
-// ];
-// //? slide show
-// const itemContainerVariants = {
-//   enter: ({ direction, width }) => ({
-//     x: direction * width,
-//     scale: 1,
-//     rotateY: 5,
-//   }),
-//   center: { x: 0, scale: 1 },
-
-//   exit: ({ direction, width }) => ({
-//     x: direction * -width,
-//     scale: 1,
-//     rotateY: 0,
-//   }),
-// };
-// const usePrevious = (state) => {
-//   let [tuple, setTuple] = useState([null, state]);
-//   if (tuple[1] !== state) {
-//     setTuple([tuple[1], state]);
-//   }
-//   return tuple[0];
-// };
