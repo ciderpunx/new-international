@@ -108,14 +108,20 @@ const Page = () => {
               group in 2007. United for Life Ethiopia(ULE) is listed in the
               world registry of Heartbeat International, a US-based network of
               ‘crisis pregnancy centres’ (CPCs). These centres have been found
-              by a series of global investigations to provide ‘deliberate
-              disinformation’ to vulnerable women to coerce them into continuing
-              unwanted
+              by a series of global investigations
               <Hyperlinks
-                key="pregnancies"
-                word="pregnancies."
+                key="
+              global investigations
+                
+                "
+                word="
+              global investigations
+              
+              "
                 linkNumber={5}
               />
+              to provide ‘deliberate disinformation’ to vulnerable women to
+              coerce them into continuing unwanted pregnancies.
             </>
           }
         />
@@ -195,7 +201,8 @@ const Page = () => {
           }
         />
         <ImageWrapper
-          caption=" In 2019, the Arizona-based Mormon organization Family Watch International (FWI) appointed the celebrity surgeon Seyoum Antonios (L) as its Africa director. Antonios is pictured here with FWI founder Sharon Slater (in purple) and Ugandan President Yoweri Museveni (in white) outside Uganda's State House in April 2023 during a conference on 'family values'."
+          caption=" In 2019, the Arizona-based Mormon organization Family Watch International (FWI) appointed the celebrity surgeon Seyoum Antonios (L) as its Africa director. Antonios is pictured here with FWI founder Sharon Slater (in purple) and Ugandan President Yoweri Museveni (in white) outside Uganda's State House in April 202
+           during a conference on 'family values'."
           key="seyoum"
           alt="seyoum"
           imageURL={Seyoum}

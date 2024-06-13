@@ -11,15 +11,7 @@ const playfair_display = Playfair_Display({
   weight: ["400", "500", "700", "900"],
   // style: 'italic',
 });
-const Page = ({
-  alt,
-  imageURL,
-  textData,
-  sevenXL,
-  bodyWidth,
-  caption,
-  originalAspect,
-}) => {
+const Page = ({ alt, imageURL, sevenXL, caption, originalAspect }) => {
   return (
     <div
       className={`${sevenXL == true ? "max-w-7xl" : ""} mx-auto flex w-full max-w-5xl flex-col gap-1 md:gap-2`}

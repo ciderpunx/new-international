@@ -257,11 +257,11 @@ const Index = () => {
               the most recent{" "}
               <Hyperlinks
                 key="census"
-                word="census."
+                word="census"
                 linkNumber={0}
               ></Hyperlinks>{" "}
-              But despite its strong religiosity, in 2005 Ethiopia managed to do
-              what many countries are still struggling to do – liberalize its
+              . But despite its strong religiosity, in 2005 Ethiopia managed to
+              do what many countries are still struggling to do – liberalize its
               abortion laws.
             </>
           }

@@ -72,10 +72,10 @@ const Page = () => {
             unsafe abortion plummeted from
             <Hyperlinks
               key="percent"
-              word="32% to less than 10%."
+              word="32% to less than 10%"
               linkNumber={2}
             />
-            The law was revised in 2013, shortly after Ethiopia ratified the
+            . The law was revised in 2013, shortly after Ethiopia ratified the
             Maputo Protocol – the first treaty signed by 43 African nations that
             recognizes abortion, under certain conditions, as a human right.
             While there is still a way to go to ensure full access to the right
