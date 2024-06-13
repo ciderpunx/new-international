@@ -389,13 +389,13 @@ const Page = () => {
           imageURL={Shadows_3}
         />
         {/* //? change aspect of this image */}
-        <ImageWrapper key="clinic" alt="nurse" imageURL={Shadows_4} />
-        {/* 
-        <div className="relative mx-auto h-[60vh] w-[500px] max-w-5xl">
+        {/* <ImageWrapper key="clinic" alt="nurse" imageURL={Shadows_4} /> */}
+
+        <div className="relative mx-auto h-[60vh] w-full max-w-[375px]">
           <div className="absolute h-full w-full">
             <Image alt="family ward" src={Shadows_4} fill />
           </div>
-        </div> */}
+        </div>
         <TitlePara
           key="Eskedar"
           para="Eskedar Melesse, the clinic coordinator for FGAE in Adama, says she often hears sermons on the ‘evils’ of abortion at church. ‘It shames you, and makes you feel that you are doing something wrong,’ she says. ‘But I know that I am saving lives.’"
