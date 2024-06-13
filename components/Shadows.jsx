@@ -37,7 +37,7 @@ const Page = () => {
   // let previous = usePrevious(count);
   // let direction = count > previous ? 1 : -1;
   return (
-    <div className="mx-auto flex h-auto w-full flex-col gap-12 md:w-10/12">
+    <div className="mx-auto flex h-auto w-full flex-col gap-8 md:w-10/12">
       <TitlePara
         key="in the shadows"
         title="in the shadows"
@@ -59,6 +59,7 @@ const Page = () => {
         </div>
       </div>
       <TitlePara
+        key="shibru"
         para={
           <>
             Shibru noticed the shift around the same time as the seismic Dobbs
