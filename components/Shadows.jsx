@@ -59,7 +59,6 @@ const Page = () => {
         </div>
       </div>
       <TitlePara
-        key="shibru"
         para={
           <>
             Shibru noticed the shift around the same time as the seismic Dobbs
