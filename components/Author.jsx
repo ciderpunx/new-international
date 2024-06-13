@@ -57,13 +57,13 @@ const Page = () => {
                 </div>
 
                 <h3
-                  className={`${league_gothic.className} text-xl uppercase text-[#3c4c54] md:text-2xl`}
+                  className={`${league_gothic.className} text-xl uppercase tracking-wider text-[#3c4c54] md:text-2xl`}
                 >
                   {x.name}
                 </h3>
               </div>
               <p
-                className={`${Libre_Baskerville_.className} max-w-5xl md:text-2xl`}
+                className={`${Libre_Baskerville_.className} max-w-5xl text-base md:text-xl`}
               >
                 {x.info}
               </p>

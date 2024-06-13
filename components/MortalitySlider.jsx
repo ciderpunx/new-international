@@ -77,128 +77,116 @@ const Page = () => {
         title="Maternal Mortality rates in Ethiopia pre- and post- 2005 abortion law"
       />
       {/* //* mortality svg */}
-      <div className="flex w-full flex-col gap-2">
-        <div
-          ref={ref}
-          className="relative aspect-video w-full overflow-hidden p-8 text-4xl"
-        >
-          {/* <div className="absolute left-0 top-0 z-40 bg-lime-500 font-bold text-black">
-          {sliderWidth.toString()}
-          <br></br>
-          <motion.span>{useTransform(() => Math.floor(x.get()))}</motion.span>
-        </div> */}
-          {/* <motion.div
-          // initial={{ filter: "blur(0px) grayscale(0.5)" }}
-          style={
-            {
-              // filter: bw_and_blur,
-            }
-          }
-          className="z-5 absolute inset-0 h-full w-full"
-        >
-          <Image src={chairs} alt="black" fill="true" />
-        </motion.div> */}
-          {/*  //! images */}
-          {/* //? left */}
-          <motion.div
-            initial={{
-              filter: "blur(2px)",
-            }}
-            style={{
-              filter: LEFTbw_and_blur,
-            }}
-            // initial={{ filter: "blur(0px) grayscale(0.5)" }}
-
-            className="absolute bottom-0 left-0 top-0 z-10 h-full w-1/2"
+      <div className="mx-auto flex w-full flex-col gap-1 md:gap-2">
+        <div className="flex w-full flex-col gap-2">
+          <div
+            ref={ref}
+            className="relative aspect-video w-full overflow-hidden p-8 text-4xl"
           >
-            <Image src={left_image} alt="black" fill="true" />
-          </motion.div>
-
-          {/* //? right */}
-          <motion.div
-            initial={{
-              filter: "blur(2px)",
-            }}
-            style={{
-              filter: RIGHTbw_and_blur,
-            }}
-            // initial={{ filter: "blur(0px) grayscale(0.5)" }}
-
-            className="absolute bottom-0 left-1/2 top-0 z-10 h-full w-1/2"
-          >
-            <Image src={right_image} alt="black" fill="true" />
-          </motion.div>
-          {/* //? svg timeline overlay */}
-          <div className="absolute inset-0 z-20 h-full w-full object-contain">
-            <Svg ref={ref} />
-          </div>
-          {/* //? slider */}
-          <motion.div
-            whileHover={{ cursor: "grab" }}
-            style={{ x }}
-            whileDrag={{
-              cursor: "grabbing",
-              background: "lightgrey",
-            }}
-            drag="x"
-            dragMomentum={false}
-            dragConstraints={ref}
-            dragElastic={0}
-            className="group absolute inset-0 z-30 m-auto h-full w-2 bg-white"
-          >
+            {/*  //! images */}
+            {/* //? left */}
             <motion.div
-              whileHover={{ scale: [1, 1.5, 1] }}
-              initial={{ x: -15 }}
-              className="absolute inset-0 m-auto grid size-10 place-items-center rounded-full bg-white shadow-xl transition-all group-hover:scale-150"
-            >
-              <VscGrabber size={40} color="black" />
-            </motion.div>
-          </motion.div>
-          {/* //? overlay percentages */}
-          <motion.div
-            style={{}}
-            className={`${airolon.className} absolute bottom-0 left-5 z-20 text-4xl font-extrabold text-red-700 md:text-9xl`}
-          >
-            32%
-          </motion.div>
-          <motion.div
-            style={
-              {
-                // scale: scale2,
-              }
-            }
-            className={`${airolon.className} absolute bottom-0 right-5 z-20 text-4xl font-extrabold text-white md:text-9xl`}
-          >
-            &lt;10%
-          </motion.div>
-        </div>
-        {/* info */}
-        <div className="flex w-full max-w-7xl items-center justify-between">
-          <span className={`${airolon.className} text-left text-xs md:text-sm`}>
-            Maternal deaths per 100,000 births
-          </span>
-          <span
-            className={`${airolon.className} text-right text-xs md:text-sm`}
-          >
-            Maternal deaths per 100,000 births
-          </span>
-        </div>
-      </div>
+              initial={{
+                filter: "blur(2px)",
+              }}
+              style={{
+                filter: LEFTbw_and_blur,
+              }}
+              // initial={{ filter: "blur(0px) grayscale(0.5)" }}
 
-      <div
-        className={`${airolon.className} w-full max-w-7xl text-xs md:text-base`}
-      >
-        Within a decade of the 2005 abortion law being passed, maternal
-        mortality rates linked to unsafe abortion dropped from
-        <a
-          className="inline underline"
-          href="https://reproductive-health-journal.biomedcentral.com/articles/10.1186/s12978-022-01457-z#:~:text=Within%20a%20decade%20of%20liberalizing,political%2C%20and%20women's%20rights%20communities "
+              className="absolute bottom-0 left-0 top-0 z-10 h-full w-1/2"
+            >
+              <Image src={left_image} alt="black" fill="true" />
+            </motion.div>
+
+            {/* //? right */}
+            <motion.div
+              initial={{
+                filter: "blur(2px)",
+              }}
+              style={{
+                filter: RIGHTbw_and_blur,
+              }}
+              // initial={{ filter: "blur(0px) grayscale(0.5)" }}
+
+              className="absolute bottom-0 left-1/2 top-0 z-10 h-full w-1/2"
+            >
+              <Image src={right_image} alt="black" fill="true" />
+            </motion.div>
+            {/* //? svg timeline overlay */}
+            <div className="absolute inset-0 z-20 h-full w-full object-contain">
+              <Svg ref={ref} />
+            </div>
+            {/* //? slider */}
+            <motion.div
+              whileHover={{ cursor: "grab" }}
+              style={{ x }}
+              whileDrag={{
+                cursor: "grabbing",
+                background: "lightgrey",
+              }}
+              drag="x"
+              dragMomentum={false}
+              dragConstraints={ref}
+              dragElastic={0}
+              className="group absolute inset-0 z-30 m-auto h-full w-2 bg-white"
+            >
+              <motion.div
+                whileHover={{ scale: [1, 1.5, 1] }}
+                initial={{ x: -15 }}
+                className="absolute inset-0 m-auto grid size-10 place-items-center rounded-full bg-white shadow-xl transition-all group-hover:scale-150"
+              >
+                <VscGrabber size={40} color="black" />
+              </motion.div>
+            </motion.div>
+            {/* //? overlay percentages */}
+            <motion.div
+              style={{}}
+              className={`${airolon.className} absolute bottom-0 left-5 z-20 text-4xl font-extrabold text-red-700 md:text-9xl`}
+            >
+              32%
+            </motion.div>
+            <motion.div
+              style={
+                {
+                  // scale: scale2,
+                }
+              }
+              className={`${airolon.className} absolute bottom-0 right-5 z-20 text-4xl font-extrabold text-white md:text-9xl`}
+            >
+              &lt;10%
+            </motion.div>
+          </div>
+          {/* info */}
+          <div className="flex w-full max-w-7xl items-center justify-between">
+            <span
+              className={`${airolon.className} text-left text-xs md:text-sm`}
+            >
+              Maternal deaths per 100,000 births
+            </span>
+            <span
+              className={`${airolon.className} text-right text-xs md:text-sm`}
+            >
+              Maternal deaths per 100,000 births
+            </span>
+          </div>
+        </div>
+
+        <div
+          className={`${airolon.className} w-full max-w-7xl text-xs md:text-base`}
         >
-          {" "}
-          32 per cent to less than 10 per cent
-        </a>
-        . Maternal mortality refers to deaths due to complications from
-        pregnancy or childbirth.
+          Within a decade of the 2005 abortion law being passed, maternal
+          mortality rates linked to unsafe abortion dropped from
+          <a
+            className="inline underline"
+            href="https://reproductive-health-journal.biomedcentral.com/articles/10.1186/s12978-022-01457-z#:~:text=Within%20a%20decade%20of%20liberalizing,political%2C%20and%20women's%20rights%20communities "
+          >
+            {" "}
+            32 per cent to less than 10 per cent
+          </a>
+          . Maternal mortality refers to deaths due to complications from
+          pregnancy or childbirth.
+        </div>
       </div>
     </div>
   );

@@ -25,7 +25,7 @@ const Page = () => {
   const [protestantsEnter, setprotestantsEnter] = useState(false);
 
   return (
-    <div className="mx-auto flex w-full max-w-5xl flex-col gap-4 md:text-7xl">
+    <div className="mx-auto flex w-full max-w-5xl flex-col gap-4 md:gap-6 md:text-7xl">
       <TitlePara
         key="dominant religion"
         title="Dominant religions of ethiopia"

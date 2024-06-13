@@ -60,9 +60,9 @@ const Index = () => {
     bounce: 0,
   });
   return (
-    <div className="mx-auto flex w-full flex-col gap-6 md:w-11/12 md:gap-16">
+    <div className="mx-auto flex w-full flex-col gap-8 md:w-11/12 md:gap-16">
       {/* //? hero */}
-      <div className="flex w-full flex-col gap-2">
+      <div className="flex w-full flex-col gap-1 md:gap-2">
         <div className="relative mx-auto aspect-4/3 w-full md:aspect-video">
           {/* //? overlay */}
           <div className="absolute z-30 h-full w-full bg-gradient-to-b from-transparent to-gray-950/50"></div>
@@ -131,7 +131,9 @@ const Index = () => {
             </motion.div>
           </div>
         </div>
-        <div className={`${airolon.className} w-full text-left text-sm`}>
+        <div
+          className={`${airolon.className} w-full text-center text-xs md:text-sm`}
+        >
           A girl holds a candle during a ceremony for Orthodox Easter in Addis
           Ababa on May 5, 2024. While Ethiopia is considered a regional leader
           on abortion provision in East Africa, strong religious views in the
@@ -140,35 +142,35 @@ const Index = () => {
       </div>
 
       {/* //? share with a friend */}
-      <div className="mx-auto flex w-full max-w-5xl items-baseline justify-between gap-2 pt-4 md:flex-row md:justify-between">
+      <div className="mx-auto flex w-full max-w-5xl items-baseline justify-between gap-2 pt-2 md:flex-row md:justify-between">
         <h3
           className={`${league_gothic.className} text-xl uppercase text-[#3c4c54] md:text-2xl`}
         >
           share this article
         </h3>
 
-        <div className="grid w-full grid-cols-4 items-baseline text-gray-500 md:w-1/3">
+        <div className="flex w-1/2 justify-evenly gap-1 text-gray-500 md:w-1/3">
           <a
             href="https://www.facebook.com/sharer/sharer.php?u=https%3A//newint.org/stories/fertile-ground"
-            className="grid aspect-square size-8 cursor-pointer place-items-center rounded-full border-black bg-gray-50 hover:border-2 hover:text-[#4267B2]"
+            className="grid aspect-square size-10 cursor-pointer place-items-center rounded-full border-black bg-gray-50 hover:border-2 hover:text-[#4267B2]"
           >
             <FaFacebookF size={20} />
           </a>
           <a
             href="https://twitter.com/intent/tweet?text=Fertile%20Ground%20on%20New%20Internationalist&url=https%3A%2F%2Fnewint.org%2Fstories%2Ffertile-ground"
-            className="grid aspect-square size-8 cursor-pointer place-items-center rounded-full border-black bg-gray-50 hover:border-2 hover:text-[#000000]"
+            className="grid aspect-square size-10 cursor-pointer place-items-center rounded-full border-black bg-gray-50 hover:border-2 hover:text-[#000000]"
           >
             <FaXTwitter size={20} />
           </a>
           <a
             href="mailto:?body=https://newint.org/stories/fertile-ground"
-            className="grid aspect-square size-8 cursor-pointer place-items-center rounded-full border-black bg-gray-50 hover:border-2 hover:text-[#FD1D1D]"
+            className="grid aspect-square size-10 cursor-pointer place-items-center rounded-full border-black bg-gray-50 hover:border-2 hover:text-[#FD1D1D]"
           >
             <IoMailOpenOutline size={20} />
           </a>
           <a
             href="https://api.whatsapp.com/send?text=https%3A%2F%2Fnewint.org%2Fstories%2Ffertile-ground"
-            className="grid aspect-square size-8 cursor-pointer place-items-center rounded-full border-black bg-gray-50 hover:border-2 hover:text-[#25D366]"
+            className="grid aspect-square size-10 cursor-pointer place-items-center rounded-full border-black bg-gray-50 hover:border-2 hover:text-[#25D366]"
           >
             <FaWhatsapp size={20} />
           </a>
@@ -176,7 +178,7 @@ const Index = () => {
       </div>
       {/* //? para */}
       <section
-        className={`mx-auto flex h-auto w-full max-w-5xl flex-col gap-4`}
+        className={`mx-auto flex h-auto w-full max-w-5xl flex-col gap-8 border-2 border-lime-400 md:gap-12`}
       >
         <p
           className={`${libre_baskerville_italic.className} text-left text-xl font-bold md:text-xl`}
@@ -216,36 +218,41 @@ const Index = () => {
           imageURL={PrayToEnd}
         />
       </div>
+      <section className="mx-auto flex w-full flex-col gap-8 border-4 border-lime-500 md:gap-12">
+        <TitlePara
+          key="outlier"
+          title="A regional outlier"
+          para="It’s the day before Orthodox Easter Sunday, and from the twentieth floor of our rented Addis apartment, faint chanting from a nearby church can be heard over the steady rumble of traffic and construction. In the streets, cars hurtle past with forlorn looking chickens and goats strapped to the roof, ready to be slaughtered and eaten. Women in white shawls and wooden crosses around their necks prepare for the hours of cooking ahead. Orthodox Christians have avoided meat for two months, and tonight they will finally break their fast. "
+        />
 
-      <TitlePara
-        key="outlier"
-        title="A regional outlier"
-        para="It’s the day before Orthodox Easter Sunday, and from the twentieth floor of our rented Addis apartment, faint chanting from a nearby church can be heard over the steady rumble of traffic and construction. In the streets, cars hurtle past with forlorn looking chickens and goats strapped to the roof, ready to be slaughtered and eaten. Women in white shawls and wooden crosses around their necks prepare for the hours of cooking ahead. Orthodox Christians have avoided meat for two months, and tonight they will finally break their fast. "
-      />
+        <ImageWrapper
+          key="candle-2"
+          alt="candle-2"
+          // sevenXL={false}
+          imageURL={Candle_two}
+        />
 
-      <ImageWrapper
-        key="candle-2"
-        alt="candle-2"
-        // sevenXL={false}
-        imageURL={Candle_two}
-      />
-
-      <TitlePara
-        key="celebrations"
-        para={
-          <>
-            The celebrations engulfing the city speak to the importance of
-            religion in Africa’s second most populous country, where 43 per cent
-            of around 123 million people identify as Christian Orthodox, 33 per
-            cent as Muslim and 18 per cent as Protestant, according to the most
-            recent{" "}
-            <Hyperlinks key="census" word="census." linkNumber={0}></Hyperlinks>{" "}
-            But despite its strong religiosity, in 2005 Ethiopia managed to do
-            what many countries are still struggling to do – liberalize its
-            abortion laws.
-          </>
-        }
-      />
+        <TitlePara
+          key="celebrations"
+          para={
+            <>
+              The celebrations engulfing the city speak to the importance of
+              religion in Africa’s second most populous country, where 43 per
+              cent of around 123 million people identify as Christian Orthodox,
+              33 per cent as Muslim and 18 per cent as Protestant, according to
+              the most recent{" "}
+              <Hyperlinks
+                key="census"
+                word="census."
+                linkNumber={0}
+              ></Hyperlinks>{" "}
+              But despite its strong religiosity, in 2005 Ethiopia managed to do
+              what many countries are still struggling to do – liberalize its
+              abortion laws.
+            </>
+          }
+        />
+      </section>
     </div>
   );
 };
