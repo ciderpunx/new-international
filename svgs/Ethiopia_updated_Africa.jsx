@@ -40,7 +40,7 @@ const SvgComponent = (props) => {
         }}
         animate={{
           scale: zoomSVG ? 1.5 : 1,
-          x: zoomSVG ? -100 : 0,
+          x: zoomSVG ? -50 : 0,
           y: zoomSVG ? 20 : 0,
           transition: {
             type: "spring",
