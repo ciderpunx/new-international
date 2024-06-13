@@ -152,8 +152,8 @@ const Page = () => {
                 linkNumber={6}
               />{" "}
               on his channels since 2018, where he claims to have ‘prayed with
-              the prime minister’ – himself an converted evangelical Christian –
-              and has made appearances several times on national TV.
+              the prime minister’ – himself an evangelical Christian – and has
+              made appearances several times on national TV.
             </>
           }
         />
