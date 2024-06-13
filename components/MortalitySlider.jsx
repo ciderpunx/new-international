@@ -146,7 +146,7 @@ const Page = () => {
               <motion.div
                 whileHover={{ scale: [1, 1.5, 1] }}
                 initial={{ x: -15 }}
-                className="absolute inset-0 m-auto grid size-10 place-items-center rounded-full bg-gray-300 shadow-xl transition-all group-hover:scale-150"
+                className="absolute inset-0 m-auto grid size-10 place-items-center rounded-full bg-gray-50 shadow-xl transition-all group-hover:scale-150"
               >
                 <VscGrabber size={40} color="black" />
               </motion.div>

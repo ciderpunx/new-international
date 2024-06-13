@@ -42,18 +42,18 @@ const Page = () => {
             Campaigners wanted a change for one reason: to end the epidemic of
             women dying from unsafe abortions, the leading cause of maternal
             death in Ethiopia at the
-            <Hyperlinks key="campaigners" linkNumber={1} word="time." />
-            Entire hospital wards were dedicated to treating women who had
-            developed sepsis or other life-threatening complications from
-            botched abortions. The coalition brought politicians to these wards
-            to see first-hand the harms of the abortion ban, which ironically
-            had just one exception: to save the woman’s life. The stench of
-            death still haunts the memories of Ethiopian doctors and nurses who
-            practised medicine before the reform. Tedros Ghebreyesus, the
-            current head of the World Health Organization, was Ethiopia’s health
-            minister at the time the 2005 abortion law came into effect. His
-            legacy, and the legacy of the wards, continue to galvanize support
-            for legal abortion today.
+            <Hyperlinks key="campaigners" linkNumber={1} word="time" />. Entire
+            hospital wards were dedicated to treating women who had developed
+            sepsis or other life-threatening complications from botched
+            abortions. The coalition brought politicians to these wards to see
+            first-hand the harms of the abortion ban, which ironically had just
+            one exception: to save the woman’s life. The stench of death still
+            haunts the memories of Ethiopian doctors and nurses who practised
+            medicine before the reform. Tedros Ghebreyesus, the current head of
+            the World Health Organization, was Ethiopia’s health minister at the
+            time the 2005 abortion law came into effect. His legacy, and the
+            legacy of the wards, continue to galvanize support for legal
+            abortion today.
           </>
         }
       />
