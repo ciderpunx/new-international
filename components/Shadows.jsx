@@ -180,8 +180,8 @@ const Page = () => {
                 linkNumber={4}
               />{" "}
               have found links between FWI and several anti-LGBTQI+ bills in
-              Africa. Organization has been accused of helping Uganda pass one
-              of the harshest anti-gay laws in the world last year, and is{" "}
+              Africa. The Organization has been accused of helping Uganda pass
+              one of the harshest anti-gay laws in the world last year, and is{" "}
               <Hyperlinks
                 key="actively lobbying"
                 word="actively lobbying"
@@ -255,10 +255,10 @@ const Page = () => {
               don’t get visible activity around abortion. It’s a very slow
               erosion, so I think one day we [could] wake up and a woman will
               find out she can no longer have an abortion.’ Research shows that
-              religious language has recently been seeping into,{" "}
+              religious language has recently been{" "}
               <Hyperlinks
-                key="mainstream media"
-                word="mainstream media"
+                key="seeping into mainstream media"
+                word="seeping into mainstream media"
                 linkNumber={8}
               />{" "}
               cultivating a platform for anti-abortion messaging. Reforms to
