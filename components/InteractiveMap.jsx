@@ -142,7 +142,7 @@ const Page = () => {
       </div>
       {/* //? title and para */}
 
-      <AnimatePresence>
+      {/* <AnimatePresence>
         {mapState.hoverState && (
           <motion.div
             variants={parentVariant}
@@ -173,7 +173,7 @@ const Page = () => {
             </motion.div>
           </motion.div>
         )}
-      </AnimatePresence>
+      </AnimatePresence> */}
     </div>
   );
 };

@@ -29,7 +29,7 @@ const SvgComponent = (props) => {
             x,
             y,
           }}
-          className="absolute z-40 h-8 w-10 bg-white px-4 py-2 text-xl font-bold text-black shadow-2xl"
+          className="absolute z-40 hidden h-8 w-10 bg-white px-4 py-2 text-xl font-bold text-black shadow-2xl md:visible"
         >
           {hoverState.countryName}
         </motion.div>
