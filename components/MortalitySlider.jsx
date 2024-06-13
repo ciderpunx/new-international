@@ -99,7 +99,7 @@ const Page = () => {
             {/* //? left */}
             <motion.div
               initial={{
-                filter: "blur(2px)",
+                filter: "blur(2px) grayScale(0.5)",
               }}
               style={{
                 filter: LEFTbw_and_blur,
@@ -114,7 +114,7 @@ const Page = () => {
             {/* //? right */}
             <motion.div
               initial={{
-                filter: "blur(2px)",
+                filter: "blur(2px) grayScale(0.5)",
               }}
               style={{
                 filter: RIGHTbw_and_blur,
@@ -202,12 +202,11 @@ const Page = () => {
           className={`${airolon.className} w-full max-w-7xl text-xs text-gray-500 md:text-base`}
         >
           Within a decade of the 2005 abortion law being passed, maternal
-          mortality rates linked to unsafe abortion dropped from
+          mortality rates linked to unsafe abortion dropped from{" "}
           <a
             className="inline underline"
             href="https://reproductive-health-journal.biomedcentral.com/articles/10.1186/s12978-022-01457-z#:~:text=Within%20a%20decade%20of%20liberalizing,political%2C%20and%20women's%20rights%20communities "
           >
-            {" "}
             32 per cent to less than 10 per cent
           </a>
           . Maternal mortality refers to deaths due to complications from

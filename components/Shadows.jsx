@@ -1,4 +1,3 @@
-"use client";
 import TitlePara from "../utils/TitlePara";
 import ImageWrapper from "../utils/ImageWrapper";
 import Siyane from "../public/siyane_replacement.jpg";
@@ -10,10 +9,6 @@ import Shadows_4 from "../public/shadow_4_replacement.jpg";
 import Shadows_5 from "../public/shadow_5_replacement.jpg";
 import Shadows_6 from "../public/2024_New_Internationalist_magazine_Addis_Aemero-71.jpg";
 import Seyoum from "../public/Seyoum Antonios.jpeg";
-import useMeasure from "react-use-measure";
-import { useState } from "react";
-import { AnimatePresence, motion } from "framer-motion";
-import Image from "next/image";
 import { Libre_Baskerville } from "next/font/google";
 import Quote from "../utils/Quote";
 import { Hyperlinks } from "../utils/Hyperlinks";
@@ -260,17 +255,16 @@ const Page = () => {
               don’t get visible activity around abortion. It’s a very slow
               erosion, so I think one day we [could] wake up and a woman will
               find out she can no longer have an abortion.’ Research shows that
-              religious language has recently been seeping into mainstream
-              media,{" "}
+              religious language has recently been seeping into,{" "}
               <Hyperlinks
                 key="mainstream media"
                 word="mainstream media"
                 linkNumber={8}
               />{" "}
-              cultivating a platform for anti-abortion messaging to Ethiopia’s
-              media law in 2021 mean that religious organizations can now
-              receive broadcasting licences for the first time in the country’s
-              history.
+              cultivating a platform for anti-abortion messaging. Reforms to
+              Ethiopia’s media law in 2021 mean that religious organizations can
+              now receive broadcasting licences for the first time in the
+              country’s history.
             </>
           }
         />
@@ -297,10 +291,7 @@ const Page = () => {
               45 per cent of girls
                 
                 "
-                word="
-              45 per cent of girls
-              
-              "
+                word="45 per cent of girls"
                 linkNumber={9}
               />{" "}
               are married before the age of 18.
@@ -549,7 +540,7 @@ const Page = () => {
                 word="account for 70 per cent of Ethiopia’s
               family planning budget"
                 linkNumber={13}
-              />{" "}
+              />
               , making the country highly susceptible to cuts. When then-US
               President Donald Trump implemented the ‘global gag rule’ – a
               policy that prohibits foreign NGOs that receive US funding from

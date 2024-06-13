@@ -1,7 +1,6 @@
 "use client";
 import Image from "next/image";
 import header_logo from "../public/header_logo.svg";
-// import co_op from "../public/co-operative.png";
 import co_op_new from "../public/CoopLogoblack-padding.png";
 import {
   FaFacebookF,

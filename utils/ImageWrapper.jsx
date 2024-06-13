@@ -1,16 +1,11 @@
 "use client";
 import Image from "next/image";
-import { Playfair_Display } from "next/font/google";
 import { motion } from "framer-motion";
 import localfont from "next/font/local";
 const aileron = localfont({
   src: "../app/Aileron-Regular.woff2",
 });
-const playfair_display = Playfair_Display({
-  subsets: ["latin"],
-  weight: ["400", "500", "700", "900"],
-  // style: 'italic',
-});
+
 const Page = ({ alt, imageURL, sevenXL, caption, originalAspect }) => {
   return (
     <div
@@ -47,11 +42,13 @@ const Page = ({ alt, imageURL, sevenXL, caption, originalAspect }) => {
         )} */}
       </div>
       {/* //caption */}
-      <div
-        className={`${aileron.className} mx-auto w-full text-left text-xs text-gray-500 md:text-base`}
-      >
-        {caption}
-      </div>
+      {caption && (
+        <div
+          className={`${aileron.className} mx-auto w-full text-left text-xs text-gray-500 md:text-base`}
+        >
+          {caption}
+        </div>
+      )}
     </div>
   );
 };

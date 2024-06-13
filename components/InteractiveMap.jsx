@@ -130,12 +130,11 @@ const Page = () => {
           className={`${airolon.className} w-full max-w-5xl text-center text-xs md:text-base`}
         >
           Data from the Center for Reproductive Rights &apos;The World&apos;s
-          Abortion Laws&apos;. To explore the full map,
+          Abortion Laws&apos;. To explore the full map,{" "}
           <a
             className="underline"
             href=" https://reproductiverights.org/maps/worlds-abortion-laws/"
           >
-            {" "}
             click here{" "}
           </a>
         </div>
