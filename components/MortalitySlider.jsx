@@ -40,6 +40,7 @@ const Page = () => {
     setSliderWidth(width);
   });
   // left
+  // *lhs
 
   let leftImageGrayScale = useTransform(
     x,
@@ -51,7 +52,13 @@ const Page = () => {
     [-sliderWidth / 2, 0, sliderWidth / 2],
     [0, 2, 7],
   );
+  let leftNumberOpacity = useTransform(
+    x,
+    [-sliderWidth / 2, 0, sliderWidth / 2],
+    [1, 0, 0],
+  );
 
+  //*rhs
   let rightImageGrayScale = useTransform(
     x,
     [-sliderWidth / 2, 0, sliderWidth / 2],
@@ -61,6 +68,11 @@ const Page = () => {
     x,
     [-sliderWidth / 2, 0, sliderWidth / 2],
     [7, 2, 0],
+  );
+  let rightNumberOpacity = useTransform(
+    x,
+    [-sliderWidth / 2, 0, sliderWidth / 2],
+    [0, 0, 1],
   );
 
   let LEFTbw_and_blur = useMotionTemplate`grayScale(${leftImageGrayScale}) blur(${leftImageBlur}px)`;
@@ -129,51 +141,63 @@ const Page = () => {
               dragMomentum={false}
               dragConstraints={ref}
               dragElastic={0}
-              className="group absolute inset-0 z-30 m-auto h-full w-2 bg-white"
+              className="group absolute inset-0 z-30 m-auto h-full w-2 bg-gray-200"
             >
               <motion.div
                 whileHover={{ scale: [1, 1.5, 1] }}
                 initial={{ x: -15 }}
-                className="absolute inset-0 m-auto grid size-10 place-items-center rounded-full bg-white shadow-xl transition-all group-hover:scale-150"
+                className="absolute inset-0 m-auto grid size-10 place-items-center rounded-full bg-gray-300 shadow-xl transition-all group-hover:scale-150"
               >
                 <VscGrabber size={40} color="black" />
               </motion.div>
             </motion.div>
             {/* //? overlay percentages */}
             <motion.div
-              style={{}}
-              className={`${airolon.className} absolute bottom-0 left-5 z-20 text-4xl font-extrabold text-red-700 md:text-9xl`}
+              style={{
+                opacity: leftNumberOpacity,
+                // scale: scale2,
+              }}
+              className={`${airolon.className} absolute bottom-1 left-1 z-40 flex flex-col gap-1 text-4xl font-extrabold text-red-600 md:text-9xl`}
             >
               32%
+              <span
+                className={`${airolon.className} m w-full bg-red-200 px-1 text-center text-[8px] leading-tight text-red-700 max-sm:h-3 md:text-lg`}
+              >
+                Maternal deaths per 100,000 births
+              </span>
             </motion.div>
             <motion.div
-              style={
-                {
-                  // scale: scale2,
-                }
-              }
-              className={`${airolon.className} absolute bottom-0 right-5 z-20 text-4xl font-extrabold text-white md:text-9xl`}
+              style={{
+                opacity: rightNumberOpacity,
+                // scale: scale2,
+              }}
+              className={`${airolon.className} absolute bottom-1 right-1 z-40 flex flex-col gap-1 self-end text-right text-4xl font-extrabold text-white md:text-9xl`}
             >
               &lt;10%
+              <span
+                className={`${airolon.className} w-full bg-gray-700 px-1 text-center text-[8px] leading-tight text-gray-200 max-sm:h-3 md:text-lg`}
+              >
+                Maternal deaths per 100,000 births
+              </span>
             </motion.div>
           </div>
           {/* info */}
-          <div className="flex w-full max-w-7xl items-center justify-between">
+          {/* <div className="flex w-full max-w-7xl items-center justify-between">
             <span
-              className={`${airolon.className} text-left text-xs md:text-sm`}
+              className={`${airolon.className} text-left text-xs text-gray-500 md:text-sm`}
             >
               Maternal deaths per 100,000 births
             </span>
             <span
-              className={`${airolon.className} text-right text-xs md:text-sm`}
+              className={`${airolon.className} text-right text-xs text-gray-500 md:text-sm`}
             >
               Maternal deaths per 100,000 births
             </span>
-          </div>
+          </div> */}
         </div>
 
         <div
-          className={`${airolon.className} w-full max-w-7xl text-xs md:text-base`}
+          className={`${airolon.className} w-full max-w-7xl text-xs text-gray-500 md:text-base`}
         >
           Within a decade of the 2005 abortion law being passed, maternal
           mortality rates linked to unsafe abortion dropped from

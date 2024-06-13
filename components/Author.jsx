@@ -45,7 +45,7 @@ const Page = () => {
             <div className="flex w-full flex-col gap-2" key={index}>
               <div className="flex items-center justify-start gap-2">
                 <div className="relative size-14 rounded-full md:size-16">
-                  <div className="absolute inset-0 overflow-hidden rounded-full shadow-inner">
+                  <div className="absolute inset-0 overflow-hidden rounded-full object-cover shadow-inner">
                     <Image
                       src={x.img}
                       key={x.name}
@@ -80,7 +80,7 @@ const Page = () => {
           share this article
         </h3>
 
-        <div className="grid w-full grid-cols-4 items-baseline text-gray-500 md:w-1/3">
+        <div className="grid w-2/3 grid-cols-4 items-baseline text-gray-500 md:w-1/3">
           <a
             href="https://www.facebook.com/sharer/sharer.php?u=https%3A//newint.org/stories/fertile-ground"
             className="grid aspect-square size-8 cursor-pointer place-items-center rounded-full border-black bg-gray-50 hover:border-2 hover:text-[#4267B2]"
@@ -115,7 +115,7 @@ export default Page;
 let authorData = [
   {
     img: Bethany,
-    name: "bethany rielley",
+    name: "bethany rielly",
     info: "Bethany Rielly is a New Internationalist co-editor based in Barcelona. She has written about topics including refugees, migration, protest, human rights and state violence and surveillance.",
   },
   {

@@ -3,6 +3,8 @@ import Image from "next/image";
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { League_Gothic, Baskervville } from "next/font/google";
+import Interactive_map from "../svgs/Africa_map";
+import UpdatedAfricaMap from "../svgs/Updated_africa";
 import EthiopioUpdatedAfrica from "../svgs/Ethiopia_updated_Africa";
 import TitlePara from "../utils/TitlePara";
 import localfont from "next/font/local";
@@ -27,78 +29,105 @@ const Page = () => {
     subtitle: "",
   });
   return (
-    <div className="relative mx-auto flex h-auto w-full max-w-7xl flex-col gap-8 md:gap-12">
+    <div className="relative mx-auto flex h-auto w-full max-w-7xl flex-col gap-4">
       <TitlePara
         key="abortion access"
         title="Abortion access in east africa"
         textCenter
       />
       {/* //? svg */}
-      <section className="flex w-full flex-col gap-1 md:gap-2">
-        <div className="mx-auto flex w-full flex-col">
-          <div className="relative aspect-video w-full overflow-hidden">
-            <div
-              className={`absolute inset-0 m-auto h-full w-full object-contain`}
-            >
-              <EthiopioUpdatedAfrica />
-            </div>
-          </div>
-          {/* //? hover elements */}
-          <div className="flex w-full flex-col gap-1">
-            <div className="md:auto-rows-auto-[160px] relative grid h-auto min-h-24 w-full auto-rows-[64px] grid-cols-2 gap-2 md:grid-cols-5 md:gap-4">
-              {mapInfo.map((x, index) => (
-                <motion.div
-                  onTap={() => {
-                    setMapState({
-                      title: x.title,
-                      hoverState: true,
-                      background: x.background,
-                      subtitle: x.subtitle,
-                      textColor: x.textColor,
-                    });
-                  }}
-                  onHoverStart={() => {
-                    setMapState({
-                      title: x.title,
-                      hoverState: true,
-                      background: x.background,
-                    });
-                  }}
-                  onHoverEnd={() => {
-                    setMapState({
-                      title: "",
-                      hoverState: false,
-                      background: "",
-                    });
-                  }}
-                  key={index}
-                  className={`roundedxs textxs relative flex h-full w-full items-center bg-[#ebf7f7] px-1 py-2 font-semibold capitalize last:col-span-2 md:text-lg md:last:col-span-1`}
-                >
-                  <span>{x.title}</span>
-                  <motion.div
-                    animate={{
-                      height:
-                        mapState.hoverState && mapState.title == x.title
-                          ? // ? "100%"
-                            "8px"
-                          : "8px",
-                    }}
-                    style={{
-                      background: x.background,
-                      color: x.textColor,
-                    }}
-                    className={`absolute bottom-0 left-0 right-0 grid h-2 w-full place-items-center text-lg`}
-                  >
-                    {/* {mapState.hoverState && mapState.title == x.title && x.title} */}
-                  </motion.div>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </div>
+      <div className="relative aspect-video w-full overflow-hidden">
+        <div className={`absolute inset-0 m-auto h-full w-full object-contain`}>
+          {/* <Interactive_map /> */}
+          {/* <UpdatedAfricaMap /> */}
+          <EthiopioUpdatedAfrica />
 
+          {/* <Image src="interactive-map.svg" fill="true" alt="interactive-map" /> */}
+        </div>
+      </div>
+      {/* //? hover elements */}
+      <div className="flex w-full flex-col gap-1">
+        <div className="md:auto-rows-auto-[160px] relative grid h-auto min-h-24 w-full auto-rows-[64px] grid-cols-2 gap-2 md:grid-cols-5 md:gap-4">
+          {mapInfo.map((x, index) => (
+            <motion.div
+              onTap={() => {
+                setMapState({
+                  title: x.title,
+                  hoverState: true,
+                  background: x.background,
+                  subtitle: x.subtitle,
+                  textColor: x.textColor,
+                });
+              }}
+              onHoverStart={() => {
+                setMapState({
+                  title: x.title,
+                  hoverState: true,
+                  background: x.background,
+                });
+              }}
+              onHoverEnd={() => {
+                setMapState({
+                  title: "",
+                  hoverState: false,
+                  background: "",
+                });
+              }}
+              key={index}
+              className={`roundedxs textxs relative flex h-full w-full items-center bg-[#ebf7f7] px-1 py-2 font-semibold capitalize last:col-span-2 md:text-lg md:last:col-span-1`}
+            >
+              <span>{x.title}</span>
+              <motion.div
+                animate={{
+                  height:
+                    mapState.hoverState && mapState.title == x.title
+                      ? // ? "100%"
+                        "8px"
+                      : "8px",
+                }}
+                style={{
+                  background: x.background,
+                  color: x.textColor,
+                }}
+                className={`absolute bottom-0 left-0 right-0 grid h-2 w-full place-items-center text-lg`}
+              >
+                {/* {mapState.hoverState && mapState.title == x.title && x.title} */}
+              </motion.div>
+              {/* <AnimatePresence>
+              {mapState.hoverState && mapState.title == x.title && x.title && (
+                <motion.div
+                  initial={{ y: -10, height: 0, x: "-30%", opacity: 0 }}
+                  // animate={{ opacity: 1 }}
+                  animate={{ height: "40vh", opacity: 1 }}
+                  exit={{ height: 0, opacity: 0 }}
+                  transition={{ type: "spring", bounce: 0, duration: 0.6 }}
+                  // layoutId="hover"
+                  style={{
+                    background: mapState.background,
+                    color: x.textColor,
+                    height: "30vh",
+                    borderBottomLeftRadius: 12,
+                    borderBottomRightRadius: 12,
+                  }}
+                  className={`${baskerville.className} absolute left-0 top-full z-40 mx-0 hidden w-[40vw] items-baseline justify-between gap-4 px-8 py-4 pt-16 text-white md:visible md:flex`}
+                >
+                  <h2 className="text-balance font-serif text-3xl font-semibold">
+                    {x.subtitle}
+                  </h2>
+                  <vr />
+                  <p
+                    className={`${baskerville.className} text-balance text-xl`}
+                  >
+                    {x.para}
+                  </p>
+                </motion.div>
+              )}
+            </AnimatePresence> */}
+            </motion.div>
+          ))}
+        </div>
         <div
-          className={`${airolon.className} w-full max-w-7xl text-center text-xs md:text-base`}
+          className={`${airolon.className} w-full max-w-5xl text-xs md:text-base`}
         >
           Data from the Center for Reproductive Rights &apos;The World&apos;s
           Abortion Laws&apos;. To explore the full map,
@@ -110,7 +139,41 @@ const Page = () => {
             click here{" "}
           </a>
         </div>
-      </section>
+      </div>
+      {/* //? title and para */}
+
+      {/* <AnimatePresence>
+        {mapState.hoverState && (
+          <motion.div
+            variants={parentVariant}
+            initial="hidden"
+            animate="show"
+            exit="exit"
+            // transition={{ type: "spring", bounce: 0.9, duration: 0.8 }}
+            onClick={() => {
+              setMapState({
+                hoverState: false,
+                subtitle: "",
+                title: "",
+              });
+            }}
+            className="fixed inset-0 h-full w-full touch-none overflow-hidden bg-black/30 px-4 md:hidden"
+          >
+            {" "}
+            <motion.div
+              variants={childVariant}
+              style={{
+                color: mapState.textColor,
+                borderColor: mapState.background,
+                background: mapState.background,
+              }}
+              className={`${baskerville.className} absolute bottom-0 left-0 right-0 mx-auto grid h-1/2 w-full place-items-center text-balance rounded-t-2xl border-t-8 px-4 py-4 text-center text-2xl font-bold shadow-2xl`}
+            >
+              {mapState.subtitle}
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence> */}
     </div>
   );
 };

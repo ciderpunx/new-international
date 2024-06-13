@@ -168,10 +168,10 @@ export default Page;
 let hamburgerVariants = {
   hidden: {
     height: 0,
-    skewY: 5,
+    skewY: 4,
   },
   show: {
-    height: "50vh",
+    height: "40vh",
     skewY: 0,
     transition: {
       type: "spring",

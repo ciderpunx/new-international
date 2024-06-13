@@ -1,7 +1,6 @@
 "use client";
 import TitlePara from "../utils/TitlePara";
 import ImageWrapper from "../utils/ImageWrapper";
-import Quote from "../utils/Quote";
 import Siyane from "../public/siyane_replacement.jpg";
 import Shadows_1 from "../public/2024_New_Internationalist_magazine_Addis_Aemero-7 (1).jpg";
 import Shadows_2 from "../public/2024_New_Internationalist_magazine_Addis_Aemero-173.jpg";
@@ -16,6 +15,7 @@ import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
 import { Libre_Baskerville } from "next/font/google";
+import Quote from "../utils/Quote";
 import { Hyperlinks } from "../utils/Hyperlinks";
 import localfont from "next/font/local";
 const aileron = localfont({
@@ -94,7 +94,7 @@ const Page = () => {
       <section className="mx-auto flex w-full flex-col gap-8 md:gap-12">
         <TitlePara
           key="pro life pioneers"
-          title="pro life pioneers"
+          title="pro-life pioneers"
           para={
             <>
               The sticky fingers of US Christian Right groups are all over
@@ -117,6 +117,7 @@ const Page = () => {
         <ImageWrapper
           key="shadow-2"
           alt="minaret"
+          caption="An American Christian missionary opened the first known crisis pregnancy centre in Ethiopia in the southern city of Adama, around 100km from Addis, in 2010. ADDIS AEMERO"
           // sevenXL={true}
           imageURL={Shadows_2}
         />
@@ -424,22 +425,22 @@ const Page = () => {
               few remaining health care centres for survivors of gender-based
               violence is run by Sister Mulu Mesfin in the region’s capital,
               Mekelle. ‘Most of the women who come to us are survivors of rape
-              and gang rape,’ she says. ‘Even after the war, they are still
-              repeatedly getting attacked in the [displacement] camps [and]
-              facing domestic violence. They beg at my feet for abortion pills.’
+              and gang rape,’ ‘Even after the war, they are still repeatedly
+              getting attacked in the [displacement] camps [and] facing domestic
+              violence. They beg at my feet for abortion pills.’
             </>
           }
         />
         <Quote
           key="survivors"
-          quote="‘Most of the women who come to us are survivors of rape and gang rape,’ she says. ‘Even after the war, they are still repeatedly getting attacked in the [displacement] camps [and] facing domestic violence. They beg at my feet for abortion pills.’"
+          quote="‘Most of the women who come to us are survivors of rape and gang rape, Even after the war, they are still repeatedly getting attacked in the [displacement] camps [and] facing domestic violence. They beg at my feet for abortion pills.’"
         />
       </section>
       {/* //? section 5 */}
       <section className="mx-auto flex w-full flex-col gap-8 md:gap-12">
         <TitlePara
           key="on the side"
-          title="on the side"
+          title="on side"
           para="Back in Addis Ababa, Demeke and Shibru’s fears over a serious and imminent threat to the 2005 abortion law have subsided. In recent months Ethiopia’s Ministry of Health has shown its commitment to abortion provision by approving the latest guidelines for abortion care services, as well as a self-care manual for women on medication abortion (abortion using pills). The Coalition for Comprehensive Abortion Care, a group of physicians in Ethiopia that works closely with the health ministry, has received verbal assurances from the department that it is aware of the threats and will ‘defend the law by any means’, says Desta. Where physicians are more concerned is the extent to which young healthcare workers could be swayed by anti-rights groups.   "
         />
         <TitlePara

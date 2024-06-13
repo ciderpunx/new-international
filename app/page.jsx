@@ -5,7 +5,6 @@ import InteractiveMap from "../components/InteractiveMap";
 import Mortality from "../components/MortalitySlider";
 import DominantReligions from "../components/DominantReligions";
 import sustainability_1 from "../public/sustainability-1.jpg";
-``;
 import sustainability_2 from "../public/sustainability-2.jpg";
 import Frontline from "../components/Frontline";
 import FutureChallenges from "../components/FutureChallenges";
@@ -13,10 +12,7 @@ import Author from "../components/Author";
 import Subscribe from "../components/Subscribe";
 import Footer from "../components/Footer";
 import Shadows from "../components/Shadows";
-
-import TitlePara from "../utils/TitlePara";
-import ImageWrapper from "../utils/ImageWrapper";
-import Quote from "../utils/Quote";
+import Maputo from "../components/MaputoProtocol";
 
 const Page = () => {
   return (
@@ -28,7 +24,8 @@ const Page = () => {
         <Ethiopa />
 
         <Mortality />
-        <InteractiveMap />
+        <Maputo />
+        {/* <InteractiveMap /> */}
 
         <Shadows />
 

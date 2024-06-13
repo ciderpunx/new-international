@@ -3,11 +3,14 @@ import Hyperlinks from "../utils/Hyperlinks";
 
 import TitlePara from "../utils/TitlePara";
 import Quote from "../utils/Quote";
+import Maputo from "../components/MaputoProtocol";
+import MaputoProtocol from "../components/MaputoProtocol";
+import InteractiveMap from "../components/InteractiveMap";
 
 const Page = () => {
   return (
-    <section className="mx-auto flex w-full max-w-6xl flex-col gap-8 md:gap-12">
-      <TitlePara
+    <section className="mx-auto flex w-full max-w-7xl flex-col gap-8 md:gap-12">
+      {/* <TitlePara
         key="maputo protocol Ratification Map"
         textCenter
         title="maputo protocol Ratification Map"
@@ -27,10 +30,10 @@ const Page = () => {
           >
             <source src="Map Loop Animation.mp4" type="video/mp4" />
           </video>
-          {/* {/* <video src={loop_video} controls='false'></video> */}
         </div>
-      </div>
-
+      </div> */}
+      {/* <MaputoProtocol /> */}
+      <InteractiveMap />
       <TitlePara
         key="campaigners"
         // title="The Struggle for safe abortion in Ethiopa"
@@ -85,4 +88,6 @@ const Page = () => {
   );
 };
 export default Page;
-<Hyperlinks key="percent" word="32% to less than 1%" linkNumber={2} />;
+{
+  /* <Hyperlinks key="percent" word="32% to less than 1%" linkNumber={2} />; */
+}
