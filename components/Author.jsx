@@ -45,13 +45,13 @@ const Page = () => {
             <div className="flex w-full flex-col gap-2" key={index}>
               <div className="flex items-center justify-start gap-2">
                 <div className="relative size-14 rounded-full md:size-16">
-                  <div className="absolute inset-0 overflow-hidden rounded-full object-cover shadow-inner">
+                  <div className="absolute inset-0 overflow-hidden rounded-full shadow-inner">
                     <Image
                       src={x.img}
                       key={x.name}
                       alt={x.name}
-                      // fill={true}
-                      // objectFit="contain"
+                      fill={true}
+                      objectFit="cover"
                     />
                   </div>
                 </div>

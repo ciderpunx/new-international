@@ -2,13 +2,13 @@
 import TitlePara from "../utils/TitlePara";
 import ImageWrapper from "../utils/ImageWrapper";
 import Quote from "../utils/Quote";
-import Siyane from "../public/2024_New_Internationalist_magazine_Addis_Aemero-86.jpg";
+import Siyane from "../public/siyane_replacement.jpg";
 import Shadows_1 from "../public/2024_New_Internationalist_magazine_Addis_Aemero-7 (1).jpg";
 import Shadows_2 from "../public/2024_New_Internationalist_magazine_Addis_Aemero-173.jpg";
 import Shadows_3 from "../public/2024_New_Internationalist_magazine_Addis_Aemero-147.jpg";
 // ? shadow 4 replaced
 import Shadows_4 from "../public/umbrella_clinic.jpg";
-import Shadows_5 from "../public/2024_New_Internationalist_magazine_Addis_Aemero-157.jpg";
+import Shadows_5 from "../public/shadow_5_replacement.jpg";
 import Shadows_6 from "../public/2024_New_Internationalist_magazine_Addis_Aemero-71.jpg";
 import Seyoum from "../public/Seyoum Antonios.jpeg";
 import useMeasure from "react-use-measure";
@@ -182,13 +182,7 @@ const Page = () => {
           }
         />
         <ImageWrapper
-          caption=" In 2019, the Arizona-based Mormon organization Family Watch
-            International (FWI) appointed the celebrity surgeon Dr Seyoum
-            Antonios (L) as its Africa director. Antonios is pictured here with
-            FWI founder Sharon Slater (in purple) and Ugandan President Yoweri
-            Museveni (in white) outside Uganda's State House in April 2023
-            during a conference on 'family values.' NATIONAL
-            RESISTANCE MOVEMENT"
+          caption=" In 2019, the Arizona-based Mormon organization Family Watch International (FWI) appointed the celebrity surgeon Seyoum Antonios (L) as its Africa director. Antonios is pictured here with FWI founder Sharon Slater (in purple) and Ugandan President Yoweri Museveni (in white) outside Uganda's State House in April 2023 during a conference on 'family values'."
           key="seyoum"
           alt="seyoum"
           imageURL={Seyoum}
@@ -201,7 +195,7 @@ const Page = () => {
         />
         <TitlePara
           key="conflation of abortion rights"
-          para="This conflation of abortion rights with LGBTQI+ advocacy is another old tactic of the ‘pro-life’ movement, which targets deeply conservative and patriarchal countries to push its ‘family values’ agenda. (Antonios did not respond to requests for comment.)"
+          para="This conflation of abortion rights with LGBTQI+ advocacy is another old tactic of the ‘anti-abortion’ movement, which targets deeply conservative and patriarchal countries to push its ‘family values’ agenda. (Antonios did not respond to requests for comment.)"
         />
         <TitlePara
           key="ongoing social and political tension"
@@ -218,7 +212,7 @@ const Page = () => {
         />
         <Quote
           key="Evangelicals"
-          quote="There are a lot more evangelicals in positions of power than before, and you can see them trying to flex their power.’"
+          quote="‘There are a lot more evangelicals in positions of power than before, and you can see them trying to flex their power.’"
         />
         <TitlePara
           key="common enemy"
@@ -359,86 +353,14 @@ const Page = () => {
         />
         <ImageWrapper
           // sevenXL={true}
+          caption="Nurse Lydia Tesfay handles medication at the Family Planning and Guidance Association of Ethiopia’s clinic in the southern city of Adama. ADDIS AEMERO'"
           key="abortion"
           alt="contraceptive pills"
           imageURL={Shadows_3}
         />
-        {/* //* slideshow */}
-        {/* <section className="relative mx-auto aspect-4/3 w-full max-w-7xl overflow-hidden md:aspect-video">
-        <AnimatePresence custom={{ width, direction }}>
-          <motion.div
-            key={count}
-            variants={itemContainerVariants}
-            custom={{ width, direction }}
-            initial="enter"
-            animate="center"
-            exit="exit"
-            className="absolute inset-0 z-0 h-full w-full object-cover"
-            transition={{
-              type: "spring",
-              bounce: 0,
-              duration: 0.8,
-            }}
-          >
-            <Image
-              src={slideData[count].slideImageURL}
-              alt={slideData[count].alt}
-              key={slideData[count].key}
-              fill={true}
-              style={{ objectFit: "cover" }}
-              loading="lazy"
-            />
-          </motion.div>
-        </AnimatePresence>
-        <div
-          style={{ zIndex: 99999 }}
-          onClick={() => setCount(count === 0 ? 0 : count - 1)}
-          className="absolute bottom-0 left-0 top-0 z-40 m-auto grid size-16 cursor-pointer rounded-full bg-black/30"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            strokeWidth={1.5}
-            stroke="currentColor"
-            className="m-auto size-10 text-white md:size-12"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="m18.75 4.5-7.5 7.5 7.5 7.5m-6-15L5.25 12l7.5 7.5"
-            />
-          </svg>
-        </div>
-        <div
-          onClick={() =>
-            setCount(count === length - 1 ? length - 1 : count + 1)
-          }
-          className="absolute bottom-0 right-0 top-0 z-40 m-auto grid size-16 cursor-pointer rounded-full bg-black/30"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            strokeWidth={1.5}
-            stroke="currentColor"
-            className="m-auto size-10 text-white md:size-12"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="m5.25 4.5 7.5 7.5-7.5 7.5m6-15 7.5 7.5-7.5 7.5"
-            />
-          </svg>
-        </div>
-      </section> */}
-        {/* //? images */}
-        <ImageWrapper
-          // sevenXL={true}
-          key="clinic"
-          alt="nurse"
-          imageURL={Shadows_4}
-        />
+
+        {/* //? change aspect of this image */}
+        <ImageWrapper key="clinic" alt="nurse" imageURL={Shadows_4} />
         <TitlePara
           key="Eskedar"
           para="Eskedar Melesse, the clinic coordinator for FGAE in Adama, says she often hears sermons on the ‘evils’ of abortion at church. ‘It shames you, and makes you feel that you are doing something wrong,’ she says. ‘But I know that I am saving lives.’"
@@ -609,7 +531,7 @@ const Page = () => {
           <p>*Names have been changed to protect identities.</p>
         </div>
         <div
-          className={`${libre_baskerville.className} mx-auto w-full max-w-5xl text-xl`}
+          className={`${libre_baskerville.className} mx-auto w-full max-w-5xl text-xs md:text-sm`}
         >
           This article appears in print in our{" "}
           <a href="#" className="text-blue-600 underline">

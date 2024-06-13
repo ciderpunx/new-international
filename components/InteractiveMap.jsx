@@ -98,7 +98,7 @@ const Page = () => {
         </div>
 
         <div
-          className={`${airolon.className} w-full max-w-5xl text-xs md:text-sm`}
+          className={`${airolon.className} w-full max-w-7xl text-center text-xs md:text-base`}
         >
           Data from the Center for Reproductive Rights &apos;The World&apos;s
           Abortion Laws&apos;. To explore the full map,

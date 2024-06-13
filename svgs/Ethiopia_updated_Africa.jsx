@@ -17,23 +17,30 @@ const SvgComponent = (props) => {
 
   const handleMouseEvent = ({ clientX, clientY, currentTarget }) => {
     let { left, top } = currentTarget.getBoundingClientRect();
-    x.set(clientX - left + 16);
+    x.set(clientX - left - 32);
     y.set(clientY - top - 64);
   };
 
   return (
     <motion.div onMouseMove={handleMouseEvent} className="h-full w-full">
-      {hoverState.hover && (
-        <motion.div
-          style={{
-            x,
-            y,
-          }}
-          className="absolute z-40 hidden h-8 w-10 bg-white px-4 py-2 text-xl font-bold text-black shadow-2xl md:visible"
-        >
-          {hoverState.countryName}
-        </motion.div>
-      )}
+      <AnimatePresence>
+        {hoverState.hover && (
+          <motion.div
+            initial={{ scale: 0.5, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            exit={{ scale: 0.5, opacity: 0 }}
+            style={{
+              x,
+              originY: 1,
+              originX: 0.5,
+              y,
+            }}
+            className="visible absolute z-40 h-8 w-10 bg-white px-4 py-2 text-xl font-bold text-black shadow-2xl"
+          >
+            {hoverState.countryName}
+          </motion.div>
+        )}
+      </AnimatePresence>
       <motion.svg
         onTap={() => {
           setZoomSVG(!zoomSVG);

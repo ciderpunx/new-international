@@ -50,13 +50,13 @@ const Page = () => {
             </p>
           </div>
           <div className="grid h-full w-full grid-cols-[30%_70%]">
-            <div className="relative flex h-full w-full items-center justify-center gap-0">
+            <div className="relative size-16 gap-2 self-center">
               <div className="absolute inset-0 aspect-square h-full w-auto">
                 <Image src={co_op_new} fill={true} alt="co-operative" />
               </div>
             </div>
             <div
-              className={`${libre_baskerville.className} m-auto flex h-full w-full items-center justify-start text-left text-sm md:text-lg`}
+              className={`${libre_baskerville.className} m-auto flex h-full w-full items-center justify-start self-end text-left text-xs md:text-sm`}
             >
               Member of Co-operatives UK
             </div>
@@ -75,26 +75,23 @@ const Page = () => {
             <div className="flex w-full justify-start gap-2 text-gray-900 md:gap-4">
               <a
                 href="https://www.facebook.com/newint"
-                className="grid aspect-square size-14 cursor-pointer place-items-center rounded-full border-black bg-gray-50 hover:border-2 hover:text-[#4267B2]"
+                className="grid aspect-square size-14 cursor-pointer place-items-center rounded-full border-2 bg-white text-black"
               >
                 <FaFacebookF size={30} />
               </a>
               <a
                 href="https://twitter.com/newint"
-                className="grid aspect-square size-14 cursor-pointer place-items-center rounded-full border-black bg-gray-50 hover:border-2 hover:text-[#000000]"
+                className="grid aspect-square size-14 cursor-pointer place-items-center rounded-full border-2 bg-white text-black"
               >
                 <FaXTwitter size={30} />
               </a>
               <a
                 href="https://www.instagram.com/newinternationalist"
-                className="grid aspect-square size-14 cursor-pointer place-items-center rounded-full border-black bg-gray-50 hover:border-2 hover:text-[#FD1D1D]"
+                className="grid aspect-square size-14 cursor-pointer place-items-center rounded-full border-2 bg-white text-black"
               >
                 <IoMailOpenOutline size={35} />
               </a>
-              <a
-                href="#"
-                className="grid aspect-square size-14 cursor-pointer place-items-center rounded-full border-black bg-gray-50 hover:border-2 hover:text-blue-500"
-              >
+              <a className="borde grid aspect-square size-14 cursor-pointer place-items-center rounded-full bg-white text-black">
                 <FaLinkedinIn size={30} />
               </a>
             </div>

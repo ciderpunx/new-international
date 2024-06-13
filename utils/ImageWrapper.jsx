@@ -11,23 +11,33 @@ const playfair_display = Playfair_Display({
   weight: ["400", "500", "700", "900"],
   // style: 'italic',
 });
-const Page = ({ alt, imageURL, textData, sevenXL, bodyWidth, caption }) => {
+const Page = ({
+  alt,
+  imageURL,
+  textData,
+  sevenXL,
+  bodyWidth,
+  caption,
+  originalAspect,
+}) => {
   return (
     <div
       className={`${sevenXL == true ? "max-w-7xl" : ""} mx-auto flex w-full max-w-5xl flex-col gap-1 md:gap-2`}
     >
       {/* //? image */}
-      <div className="relative aspect-4/3 w-full md:aspect-video">
+      <div
+        className={`relative ${originalAspect ? "object-contain" : "aspect-4/3 md:aspect-video"} w-full`}
+      >
         <motion.div
           transition={{ type: "spring", bounce: 0 }}
           initial={{ scale: 0.9 }}
           whileInView={{ scale: 1 }}
           viewport={{ amount: "some" }}
-          className="absolute inset-0 h-full w-full object-cover"
+          className="absolute inset-0 h-full w-full"
         >
           <Image
             src={imageURL}
-            style={{ objectFit: "cover" }}
+            // style={{ objectFit: "fill" }}
             loading="lazy"
             alt={alt}
             fill={true}
@@ -46,7 +56,7 @@ const Page = ({ alt, imageURL, textData, sevenXL, bodyWidth, caption }) => {
       </div>
       {/* //caption */}
       <div
-        className={`${aileron.className} mx-auto w-full text-left text-xs md:text-sm`}
+        className={`${aileron.className} mx-auto w-full text-left text-xs text-gray-500 md:text-base`}
       >
         {caption}
       </div>

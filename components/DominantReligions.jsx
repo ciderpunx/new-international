@@ -123,7 +123,7 @@ const Page = () => {
 
         {/* //? protestants */}
 
-        <motion.div className="grid h-[50vh] w-full grid-rows-[10%_70%_20%] md:h-[60vh]">
+        <motion.div className="grid h-[50vh] w-full grid-rows-[10%_70%_20%]">
           <div
             className={`${league_gothic.className} grid place-items-center text-center align-middle text-3xl text-red-600 md:text-4xl`}
           >

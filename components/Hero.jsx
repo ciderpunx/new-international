@@ -20,7 +20,7 @@ import { Roboto, League_Gothic, Libre_Baskerville } from "next/font/google";
 import Hyperlinks from "../utils/Hyperlinks";
 import { IoMailOpenOutline } from "react-icons/io5";
 import localfont from "next/font/local";
-const airolon = localfont({
+const aileron = localfont({
   src: "../app/Aileron-Regular.woff2",
 });
 
@@ -112,9 +112,9 @@ const Index = () => {
                     initial="hidden"
                     animate="show"
                     exit="exit"
-                    className="text-wrap"
+                    className="text-wrap text-gray-400"
                   >
-                    By Bethany Rielly, Maxine Beteridge Moes, and Maya Misikir{" "}
+                    By Bethany Rielly, Maxine Betteridge Moes and Maya Misikir{" "}
                   </motion.div>
                 </motion.div>
 
@@ -132,7 +132,7 @@ const Index = () => {
           </div>
         </div>
         <div
-          className={`${airolon.className} w-full text-center text-xs md:text-sm`}
+          className={`${aileron.className} w-full text-center text-xs md:text-sm`}
         >
           A girl holds a candle during a ceremony for Orthodox Easter in Addis
           Ababa on May 5, 2024. While Ethiopia is considered a regional leader
@@ -181,7 +181,7 @@ const Index = () => {
         className={`mx-auto flex h-auto w-full max-w-5xl flex-col gap-8 md:gap-12`}
       >
         <p
-          className={`${libre_baskerville_italic.className} text-left text-xl font-bold md:text-xl`}
+          className={`${libre_baskerville_italic.className} mb-8 text-left text-lg font-bold md:text-2xl`}
         >
           Anti-abortion campaigners have their sights set on Ethiopia – a
           progressive outlier in a region marred by restrictions. Who’s behind
@@ -209,7 +209,7 @@ const Index = () => {
       </section>
 
       {/* //? image */}
-      <div className="m-auto w-full max-w-4xl">
+      <div className="m-auto flex w-full max-w-4xl flex-col gap-1 md:gap-2">
         <ImageWrapper
           alt="pray-to-end"
           key="key-to-end"
@@ -217,6 +217,12 @@ const Index = () => {
           // sevenXL={true}
           imageURL={PrayToEnd}
         />
+        <div
+          className={`${aileron.className} mx-auto w-full text-left text-xs md:text-base`}
+        >
+          A taxi parked outside a family planning clinic in Addis Adaba reads
+          ‘Pray to end abortion in Ethiopia’
+        </div>
       </div>
       <section className="mx-auto flex w-full flex-col gap-8 md:gap-12">
         <TitlePara
@@ -224,13 +230,21 @@ const Index = () => {
           title="A regional outlier"
           para="It’s the day before Orthodox Easter Sunday, and from the twentieth floor of our rented Addis apartment, faint chanting from a nearby church can be heard over the steady rumble of traffic and construction. In the streets, cars hurtle past with forlorn looking chickens and goats strapped to the roof, ready to be slaughtered and eaten. Women in white shawls and wooden crosses around their necks prepare for the hours of cooking ahead. Orthodox Christians have avoided meat for two months, and tonight they will finally break their fast. "
         />
-
-        <ImageWrapper
-          key="candle-2"
-          alt="candle-2"
-          // sevenXL={false}
-          imageURL={Candle_two}
-        />
+        <div className="mx-auto flex w-full max-w-5xl flex-col gap-1 md:gap-2">
+          <ImageWrapper
+            key="candle-2"
+            alt="candle-2"
+            // sevenXL={false}
+            imageURL={Candle_two}
+          />
+          <div
+            className={`${aileron.className} text-5 mx-auto w-full text-left text-xs md:text-base`}
+          >
+            Women light candles in celebration of Orthodox Easter in Ethiopia,
+            where approximately 43% of the population is Orthodox Christian.
+            AMANUEL SILESHI
+          </div>
+        </div>
 
         <TitlePara
           key="celebrations"

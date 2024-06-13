@@ -7,7 +7,11 @@ import Quote from "../utils/Quote";
 const Page = () => {
   return (
     <section className="mx-auto flex w-full max-w-6xl flex-col gap-8 md:gap-12">
-      <TitlePara key="maputo protocol" textCenter title="maputo protocol" />
+      <TitlePara
+        key="maputo protocol Ratification Map"
+        textCenter
+        title="maputo protocol Ratification Map"
+      />
       <div className="relative aspect-video w-full md:aspect-video">
         <div className="absolute inset-0">
           <video
