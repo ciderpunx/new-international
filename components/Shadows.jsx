@@ -108,16 +108,13 @@ const Page = () => {
               group in 2007. United for Life Ethiopia(ULE) is listed in the
               world registry of Heartbeat International, a US-based network of
               ‘crisis pregnancy centres’ (CPCs). These centres have been found
-              by a series of global investigations{" "}
+              by a series of{" "}
               <Hyperlinks
                 key="
               global investigations
                 
                 "
-                word="
-              global investigations
-              
-              "
+                word="global investigations"
                 linkNumber={5}
               />{" "}
               to provide ‘deliberate disinformation’ to vulnerable women to
@@ -181,11 +178,15 @@ const Page = () => {
               It would be easy to dismiss these unfounded ramblings if Antonios
               and his wife were not key figures in Africa’s anti-rights
               ecosystem, touring the continent and coordinating campaigns to
-              halt any semblance of progress on SRHR. Multiple investigations
+              halt any semblance of progress on SRHR. Multiple{" "}
+              <Hyperlinks
+                key="investigations"
+                word="investigations"
+                linkNumber={4}
+              />{" "}
               have found links between FWI and several anti-LGBTQI+ bills in
-              Africa. Africa. organization has been accused of helping Uganda
-              pass one of the harshest anti-gay laws in the world last year, and
-              is{" "}
+              Africa. Organization has been accused of helping Uganda pass one
+              of the harshest anti-gay laws in the world last year, and is{" "}
               <Hyperlinks
                 key="actively lobbying"
                 word="actively lobbying"
@@ -260,18 +261,16 @@ const Page = () => {
               erosion, so I think one day we [could] wake up and a woman will
               find out she can no longer have an abortion.’ Research shows that
               religious language has recently been seeping into mainstream
-              media, cultivating a platform for anti-abortion{" "}
+              media,{" "}
               <Hyperlinks
-                key="
-                
-              cultivating a platform for anti-abortion
-                "
-                word=" cultivating a platform for anti-abortion"
+                key="mainstream media"
+                word="mainstream media"
                 linkNumber={8}
               />{" "}
-              reforms to Ethiopia’s media law in 2021 mean that religious
-              organizations can now receive broadcasting licences for the first
-              time in the country’s history.
+              cultivating a platform for anti-abortion messaging to Ethiopia’s
+              media law in 2021 mean that religious organizations can now
+              receive broadcasting licences for the first time in the country’s
+              history.
             </>
           }
         />
@@ -460,9 +459,9 @@ const Page = () => {
               fighting in support of the federal government committed widespread
               rape against Tigrayan women and girls. Today the healthcare
               service in the region has all but collapsed, and maternal
-              mortality rates are once again
-              <Hyperlinks key="soaring" word="soaring" linkNumber={12} />
-              across the region.
+              mortality rates are once again{" "}
+              <Hyperlinks key="soaring" word="soaring" linkNumber={12} /> across
+              the region.
             </>
           }
         />
@@ -544,22 +543,22 @@ const Page = () => {
               While NGO workers we spoke to stress that the opposition is so far
               not impacting the provision of safe abortion care in their
               clinics, funding is a more pressing worry. Foreign donors,
-              including the United States, account for{" "}
+              including the United States,{" "}
               <Hyperlinks
                 key="budget"
-                word="70 per cent of Ethiopia’s
+                word="account for 70 per cent of Ethiopia’s
               family planning budget"
                 linkNumber={13}
               />{" "}
               , making the country highly susceptible to cuts. When then-US
               President Donald Trump implemented the ‘global gag rule’ – a
               policy that prohibits foreign NGOs that receive US funding from
-              providing abortion services – it was a major blow. FGAE and MSI
+              providing abortion services – it was a major blow. FGAE and MSI{" "}
               <Hyperlinks
                 key="refused to comply"
                 word="refused to comply"
                 linkNumber={13}
-              />
+              />{" "}
               meaning millions of people lost access to services and the system
               faltered as a result of programmes ending.
             </>
