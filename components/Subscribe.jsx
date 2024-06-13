@@ -37,7 +37,7 @@ const Page = () => {
           </h2>
           {/* //links */}
           <ul
-            className={`${libre_baskerville.className} my-auto grid h-full w-full cursor-pointer grid-rows-[auto] divide-y-2 divide-gray-600 border-b-2 border-t-2 border-b-slate-800 border-t-gray-600`}
+            className={`${libre_baskerville.className} my-auto grid h-full w-full grid-rows-[auto] divide-y-2 divide-gray-600 border-b-2 border-t-2 border-b-slate-800 border-t-gray-600`}
           >
             {linkArrowData.map((x, index) => (
               <li

@@ -19,7 +19,7 @@ import { Libre_Baskerville } from "next/font/google";
 import { Hyperlinks } from "../utils/Hyperlinks";
 import localfont from "next/font/local";
 const aileron = localfont({
-  src: "../app/aileron-Regular.woff2",
+  src: "../app/Aileron-Regular.woff2",
 });
 const libre_baskerville = Libre_Baskerville({
   subsets: ["latin"],
@@ -100,11 +100,12 @@ const Page = () => {
             The sticky fingers of US Christian Right groups are all over
             Ethiopia’s anti-abortion movement. Antonios and his wife Saba set up
             what could be considered Ethiopia’s first organized ‘pro-life’ group
-            in 2007. United for Life Ethiopia (ULE) is listed in the world
-            registry of Heartbeat International, a US-based network of ‘crisis
-            pregnancy centres’ (CPCs). These centres have been found by a series
-            of global investigations to provide ‘deliberate disinformation’ to
-            vulnerable women to coerce them into continuing unwanted
+            in 2007. United for Life Ethiopiad:\EdgeDownloads\email_signup.html
+            (ULE) is listed in the world registry of Heartbeat International, a
+            US-based network of ‘crisis pregnancy centres’ (CPCs). These centres
+            have been found by a series of global investigations to provide
+            ‘deliberate disinformation’ to vulnerable women to coerce them into
+            continuing unwanted
             <Hyperlinks key="pregnancies" word="pregnancies." linkNumber={5} />
           </>
         }
@@ -139,8 +140,8 @@ const Page = () => {
             infertility, cancer and depression. The doctor has amassed over one
             million views on his channels since 2018, where he claims to have
             ‘prayed with the prime minister’ – himself a converted evangelical
-            Christian – and has made appeared several times on national
-            <Hyperlinks key="tv" word="TV" linkNumber={6} />
+            Christian – and has made appearances several times on national
+            <Hyperlinks key="tv" word="TV." linkNumber={6} />
           </>
         }
       />
@@ -172,9 +173,9 @@ const Page = () => {
         }
       />
       <div className="mx-auto flex w-full max-w-7xl flex-col gap-2">
-        <ImageWrapper key="seyoum" alt="seyoum" imageURL={Seyoum} sevenXL />
+        <ImageWrapper key="seyoum" alt="seyoum" imageURL={Seyoum} bodyWidth />
         <div
-          className={`${aileron.className} w-full max-w-7xl text-center text-sm`}
+          className={`${aileron.className} m-auto w-full max-w-5xl text-center text-sm`}
         >
           In 2019, the Arizona-based Mormon organization Family Watch
           International (FWI) appointed the celebrity surgeon Dr Seyoum Antonios
@@ -325,8 +326,14 @@ const Page = () => {
         }
       />
       {/* //?  following pic needs replacing */}
-      <div className="gap2 mx-auto flex w-full flex-col">
-        <ImageWrapper key="siyane" alt="Siyane" imageURL={Siyane} />
+      <div className="gap2 mx-auto flex w-full max-w-5xl flex-col">
+        <ImageWrapper
+          key="siyane"
+          alt="Siyane"
+          imageURL={Siyane}
+          bodyWidth={true}
+          sevenXL
+        />
         <div className={`${aileron.className} w-full text-xs md:text-sm`}>
           - Siyane Aniley, an Ethiopian sexual and reproductive rights
           researcher, says anti-right figures on social media have accused her
@@ -342,10 +349,6 @@ const Page = () => {
         key="abortion"
         alt="contraceptive pills"
         imageURL={Shadows_3}
-      />
-      <TitlePara
-        key="Eskedar"
-        para="Eskedar Melesse, the clinic coordinator for FGAE in Adama, says she often hears sermons on the ‘evils’ of abortion at church. ‘It shames you, and makes you feel that you are doing something wrong,’ she says. ‘But I know that I am saving lives.’"
       />
 
       {/* //* slideshow */}
@@ -426,6 +429,11 @@ const Page = () => {
         alt="nurse"
         imageURL={Shadows_4}
       />
+      <TitlePara
+        key="Eskedar"
+        para="Eskedar Melesse, the clinic coordinator for FGAE in Adama, says she often hears sermons on the ‘evils’ of abortion at church. ‘It shames you, and makes you feel that you are doing something wrong,’ she says. ‘But I know that I am saving lives.’"
+      />
+      {/* ??//* replace this image */}
       <ImageWrapper
         sevenXL={true}
         key="family ward"

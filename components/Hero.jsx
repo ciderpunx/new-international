@@ -142,7 +142,7 @@ const Index = () => {
       {/* //? share with a friend */}
       <div className="mx-auto flex w-full max-w-5xl items-baseline justify-between gap-2 pt-4 md:flex-row md:justify-between">
         <h3
-          className={`${league_gothic.className} text-2xl uppercase text-[#3c4c54]`}
+          className={`${league_gothic.className} text-xl uppercase text-[#3c4c54] md:text-2xl`}
         >
           share this article
         </h3>

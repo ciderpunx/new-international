@@ -58,7 +58,7 @@ const Page = () => {
             <div
               className={`${libre_baskerville.className} m-auto flex h-full w-full items-center justify-start text-left text-sm md:text-lg`}
             >
-              Member of Co-operative UK
+              Member of Co-operatives UK
             </div>
           </div>
         </div>
@@ -126,6 +126,7 @@ const Page = () => {
                 onChange={(e) => setEmail(e.target.value)}
               />
               <button
+                onSubmit={async () => {}}
                 className={`${league_gothic.className} h-full w-full bg-black text-lg uppercase text-white md:text-2xl`}
               >
                 <a
@@ -150,9 +151,24 @@ const Page = () => {
         <div
           className={`${libre_baskerville.className} flex flex-col gap-1 text-sm md:flex-row md:items-center md:gap-4 md:text-xl`}
         >
-          <span>Privacy Policy</span>
           <span>
-            Crafted By <strong>Natural Eye Media</strong>
+            <a
+              href="
+            https://newint.org/about/privacy
+            "
+              className=""
+            ></a>
+            Privacy Policy
+          </span>
+
+          <span>
+            <a
+              href="
+          https://naturaleyemedia.com/
+          "
+            >
+              Crafted By <strong>Natural Eye Media</strong>
+            </a>
           </span>
         </div>
       </div>

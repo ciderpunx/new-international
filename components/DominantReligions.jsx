@@ -123,7 +123,7 @@ const Page = () => {
 
         {/* //? protestants */}
 
-        <motion.div className="grid h-[60vh] w-full grid-rows-[10%_70%_20%]">
+        <motion.div className="grid h-[50vh] w-full grid-rows-[10%_70%_20%] md:h-[60vh]">
           <div
             className={`${league_gothic.className} grid place-items-center text-center align-middle text-3xl text-red-600 md:text-4xl`}
           >
@@ -136,7 +136,7 @@ const Page = () => {
               whileInView={{ scale: 1 }}
               // ref={imageRef}
               // style={{ scale }}
-              className={`absolute inset-0 m-auto h-2/4 w-full fill-yellow-600 object-contain`}
+              className={`absolute inset-0 m-auto w-full fill-yellow-600 object-contain md:h-2/4`}
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
