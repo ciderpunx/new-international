@@ -34,7 +34,7 @@ const Page = () => {
       }}
       transition={{
         type: "spring",
-        bounce: 0.2,
+        bounce: 0.4,
         // duration: 0.6,
       }}
       style={{
@@ -176,7 +176,7 @@ let hamburgerVariants = {
     transition: {
       type: "spring",
       bounce: 0,
-      duration: 0.8,
+      duration: 1,
       delayChildren: 0.2,
       staggerChildren: 0.1,
     },
@@ -188,7 +188,7 @@ let hamburgerVariants = {
     transition: {
       type: "spring",
       bounce: 0.5,
-      duration: 0.8,
+      duration: 0.9,
       when: "afterChildren",
       delayChildren: 0.2,
       staggerChildren: 0.1,

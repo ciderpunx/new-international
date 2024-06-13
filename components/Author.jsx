@@ -82,25 +82,25 @@ const Page = () => {
 
         <div className="grid w-2/3 grid-cols-4 items-baseline text-gray-500 md:w-1/3">
           <a
-            href="https://www.facebook.com/sharer/sharer.php?u=https%3A//newint.org/stories/fertile-ground"
+            href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fnewint.org%2Finteractive%2F2024%2Ffertile-ground"
             className="grid aspect-square size-8 cursor-pointer place-items-center rounded-full border-black bg-gray-50 hover:border-2 hover:text-[#4267B2]"
           >
             <FaFacebookF size={20} />
           </a>
           <a
-            href="https://twitter.com/intent/tweet?text=Fertile%20Ground%20on%20New%20Internationalist&url=https%3A%2F%2Fnewint.org%2Fstories%2Ffertile-ground"
+            href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fnewint.org%2Finteractive%2F2024%2Ffertile-ground"
             className="grid aspect-square size-8 cursor-pointer place-items-center rounded-full border-black bg-gray-50 hover:border-2 hover:text-[#000000]"
           >
             <FaXTwitter size={20} />
           </a>
           <a
-            href="mailto:?body=https://newint.org/stories/fertile-ground"
+            href="mailto:?body=https://newint.org/interactive/2024/fertile-ground"
             className="grid aspect-square size-8 cursor-pointer place-items-center rounded-full border-black bg-gray-50 hover:border-2 hover:text-[#FD1D1D]"
           >
             <IoMailOpenOutline size={20} />
           </a>
           <a
-            href="https://api.whatsapp.com/send?text=https%3A%2F%2Fnewint.org%2Fstories%2Ffertile-ground"
+            href="https://api.whatsapp.com/send?text=https%3A%2F%2Fnewint.org%2Finteractive%2F2024%2Ffertile-ground"
             className="grid aspect-square size-8 cursor-pointer place-items-center rounded-full border-black bg-gray-50 hover:border-2 hover:text-[#25D366]"
           >
             <FaWhatsapp size={20} />

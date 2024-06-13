@@ -307,7 +307,7 @@ const Page = () => {
         />
       </section>
       {/* //? section 4 */}
-      <section className="mx-auto flex w-full flex-col gap-8 md:gap-12">
+      <section className="mx-auto flex w-full flex-col gap-6 md:gap-12">
         <TitlePara
           key="saving lives"
           title="‘I know that I am saving lives’"
@@ -351,7 +351,7 @@ const Page = () => {
           para={
             <>
               And it’s not just clients who face stigma – according to a recent
-              <Hyperlinks key=" report " word="report  " linkNumber={11} />
+              <Hyperlinks key=" report " word="report" linkNumber={11} />
               from Amnesty International, providers, advocates and activists
               defending abortion worldwide are increasingly facing physical and
               verbal attacks, intimidation, threats and criminalization, with
@@ -461,17 +461,23 @@ const Page = () => {
               fighting in support of the federal government committed widespread
               rape against Tigrayan women and girls. Today the healthcare
               service in the region has all but collapsed, and maternal
-              mortality rates are once again soaring across the
-              <Hyperlinks key="region" word="region" linkNumber={12} />
-              Nearly one million people are displaced in Tigray, and one of the
-              few remaining health care centres for survivors of gender-based
-              violence is run by Sister Mulu Mesfin in the region’s capital,
-              Mekelle. ‘Most of the women who come to us are survivors of rape
-              and gang rape,’ ‘Even after the war, they are still repeatedly
-              getting attacked in the [displacement] camps [and] facing domestic
-              violence. They beg at my feet for abortion pills.’
+              mortality rates are once again
+              <Hyperlinks key="soaring" word="soaring" linkNumber={12} />
+              across the region.
             </>
           }
+        />
+
+        <TitlePara
+          key="nearly"
+          para=" Nearly one million people are displaced in
+              Tigray, and one of the few remaining health care centres for
+              survivors of gender-based violence is run by Sister Mulu Mesfin in
+              the region’s capital, Mekelle. ‘Most of the women who come to us
+              are survivors of rape and gang rape,’ ‘Even after the war, they
+              are still repeatedly getting attacked in the [displacement] camps
+              [and] facing domestic violence. They beg at my feet for abortion
+              pills.’"
         />
         <Quote
           key="survivors"
@@ -598,7 +604,10 @@ const Page = () => {
           className={`${libre_baskerville.className} mx-auto w-full max-w-5xl text-xs md:text-sm`}
         >
           This article appears in print in our{" "}
-          <a href="#" className="text-blue-600 underline">
+          <a
+            href="https://newint.org/issues/2024/05/16/debt-which-way-out"
+            className="text-blue-600 underline"
+          >
             July/August 2024 issue
           </a>
           , Abortion: Why is your body still a battleground?

@@ -153,6 +153,7 @@ const Page = () => {
             </motion.div>
             {/* //? overlay percentages */}
             <motion.div
+              initial={{ opacity: 0 }}
               style={{
                 opacity: leftNumberOpacity,
                 // scale: scale2,
@@ -167,6 +168,7 @@ const Page = () => {
               </span>
             </motion.div>
             <motion.div
+              initial={{ opacity: 0 }}
               style={{
                 opacity: rightNumberOpacity,
                 // scale: scale2,

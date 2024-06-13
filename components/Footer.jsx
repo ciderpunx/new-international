@@ -98,23 +98,23 @@ const Page = () => {
             <div className="flex w-full justify-start gap-2 text-gray-900 md:gap-4">
               <a
                 href="https://www.facebook.com/newint"
-                className="grid aspect-square size-14 cursor-pointer place-items-center rounded-full border-2 bg-white text-black"
+                className="grid aspect-square size-14 cursor-pointer place-items-center rounded-full border-2 border-black text-black"
               >
                 <FaFacebookF size={30} />
               </a>
               <a
                 href="https://twitter.com/newint"
-                className="grid aspect-square size-14 cursor-pointer place-items-center rounded-full border-2 bg-white text-black"
+                className="grid aspect-square size-14 cursor-pointer place-items-center rounded-full border-2 border-black text-black"
               >
                 <FaXTwitter size={30} />
               </a>
               <a
                 href="https://www.instagram.com/newinternationalist"
-                className="grid aspect-square size-14 cursor-pointer place-items-center rounded-full border-2 bg-white text-black"
+                className="grid aspect-square size-14 cursor-pointer place-items-center rounded-full border-2 border-black text-black"
               >
                 <IoMailOpenOutline size={35} />
               </a>
-              <a className="borde grid aspect-square size-14 cursor-pointer place-items-center rounded-full bg-white text-black">
+              <a className="borde grid aspect-square size-14 cursor-pointer place-items-center rounded-full border-2 border-black text-black">
                 <FaLinkedinIn size={30} />
               </a>
             </div>
@@ -206,13 +206,9 @@ const Page = () => {
           className={`${libre_baskerville.className} flex flex-col gap-1 text-sm md:flex-row md:items-center md:gap-4 md:text-xl`}
         >
           <span>
-            <a
-              href="
-            https://newint.org/about/privacy
-            "
-              className=""
-            ></a>
-            Privacy Policy
+            <a href=" https://newint.org/about/privacy" className="">
+              Privacy Policy
+            </a>
           </span>
 
           <span>

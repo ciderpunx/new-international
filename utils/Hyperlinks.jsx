@@ -4,8 +4,8 @@ export const Hyperlinks = ({ word, linkNumber }) => {
     <a
       title={dataArray[linkNumber]?.name}
       href={dataArray[linkNumber]?.href}
-      className="relative"
-      style={{ textDecoration: "underline", color: "darkblue" }}
+      className="relative underline"
+      style={{ color: "darkblue" }}
     >
       {" "}
       {word}{" "}
@@ -51,11 +51,11 @@ let dataArray = [
   },
   {
     name: "MM Alemayehu and S Terje, ‘Media and religion…’, Fojo media institute, Linnaeus University, 2024",
-    href: "https://a.nin.tl/ MediaEthio",
+    href: "https://a.nin.tl/MediaEthio",
   },
   {
     name: "UN Women Africa, ‘Multi-country analytical study’, 2019",
-    href: "https:// a.nin.tl/amhara",
+    href: "https://a.nin.tl/amhara",
   },
   {
     name: "Amnesty International, ‘An Unstoppable movement…’, November 2023",
@@ -63,7 +63,7 @@ let dataArray = [
   },
   {
     name: "Amnesty International, ‘Ethiopia: Troops and militia rape’, August 2021",
-    href: "https:// a.nin.tl/Tigray",
+    href: "https://a.nin.tl/Tigray",
   },
   {
     name: "WHO, ‘HeRAMS Tigray baseline report 2023’, October 2023",

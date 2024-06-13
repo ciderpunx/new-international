@@ -13,10 +13,10 @@ const Page = ({ title, para, text20Px, textCenter }) => {
     <div className="mx-auto flex w-full max-w-5xl flex-col gap-2 md:gap-6">
       {title && (
         <h2
-          // style={{
-          //   fontSize: 24,
-          // }}
-          className={`${league_gothic.className} ${textCenter ? "text-center" : "text-left"} w-full text-3xl uppercase leading-5 tracking-wide text-[#3c4c54] md:text-5xl`}
+          style={{
+            fontSize: 40,
+          }}
+          className={`${league_gothic.className} ${textCenter ? "text-center" : "text-left"} w-full text-4xl uppercase leading-5 tracking-wide text-[#3c4c54] md:text-5xl`}
         >
           {title}
         </h2>

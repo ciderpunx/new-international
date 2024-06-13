@@ -26,7 +26,7 @@ const Page = ({
     >
       {/* //? image */}
       <div
-        className={`relative ${originalAspect ? "object-contain" : "aspect-4/3 md:aspect-video"} w-full`}
+        className={`relative ${originalAspect ? "" : "aspect-4/3 md:aspect-video"} w-full`}
       >
         <motion.div
           transition={{ type: "spring", bounce: 0 }}
@@ -37,7 +37,7 @@ const Page = ({
         >
           <Image
             src={imageURL}
-            // style={{ objectFit: "fill" }}
+            style={{ objectFit: "cover" }}
             loading="lazy"
             alt={alt}
             fill={true}
