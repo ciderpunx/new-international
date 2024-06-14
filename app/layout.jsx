@@ -18,10 +18,11 @@ export default function RootLayout({ children }) {
             src="https://www.googletagmanager.com/ns.html?id=GTM-KD6ZVR"
             height="0"
             width="0"
-            className={{
-              display: "none",
-              visibility: "hidden",
-            }}
+            className="hidden"
+            // style={{
+            //   display: "none",
+            //   visibility: "hidden",
+            // }}
           ></iframe>
         </noscript>
       </Head>
