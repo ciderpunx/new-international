@@ -218,7 +218,7 @@ const Index = () => {
               The celebrations engulfing the city speak to the importance of
               religion in Africa’s second most populous country, where 43 per
               cent of around 123 million people identify as Christian Orthodox,
-              33 per cent as Muslim and 18 per cent as Protestant, according to
+              33 percent as Muslim and 18 percent as Protestant, according to
               the most recent{" "}
               <Hyperlinks
                 key="census"
