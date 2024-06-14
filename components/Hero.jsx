@@ -68,9 +68,13 @@ const Index = () => {
               initial="hidden"
               animate="show"
               exit="exit"
-              className="absolute bottom-2 left-0 right-0 z-40 m-auto flex max-w-5xl flex-col overflow-hidden px-2 md:bottom-16 md:px-0"
+              className="absolute bottom-2 left-0 right-0 z-40 m-auto flex max-w-5xl flex-col overflow-hidden px-2 md:bottom-20 md:px-0 md:py-2"
             >
-              <h1
+              <motion.h1
+                variants={parentVariant}
+                initial="hidden"
+                animate="show"
+                exit="exit"
                 className={`${league_gothic.className} overflow-hidden text-4xl font-[500] tracking-wide text-white md:text-7xl`}
               >
                 <motion.div
@@ -82,37 +86,7 @@ const Index = () => {
                 >
                   FERTILE GROUND
                 </motion.div>
-              </h1>
-              <motion.div className="h-6 w-full overflow-hidden md:h-12">
-                <motion.div
-                  // style={{ y, skewY }}
-                  transition={{ delay: 1 }}
-                  className={
-                    libre_baskerville.className +
-                    " flex items-center justify-start gap-1 overflow-hidden text-balance text-[8px] font-thin text-[#c8c8c8] md:flex-row md:text-2xl"
-                  }
-                >
-                  <motion.div
-                    variants={childVariant}
-                    initial="hidden"
-                    animate="show"
-                    exit="exit"
-                    className="text-wrap text-gray-400"
-                  >
-                    By Bethany Rielly, Maxine Betteridge Moes and Maya Misikir{" "}
-                  </motion.div>
-                </motion.div>
-
-                <motion.div
-                  variants={childVariant}
-                  initial="hidden"
-                  animate="show"
-                  exit="exit"
-                  className=""
-                >
-                  8 June 2024
-                </motion.div>
-              </motion.div>
+              </motion.h1>
             </motion.div>
           </div>
         </div>
@@ -122,7 +96,7 @@ const Index = () => {
           A girl holds a candle during a ceremony for Orthodox Easter in Addis
           Ababa on May 5, 2024. While Ethiopia is considered a regional leader
           on abortion provision in East Africa, strong religious views in the
-          country often clash with abortion rights. AMANUEL SILESH
+          country often clash with abortion rights. AMANUEL SILESHI
         </div>
       </div>
 
@@ -161,19 +135,25 @@ const Index = () => {
           </a>
         </div>
       </div>
+      {/* //?date */}
+      <div
+        className={`${aileron.className} mx-auto w-full max-w-5xl text-left text-xs text-gray-500 md:text-base`}
+      >
+        14 June 2024
+      </div>
+      <p
+        className={`${libre_baskerville_italic.className} mx-auto mb-8 max-w-5xl text-left text-lg font-bold md:text-2xl`}
+      >
+        Anti-abortion campaigners have their sights set on Ethiopia – a
+        progressive outlier in a region marred by restrictions. Who’s behind the
+        emboldened ‘pro-life’ movement and what’s at stake for women’s rights
+        amid a myriad of other challenges? Bethany Rielly, Maxine
+        Betteridge-Moes and Maya Misikir report from Addis Ababa.
+      </p>
       {/* //? para */}
       <section
-        className={`mx-auto flex h-auto w-full max-w-5xl flex-col gap-8 md:gap-12`}
+        className={`mx-auto flex h-auto w-full max-w-5xl flex-col gap-10 md:gap-12`}
       >
-        <p
-          className={`${libre_baskerville_italic.className} mb-8 text-left text-lg font-bold md:text-2xl`}
-        >
-          Anti-abortion campaigners have their sights set on Ethiopia – a
-          progressive outlier in a region marred by restrictions. Who’s behind
-          the emboldened ‘pro-life’ movement and what’s at stake for women’s
-          rights amid a myriad of other challenges?
-        </p>
-
         <TitlePara
           key="abortion"
           text20Px={true}
@@ -226,8 +206,8 @@ const Index = () => {
             className={`${aileron.className} text-5 mx-auto w-full text-left text-xs md:text-base`}
           >
             Women light candles in celebration of Orthodox Easter in Ethiopia,
-            where approximately 43% of the population is Orthodox Christian.
-            AMANUEL SILESHI
+            where approximately 43 percent of the population is Orthodox
+            Christian. AMANUEL SILESHI
           </div>
         </div>
 

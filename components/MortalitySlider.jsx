@@ -62,7 +62,7 @@ const Page = () => {
   let rightImageGrayScale = useTransform(
     x,
     [-sliderWidth / 2, 0, sliderWidth / 2],
-    [0, 0, 0],
+    [0, 1, 0],
   );
   let rightImageBlur = useTransform(
     x,
@@ -86,7 +86,7 @@ const Page = () => {
       <TitlePara
         textCenter={true}
         key="maternal-mortality"
-        title="Maternal Mortality rates in Ethiopia pre- and post- 2005 abortion law"
+        title="Slide to see maternal mortality rates in Ethiopia pre- and post-2005 abortion law"
       />
       {/* //* mortality svg */}
       <div className="mx-auto flex w-full flex-col gap-1 md:gap-2">
@@ -146,6 +146,7 @@ const Page = () => {
               <motion.div
                 whileHover={{ scale: [1, 1.5, 1] }}
                 initial={{ x: -15 }}
+                transition={{ type: "spring", bounce: 0.6 }}
                 className="absolute inset-0 m-auto grid size-10 place-items-center rounded-full bg-gray-50 shadow-xl transition-all group-hover:scale-150"
               >
                 <VscGrabber size={40} color="black" />
@@ -177,7 +178,7 @@ const Page = () => {
             >
               &lt;10%
               <span
-                className={`${airolon.className} w-full bg-gray-700 px-1 text-center text-[8px] leading-tight text-gray-200 max-sm:h-3 md:text-lg`}
+                className={`${airolon.className} w-full bg-gray-700 px-1 text-center text-[8px] leading-tight text-white max-sm:h-3 md:text-lg`}
               >
                 Maternal deaths per 100,000 births
               </span>
@@ -207,7 +208,7 @@ const Page = () => {
             className="inline underline"
             href="https://reproductive-health-journal.biomedcentral.com/articles/10.1186/s12978-022-01457-z#:~:text=Within%20a%20decade%20of%20liberalizing,political%2C%20and%20women's%20rights%20communities "
           >
-            32 per cent to less than 10 per cent
+            32 percent to less than 10 percent
           </a>
           . Maternal mortality refers to deaths due to complications from
           pregnancy or childbirth.

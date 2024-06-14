@@ -148,7 +148,7 @@ const Page = () => {
               initial="hidden"
               animate="show"
               exit="exit"
-              className="absolute top-full m-auto flex h-[50vh] w-screen flex-col items-center justify-start gap-4 bg-[#dcf3f3] px-2 py-8"
+              className="absolute top-full z-30 m-auto flex h-[50vh] w-screen flex-col items-center justify-start gap-4 bg-[#dcf3f3] px-2 py-8"
             >
               {links.map((x, index) => (
                 <motion.div
@@ -188,22 +188,23 @@ let hamburgerVariants = {
     skewY: 0,
     transition: {
       type: "spring",
-      bounce: 0,
+      bounce: 0.4,
       duration: 1,
       delayChildren: 0.2,
       staggerChildren: 0.1,
     },
   },
   exit: {
-    skewY: -10,
     scaleY: 0,
+    skewY: -10,
+    skewX: 5,
     // height: 0,
     transition: {
       type: "spring",
-      bounce: 0.3,
+      bounce: 0.4,
       duration: 0.5,
       when: "afterChildren",
-      delayChildren: 0.2,
+      // delayChildren: 0.1,
       staggerChildren: 0.1,
     },
   },

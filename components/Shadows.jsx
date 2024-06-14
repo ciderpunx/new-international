@@ -35,7 +35,7 @@ const Page = () => {
   return (
     <div className="mx-auto flex h-auto w-full flex-col gap-16 md:w-10/12 md:gap-24">
       {/* //? section 1 */}
-      <section className="mx-auto flex w-full flex-col gap-8 md:gap-12">
+      <section className="mx-auto flex w-full flex-col gap-6 md:gap-8">
         <TitlePara
           key="in the shadows"
           title="in the shadows"
@@ -92,7 +92,7 @@ const Page = () => {
         />
       </section>
       {/* //? section 2 */}
-      <section className="mx-auto flex w-full flex-col gap-8 md:gap-12">
+      <section className="mx-auto flex w-full flex-col gap-6 md:gap-8">
         <TitlePara
           key="pro life pioneers"
           title="pro-life pioneers"
@@ -101,7 +101,7 @@ const Page = () => {
               The sticky fingers of US Christian Right groups are all over
               Ethiopia’s anti-abortion movement. Antonios and his wife Saba set
               up what could be considered Ethiopia’s first organized ‘pro-life’
-              group in 2007. United for Life Ethiopia(ULE) is listed in the
+              group in 2007. United for Life Ethiopia (ULE) is listed in the
               world registry of Heartbeat International, a US-based network of
               ‘crisis pregnancy centres’ (CPCs). These centres have been found
               by a series of{" "}
@@ -131,7 +131,7 @@ const Page = () => {
         />
         <TitlePara
           key="ministry"
-          para="Monahan denies that staff at the ministry play a role in the women’s decisions not have abortions. In a response over email, she says: ‘They changed their mind about abortion (we were not involved at all) and someone told them about how we could assist them. There are people who talk to women going into the abortion clinics offering them educational information, but they are not affiliated with us.’"
+          para="Monahan denies that staff at the ministry play a role in the women’s decisions not to have abortions. In a response over email, she says: ‘They changed their mind about abortion (we were not involved at all) and someone told them about how we could assist them. There are people who talk to women going into the abortion clinics offering them educational information, but they are not affiliated with us.’"
         />
         <TitlePara
           key="more woring"
@@ -188,14 +188,14 @@ const Page = () => {
                 word="actively lobbying"
                 linkNumber={4}
               />{" "}
-              politicians in Kenya and Ghana to pass similar legislation FWI has
-              repeatedly denied these accusations.
+              politicians in Kenya and Ghana to pass similar legislation. FWI
+              has repeatedly denied these accusations.
             </>
           }
         />
 
         <ImageWrapper
-          caption=" In 2019, the Arizona-based Mormon organization Family Watch International (FWI) appointed the celebrity surgeon Seyoum Antonios (L) as its Africa director. Antonios is pictured here with FWI founder Sharon Slater (in purple) and Ugandan President Yoweri Museveni (in white) outside Uganda's State House in April 202
+          caption=" In 2019, the Arizona-based Mormon organization Family Watch International (FWI) appointed the celebrity surgeon Seyoum Antonios (L) as its Africa director. Antonios is pictured here with FWI founder Sharon Slater (in purple) and Ugandan President Yoweri Museveni (in white) outside Uganda's State House in April 2023
            during a conference on 'family values'."
           key="seyoum"
           alt="seyoum"
@@ -209,7 +209,7 @@ const Page = () => {
         />
         <TitlePara
           key="conflation of abortion rights"
-          para="This conflation of abortion rights with LGBTQI+ advocacy is another old tactic of the ‘anti-abortion’ movement, which targets deeply conservative and patriarchal countries to push its ‘family values’ agenda. (Antonios did not respond to requests for comment.)"
+          para="This conflation of abortion rights with LGBTQI+ advocacy is another old tactic of the ‘anti-abortion’ movement, which targets deeply conservative and patriarchal countries to push its ‘family values’ agenda. (Antonios did not respond to requests for comment)."
         />
         <TitlePara
           key="ongoing social and political tension"
@@ -238,7 +238,7 @@ const Page = () => {
         />
       </section>
       {/* //? section 3 */}
-      <section className="mx-auto flex w-full flex-col gap-8 md:gap-12">
+      <section className="mx-auto flex w-full flex-col gap-6 md:gap-8">
         <TitlePara
           key="prayers in a palace"
           title="prayers in a palace"
@@ -293,7 +293,7 @@ const Page = () => {
               45 per cent of girls
                 
                 "
-                word="45 per cent of girls"
+                word="45 percent of girls"
                 linkNumber={9}
               />{" "}
               are married before the age of 18.
@@ -302,7 +302,7 @@ const Page = () => {
         />
       </section>
       {/* //? section 4 */}
-      <section className="mx-auto flex w-full flex-col gap-6 md:gap-12">
+      <section className="mx-auto flex w-full flex-col gap-6 md:gap-8">
         <TitlePara
           key="saving lives"
           title="‘I know that I am saving lives’"
@@ -352,7 +352,7 @@ const Page = () => {
               Amnesty International, providers, advocates and activists
               defending abortion worldwide are increasingly facing physical and
               verbal attacks, intimidation, threats and criminalization, with
-              little to no accountability Siyane Aniley, an Ethiopian SRHR
+              little to no accountability. Siyane Aniley, an Ethiopian SRHR
               researcher says that anti-rights figures on social media have
               accused her and other advocates of promoting LGBTQI+ rights as a
               ‘hidden agenda’.
@@ -372,7 +372,7 @@ const Page = () => {
           alt="Siyane"
           imageURL={Siyane}
           bodyWidth={true}
-          caption="- Siyane Aniley, an Ethiopian sexual and reproductive rights
+          caption="Siyane Aniley, an Ethiopian sexual and reproductive rights
             researcher, says anti-right figures on social media have accused her
             of promoting a 'hidden agenda'. AMANUEL SILESHI"
           // sevenXL
@@ -383,7 +383,7 @@ const Page = () => {
         />
         <ImageWrapper
           // sevenXL={true}
-          caption="Nurse Lydia Tesfay handles medication at the Family Planning and Guidance Association of Ethiopia’s clinic in the southern city of Adama. ADDIS AEMERO'"
+          caption="Nurse Lydia Tesfay handles medication at the Family Planning and Guidance Association of Ethiopia’s clinic in the southern city of Adama. ADDIS AEMERO"
           key="abortion"
           alt="contraceptive pills"
           imageURL={Shadows_3}
@@ -391,9 +391,22 @@ const Page = () => {
         {/* //? change aspect of this image */}
         {/* <ImageWrapper key="clinic" alt="nurse" imageURL={Shadows_4} /> */}
 
-        <div className="relative mx-auto h-[30rem] w-full max-w-5xl md:h-[80rem]">
-          <div className="absolute h-full w-full object-cover">
-            <Image alt="family ward" src={Shadows_4} fill objectFit="cover" />
+        <div className="relative mx-auto flex w-full max-w-5xl flex-col gap-1 md:gap-2">
+          <div className="relative h-[30rem] w-full md:h-[80rem]">
+            <div className="absolute h-full w-full object-cover">
+              <Image
+                alt="family ward"
+                src={Shadows_4}
+                fill={true}
+                objectFit="cover"
+              />
+            </div>
+          </div>
+          <div
+            className={`${aileron.className} mx-auto w-full text-left text-xs text-gray-500 md:text-base`}
+          >
+            Clients enter a clinic run by the Family Guidance Association of
+            Ethiopia, an IPPF member association, in Adama. ADDIS AEMERO
           </div>
         </div>
         <TitlePara
@@ -402,6 +415,7 @@ const Page = () => {
         />
         {/* ??//* replace this image */}
         <ImageWrapper
+          caption="Eskedar Melesse is the clinic coordinator for FGAE in Adama. She says she often hears sermons on the ‘evils’ of abortion at church. ADDIS AEMERO"
           // sevenXL={true}
           key="family ward"
           alt="family ward"
@@ -476,7 +490,7 @@ const Page = () => {
         />
       </section>
       {/* //? section 5 */}
-      <section className="mx-auto flex w-full flex-col gap-8 md:gap-12">
+      <section className="mx-auto flex w-full flex-col gap-6 md:gap-8">
         <TitlePara
           key="on the side"
           title="on side"
@@ -526,7 +540,7 @@ const Page = () => {
         />
       </section>
       {/* //? section 6 */}
-      <section className="mx-auto flex w-full flex-col gap-8 md:gap-12">
+      <section className="mx-auto flex w-full flex-col gap-6 md:gap-8">
         <TitlePara
           key="fickle funding"
           title="fickle funding"
@@ -539,7 +553,7 @@ const Page = () => {
               including the United States,{" "}
               <Hyperlinks
                 key="budget"
-                word="account for 70 per cent of Ethiopia’s
+                word="account for 70 percent of Ethiopia’s
               family planning budget"
                 linkNumber={13}
               />
@@ -593,7 +607,7 @@ const Page = () => {
         <div
           className={`${libre_baskerville.className} mx-auto w-full max-w-5xl text-xs md:text-sm`}
         >
-          This article appears in print in our{" "}
+          This article also appears in print in our{" "}
           <a
             href="https://newint.org/issues/2024/05/16/debt-which-way-out"
             className="text-blue-600 underline"
