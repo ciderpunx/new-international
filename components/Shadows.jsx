@@ -465,7 +465,7 @@ const Page = () => {
               Tigray, and one of the few remaining health care centres for
               survivors of gender-based violence is run by Sister Mulu Mesfin in
               the region’s capital, Mekelle. ‘Most of the women who come to us
-              are survivors of rape and gang rape,’ ‘Even after the war, they
+              are survivors of rape and gang rape,’ she says. ‘Even after the war, they
               are still repeatedly getting attacked in the [displacement] camps
               [and] facing domestic violence. They beg at my feet for abortion
               pills.’"
