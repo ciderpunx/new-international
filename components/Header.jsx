@@ -92,7 +92,13 @@ const Page = () => {
         >
           <AnimatePresence mode="wait" key={isNavbarOpen}>
             {isNavbarOpen ? (
-              <motion.button key="isOpen" transition={{ duration: 0.5 }}>
+              <motion.button
+                key="isOpen"
+                initial={{ scale: 0.5, opacity: 0 }}
+                animate={{ scale: 1, opacity: 1 }}
+                exit={{ scale: 0.5, opacity: 0 }}
+                transition={{ duration: 0.5 }}
+              >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
@@ -109,7 +115,12 @@ const Page = () => {
                 </svg>
               </motion.button>
             ) : (
-              <motion.button>
+              <motion.button
+                initial={{ scale: 0.5, opacity: 0 }}
+                animate={{ scale: 1, opacity: 1 }}
+                exit={{ scale: 0.5, opacity: 0 }}
+                transition={{ duration: 0.5 }}
+              >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
