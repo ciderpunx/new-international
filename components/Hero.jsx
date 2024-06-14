@@ -94,8 +94,8 @@ const Index = () => {
           className={`${aileron.className} w-full text-center text-xs md:text-sm`}
         >
           A girl holds a candle during a ceremony for Orthodox Easter in Addis
-          Ababa on May 5, 2024. While Ethiopia is considered a regional leader
-          on abortion provision in East Africa, strong religious views in the
+          Ababa on 5 May 2024. While Ethiopia is considered a regional leader on
+          abortion provision in East Africa, strong religious views in the
           country often clash with abortion rights. AMANUEL SILESHI
         </div>
       </div>
