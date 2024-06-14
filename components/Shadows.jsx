@@ -290,7 +290,7 @@ const Page = () => {
               the Amhara region,{" "}
               <Hyperlinks
                 key="
-              45 per cent of girls
+              45 percent of girls
                 
                 "
                 word="45 percent of girls"
@@ -536,7 +536,7 @@ const Page = () => {
           imageURL={Shadows_6}
           caption=" A health worker does her daily rounds at an MSI clinic in Addis
             Ababa. Foreign donors, including the United States, account for 70
-            per cent of Ethiopia's family planning budget. ADDIS AEMERO"
+            percent of Ethiopia's family planning budget. ADDIS AEMERO"
         />
       </section>
       {/* //? section 6 */}
