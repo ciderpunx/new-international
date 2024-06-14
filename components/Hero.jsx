@@ -24,12 +24,6 @@ const aileron = localfont({
   src: "../app/Aileron-Regular.woff2",
 });
 
-// import { Artifika } from "next/font/google";
-
-// const artifika = Artifika({
-//   subsets: ["latin"],
-//   weight: ["400"],
-// });
 const libre_baskerville_italic = Libre_Baskerville({
   subsets: ["latin"],
   weight: ["400"],
@@ -47,25 +41,16 @@ const roboto = Roboto({
   subsets: ["latin"],
   weight: ["100", "300", "400", "500", "700", "900"],
 });
-// const playfair_display = Playfair_Display({
-//   subsets: ["latin"],
-//   weight: ["400", "500", "700", "900"],
-//   style: "italic",
-// });
 
 const Index = () => {
-  let { scrollY } = useScroll();
-  let y = useSpring(useTransform(scrollY, [100, 200], [0, 200]), { bounce: 0 });
-  let skewY = useSpring(useTransform(scrollY, [100, 200], [0, 10]), {
-    bounce: 0,
-  });
   return (
     <div className="mx-auto flex w-full flex-col gap-8 md:w-11/12 md:gap-16">
       {/* //? hero */}
       <div className="flex w-full flex-col gap-1 md:gap-2">
         <div className="relative mx-auto aspect-4/3 w-full md:aspect-video">
           {/* //? overlay */}
-          <div className="absolute z-30 h-full w-full bg-gradient-to-b from-transparent to-gray-950/50"></div>
+          {/* <div className="absolute z-30 h-full w-full bg-gradient-to-b from-transparent to-gray-950/50"></div> */}
+          <div className="absolute z-30 h-full w-full bg-gradient-to-b from-transparent to-black/40"></div>
           {/* //? image */}
           <div className="absolute inset-0 h-full w-full object-cover">
             <Image

@@ -86,45 +86,47 @@ const Page = () => {
         </div>
         {/* //? visible on mobile */}
         <motion.div
-          whileTap={{ scale: 0.9 }}
+          // whileTap={{ scale: 0.9 }}
           onClick={() => setIsNavbarOpen(!isNavbarOpen)}
           className="mr-2 grid size-14 place-items-center md:hidden"
         >
-          {isNavbarOpen ? (
-            <motion.button>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                strokeWidth={1.5}
-                stroke="currentColor"
-                className="size-10 text-black"
-              >
-                <motion.path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M6 18 18 6M6 6l12 12"
-                />
-              </svg>
-            </motion.button>
-          ) : (
-            <motion.button>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                strokeWidth={1.5}
-                stroke="currentColor"
-                className="black size-10"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
-                />
-              </svg>
-            </motion.button>
-          )}
+          <AnimatePresence mode="wait" key={isNavbarOpen}>
+            {isNavbarOpen ? (
+              <motion.button key="isOpen" transition={{ duration: 0.5 }}>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth={1.5}
+                  stroke="currentColor"
+                  className="size-10 text-black"
+                >
+                  <motion.path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M6 18 18 6M6 6l12 12"
+                  />
+                </svg>
+              </motion.button>
+            ) : (
+              <motion.button>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth={1.5}
+                  stroke="currentColor"
+                  className="black size-10"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+                  />
+                </svg>
+              </motion.button>
+            )}
+          </AnimatePresence>
         </motion.div>
 
         <AnimatePresence mode="sync">
@@ -187,8 +189,8 @@ let hamburgerVariants = {
     // height: 0,
     transition: {
       type: "spring",
-      bounce: 0.5,
-      duration: 0.9,
+      bounce: 0.3,
+      duration: 0.5,
       when: "afterChildren",
       delayChildren: 0.2,
       staggerChildren: 0.1,

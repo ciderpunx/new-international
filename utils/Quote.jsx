@@ -17,8 +17,8 @@ const Page = ({ quote }) => {
   return (
     <section
       style={{
-        paddingTop: 72,
-        paddingBottom: 72,
+        paddingTop: 64,
+        paddingBottom: 64,
         background: "#effeff",
         borderColor: "#6ecad0",
         borderWidth: 2,
