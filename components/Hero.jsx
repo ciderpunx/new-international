@@ -216,10 +216,10 @@ const Index = () => {
           para={
             <>
               The celebrations engulfing the city speak to the importance of
-              religion in Africa’s second most populous country, where 43 per
-              cent of around 123 million people identify as Christian Orthodox,
-              33 percent as Muslim and 18 percent as Protestant, according to
-              the most recent{" "}
+              religion in Africa’s second most populous country, where 43
+              percent of around 123 million people identify as Christian
+              Orthodox, 33 percent as Muslim and 18 percent as Protestant,
+              according to the most recent{" "}
               <Hyperlinks
                 key="census"
                 word="census"
