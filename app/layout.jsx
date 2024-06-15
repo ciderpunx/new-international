@@ -56,7 +56,10 @@ export default function RootLayout({ children }) {
         content="Explore the growing anti-abortion movement in Ethiopia and its impact on women's rights amidst a backdrop of social and political challenges."
       />
 
-      <meta property="og:image" content="NewInternationalist Open Graph.png" />
+      <meta
+        property="og:image"
+        content="/public/NewInternationalist Open Graph.png"
+      />
 
       <meta
         property="og:url"
@@ -79,7 +82,10 @@ export default function RootLayout({ children }) {
         content="Explore the growing anti-abortion movement in Ethiopia and its impact on women's rights amidst a backdrop of social and political challenges."
       />
 
-      <meta name="twitter:image" content="NewInternationalist Open Graph.png" />
+      <meta
+        name="twitter:image"
+        content="/public/NewInternationalist Open Graph.png"
+      />
 
       <meta name="twitter:site" content="@newint" />
 
