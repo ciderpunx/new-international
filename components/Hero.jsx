@@ -68,7 +68,7 @@ const Index = () => {
               initial="hidden"
               animate="show"
               exit="exit"
-              className="absolute bottom-0 left-0 right-0 z-40 m-auto mb-4 flex max-w-5xl flex-col overflow-hidden md:mb-6"
+              className="absolute bottom-0 left-0 right-0 z-40 m-auto mb-1 flex max-w-5xl flex-col overflow-hidden md:mb-6"
             >
               <motion.h1
                 variants={parentVariant}
