@@ -195,8 +195,7 @@ const Page = () => {
         />
 
         <ImageWrapper
-          caption="NATIONAL RESISTANCE MOVEMENT: In 2019, the Arizona-based Mormon organization Family Watch International (FWI) appointed the celebrity surgeon Seyoum Antonios (L) as its Africa director. Antonios is pictured here with FWI founder Sharon Slater (in purple) and Ugandan President Yoweri Museveni (in white) outside Uganda's State House in April 2023 during a conference on 'family values'.
-"
+          caption="In 2019, the Arizona-based Mormon organization Family Watch International (FWI) appointed the celebrity surgeon Seyoum Antonios (L) as its Africa director. Antonios is pictured here with FWI founder Sharon Slater (in purple) and Ugandan President Yoweri Museveni (in white) outside Uganda's State House in April 2023 during a conference on 'family values'. NATIONAL RESISTANCE MOVEMENT."
           key="seyoum"
           alt="seyoum"
           imageURL={Seyoum}
@@ -332,9 +331,10 @@ const Page = () => {
             </div>
           </div>
           <div
-            className={`${aileron.className} w-full max-w-5xl text-xs md:text-sm`}
+            className={`${aileron.className} flex w-full justify-between text-xs md:text-sm`}
           >
-            Read by a voice actor
+            <span>Read by a voice actor.</span>
+            <span>Photo: ADDIS AEMERO</span>
           </div>
         </div>
         <TitlePara
@@ -450,9 +450,10 @@ const Page = () => {
             </div>
           </div>
           <div
-            className={`${aileron.className} w-full max-w-5xl text-xs md:text-sm`}
+            className={`${aileron.className} mx-auto flex w-full justify-between text-xs md:text-sm`}
           >
-            Read by a voice actor
+            <span>Read by a voice actor.</span>
+            <span>Photo: ADDIS AEMERO</span>
           </div>
         </div>
         <TitlePara

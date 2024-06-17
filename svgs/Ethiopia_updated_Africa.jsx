@@ -553,7 +553,7 @@ const SvgComponent = (props) => {
                 borderColor:
                   countryData[africaState?.countryName]?.["backgroundColor"],
               }}
-              className="flex h-full flex-col justify-start gap-2 divide-gray-600 border-t-8 bg-white px-2 py-8 leading-tight text-gray-800 md:gap-16 md:px-8 md:py-8"
+              className="flex h-full flex-col justify-start gap-2 divide-gray-600 border-t-8 bg-white px-1 py-8 leading-tight text-gray-800 md:gap-16 md:px-8 md:py-8"
             >
               <motion.div
                 variants={textVariant}

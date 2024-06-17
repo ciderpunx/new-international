@@ -65,7 +65,7 @@ const Page = () => {
 export default Page;
 
 let linkArrowData = [
-  "Discover new perspective",
+  "Discover new perspectives",
   "Support cutting-edge independent media",
   "Magazine delivered to your door or inbox",
   "Digital archive of over 500 issues",
