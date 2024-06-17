@@ -49,8 +49,8 @@ const Page = () => {
     <footer className="m-auto min-h-[120vh] w-screen bg-[#6ecad0] px-4 py-4 md:grid md:min-h-[80vh] md:place-items-center md:px-0">
       <section className="flex h-[110vh] w-full flex-col items-center justify-evenly gap-16 py-4 md:h-5/6 md:w-9/12 md:flex-row">
         {/* slide-1 */}
-        <div className="grid h-full w-full grid-rows-3 gap-0 bg-lime-600">
-          <div className="flex h-full w-full flex-col justify-start bg-purple-500">
+        <div className="grid h-full w-full grid-rows-3 gap-0">
+          <div className="flex h-full w-full flex-col justify-start">
             {/* //image */}
             <div className="relative m-auto h-full w-full place-self-start">
               <div className="absolute inset-0 h-full w-1/2">
@@ -65,7 +65,7 @@ const Page = () => {
           </div>
           {/* //para */}
 
-          <div className="grid h-full w-full place-items-center bg-red-400">
+          <div className="grid h-full w-full place-items-center">
             <p className={`${libre_baskerville.className} text-sm`}>
               New Internationalist is a multi-stakeholder co-operative owned by
               its workers and approximately 4,600 co-owners.
