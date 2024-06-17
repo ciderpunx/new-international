@@ -92,5 +92,4 @@ const Page = () => {
 };
 export default Page;
 {
-  /* <Hyperlinks key="percent" word="32% to less than 1%" linkNumber={2} />; */
 }

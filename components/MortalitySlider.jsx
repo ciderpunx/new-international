@@ -106,7 +106,7 @@ const Page = () => {
               }}
               // initial={{ filter: "blur(0px) grayscale(0.5)" }}
 
-              className="absolute bottom-0 left-0 top-0 z-10 h-full w-1/2"
+              className="absolute bottom-0 left-0 top-0 z-0 h-full w-1/2"
             >
               <Image src={left_image} alt="black" fill="true" />
             </motion.div>
@@ -121,12 +121,12 @@ const Page = () => {
               }}
               // initial={{ filter: "blur(0px) grayscale(0.5)" }}
 
-              className="absolute bottom-0 left-1/2 top-0 z-10 h-full w-1/2"
+              className="absolute bottom-0 left-1/2 top-0 z-0 h-full w-1/2"
             >
               <Image src={right_image} alt="black" fill="true" />
             </motion.div>
             {/* //? svg timeline overlay */}
-            <div className="absolute inset-0 z-20 h-full w-full object-contain">
+            <div className="absolute inset-0 z-10 h-full w-full object-contain">
               <Svg ref={ref} />
             </div>
             {/* //? slider */}
@@ -138,16 +138,23 @@ const Page = () => {
                 background: "lightgrey",
               }}
               drag="x"
-              dragMomentum={false}
+              dragMomentum
               dragConstraints={ref}
               dragElastic={0}
-              className="group absolute inset-0 z-30 m-auto h-full w-2 bg-gray-200"
+              className="group absolute inset-0 z-20 m-auto h-full w-2 bg-gray-200"
             >
               <motion.div
-                whileHover={{ scale: [1, 1.5, 1] }}
+                whileHover={{
+                  scale: [1.5, 1],
+                  // rotate: [-20, 20, 0],
+                }}
                 initial={{ x: -15 }}
-                transition={{ type: "spring", bounce: 0.6 }}
-                className="absolute inset-0 m-auto grid size-10 place-items-center rounded-full bg-gray-50 shadow-xl transition-all group-hover:scale-150"
+                transition={{
+                  type: "spring",
+                  bounce: 0.2,
+                  duration: 0.6,
+                }}
+                className="absolute inset-0 m-auto grid size-10 place-items-center rounded-full bg-gray-50 shadow-xl"
               >
                 <VscGrabber size={40} color="black" />
               </motion.div>
@@ -163,7 +170,7 @@ const Page = () => {
             >
               32%
               <span
-                className={`${airolon.className} m w-full bg-red-200 px-1 text-center text-[8px] leading-tight text-red-700 max-sm:h-3 md:text-lg`}
+                className={`${airolon.className}w-full bg-red-200 px-1 text-center text-[8px] leading-tight text-red-700 max-sm:h-3 md:text-lg`}
               >
                 Maternal deaths per 100,000 births
               </span>

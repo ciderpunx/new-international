@@ -68,7 +68,7 @@ const Index = () => {
               initial="hidden"
               animate="show"
               exit="exit"
-              className="absolute bottom-2 left-0 right-0 z-40 m-auto flex max-w-5xl flex-col overflow-hidden px-2 md:bottom-20 md:px-0 md:py-2"
+              className="absolute bottom-0 left-0 right-0 z-40 m-auto mb-4 flex max-w-5xl flex-col overflow-hidden md:mb-6"
             >
               <motion.h1
                 variants={parentVariant}
@@ -91,7 +91,7 @@ const Index = () => {
           </div>
         </div>
         <div
-          className={`${aileron.className} w-full text-center text-xs md:text-sm`}
+          className={`${aileron.className} mx-auto w-full max-w-5xl text-left text-xs md:text-sm`}
         >
           A girl holds a candle during a ceremony for Orthodox Easter in Addis
           Ababa on 5 May 2024. While Ethiopia is considered a regional leader on
@@ -152,7 +152,7 @@ const Index = () => {
       </p>
       {/* //? para */}
       <section
-        className={`mx-auto flex h-auto w-full max-w-5xl flex-col gap-10 md:gap-12`}
+        className={`mx-auto flex h-auto w-full max-w-5xl flex-col gap-6 md:gap-8`}
       >
         <TitlePara
           key="abortion"
@@ -186,7 +186,7 @@ const Index = () => {
           className={`${aileron.className} mx-auto w-full text-left text-xs md:text-base`}
         >
           A taxi parked outside a family planning clinic in Addis Adaba reads
-          ‘Pray to end abortion in Ethiopia’
+          ‘Pray to end abortion in Ethiopia’.
         </div>
       </div>
       <section className="mx-auto flex w-full flex-col gap-8 md:gap-12">
@@ -253,7 +253,7 @@ let parentVariant = {
 
 let childVariant = {
   hidden: {
-    y: 150,
+    y: 160,
     skewY: 10,
   },
   show: {

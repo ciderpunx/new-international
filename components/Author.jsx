@@ -126,6 +126,6 @@ let authorData = [
   {
     img: Maya,
     name: "maya misikir",
-    info: "Maya is a freelance reporter based in Addis Abeba, Ethiopia. She runs Sifter, a newsletter on Ethiopia, where she curates the week's top five series focusing on human rights.",
+    info: "Maya is a freelance reporter based in Addis Abeba, Ethiopia. She runs Sifter, a newsletter on Ethiopia, where she curates the week's top five stories focusing on human rights.",
   },
 ];

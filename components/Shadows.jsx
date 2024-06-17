@@ -46,7 +46,7 @@ const Page = () => {
           alt="shadow-1"
           // sevenXL={true}
           imageURL={Shadows_1}
-          caption=" The Ethiopia director of Marie Stopes International Abebe Shibru
+          caption=" The Ethiopia director of MSI Abebe Shibru
             warns that anti-abortion groups are trying to ‘cripple the system’
             of abortion provision. ADDIS AEMERO"
         />
@@ -78,7 +78,7 @@ const Page = () => {
                 word=" track record"
                 linkNumber={4}
               />{" "}
-              of influencing regressive policies on SRHR in several Countries.
+              of influencing regressive policies on SRHR in several countries.
               In 2019, it appointed an Ethiopian celebrity physician named
               Seyoum Antonios as its Africa director. As the home of the African
               Union headquarters, Addis offers a gateway to a host of the
@@ -195,8 +195,8 @@ const Page = () => {
         />
 
         <ImageWrapper
-          caption=" In 2019, the Arizona-based Mormon organization Family Watch International (FWI) appointed the celebrity surgeon Seyoum Antonios (L) as its Africa director. Antonios is pictured here with FWI founder Sharon Slater (in purple) and Ugandan President Yoweri Museveni (in white) outside Uganda's State House in April 2023
-           during a conference on 'family values'."
+          caption="NATIONAL RESISTANCE MOVEMENT: In 2019, the Arizona-based Mormon organization Family Watch International (FWI) appointed the celebrity surgeon Seyoum Antonios (L) as its Africa director. Antonios is pictured here with FWI founder Sharon Slater (in purple) and Ugandan President Yoweri Museveni (in white) outside Uganda's State House in April 2023 during a conference on 'family values'.
+"
           key="seyoum"
           alt="seyoum"
           imageURL={Seyoum}
@@ -228,13 +228,13 @@ const Page = () => {
             </>
           }
         />
-        <Quote
-          key="Evangelicals"
-          quote="‘There are a lot more evangelicals in positions of power than before, and you can see them trying to flex their power.’"
-        />
         <TitlePara
           key="common enemy"
           para="‘[People] need a common enemy,’ says the activist. ‘They need a distraction. Generally Ethiopians are not ones to uprise … but now it’s pushing the point beyond which people are tolerant. There are a lot more evangelicals in positions of power than before, and you can see them trying to flex their power.’"
+        />
+        <Quote
+          key="Evangelicals"
+          quote="‘There are a lot more evangelicals in positions of power than before, and you can see them trying to flex their power.’"
         />
       </section>
       {/* //? section 3 */}
@@ -260,7 +260,7 @@ const Page = () => {
               religious language has recently been{" "}
               <Hyperlinks
                 key="seeping into mainstream media"
-                word="seeping into mainstream media"
+                word="seeping into mainstream media,"
                 linkNumber={8}
               />{" "}
               cultivating a platform for anti-abortion messaging. Reforms to
@@ -383,7 +383,7 @@ const Page = () => {
         />
         <ImageWrapper
           // sevenXL={true}
-          caption="Nurse Lydia Tesfay handles medication at the Family Planning and Guidance Association of Ethiopia’s clinic in the southern city of Adama. ADDIS AEMERO"
+          caption="Nurse Lydia Tesfay handles medication at the Family Guidance Association of Ethiopia’s clinic in the southern city of Adama. ADDIS AEMERO"
           key="abortion"
           alt="contraceptive pills"
           imageURL={Shadows_3}
@@ -607,14 +607,13 @@ const Page = () => {
         <div
           className={`${libre_baskerville.className} mx-auto w-full max-w-5xl text-xs md:text-sm`}
         >
-          This article also appears in print in our{" "}
+          This article also appears in print in our July/August 2024 issue,{" "}
           <a
             href="https://newint.org/issues/2024/05/16/debt-which-way-out"
             className="text-blue-600 underline"
           >
-            July/August 2024 issue
+            Abortion: Why is your body still a battleground?
           </a>
-          , Abortion: Why is your body still a battleground?
         </div>
       </section>
     </div>

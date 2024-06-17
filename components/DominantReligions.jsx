@@ -199,7 +199,7 @@ export default Page;
 function AnimatedNumber({ value }) {
   let spring = useSpring(value, {
     mass: 1,
-    stiffness: 75,
+    stiffness: 35,
     damping: 15,
     // bounce: 0,
   });

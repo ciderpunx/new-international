@@ -60,7 +60,7 @@ export default function RootLayout({ children }) {
         property="og:site_name"
         content="New Internationalist Magazine"
       />{" "}
-      <link rel="icon" href="/app/NewInt Favicon.ico" />
+      <link rel="icon" href="app/NewInt Favicon.ico" />
       <meta name="twitter:card" content="summary_large_image" />
       <meta
         name="twitter:title"
