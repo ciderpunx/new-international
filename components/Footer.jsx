@@ -46,7 +46,7 @@ const Page = () => {
       });
   };
   return (
-    <footer className="m-auto min-h-[120svh] w-screen bg-[#6ecad0] px-4 py-4 md:grid md:max-h-[70svh] md:min-h-[70svh] md:place-items-center md:px-0">
+    <footer className="m-auto min-h-[120dvh] w-screen bg-[#6ecad0] px-4 py-4 md:grid md:min-h-[70vh] md:place-items-center md:px-0">
       <section className="flex h-[100dvh] w-full flex-col items-center justify-evenly gap-16 py-4 md:h-3/4 md:w-9/12 md:flex-row">
         {/* slide-1 */}
         <div className="grid h-full w-full grid-rows-3 gap-0">

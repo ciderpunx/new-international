@@ -14,7 +14,7 @@ const libre_baskerville = Libre_Baskerville({
 
 const Page = () => {
   return (
-    <div className="grid h-auto min-h-[100dvh] w-full place-items-center bg-[#fbeaea] py-16 md:max-h-[70dvh] md:min-h-[70dvh]">
+    <div className="grid h-auto min-h-[100svh] w-full place-items-center bg-[#fbeaea] py-16 md:max-h-[70svh] md:min-h-[70svh]">
       <section className="border-5 divide-y- flex w-full max-w-5xl flex-col gap-8 border-red-600 px-4 md:flex-row">
         {/* //? image */}
         <div className="relative h-[500px] w-full max-w-sm bg-red-500">
