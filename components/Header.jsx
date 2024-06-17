@@ -80,7 +80,9 @@ const Page = () => {
             <button
               className={`${league_gothic.className} place-self-center bg-[#c72e21] px-4 py-2 text-2xl uppercase text-white hover:bg-red-500 md:self-start md:px-8 md:py-4 md:text-3xl`}
             >
-              <a href="https://subscribe.newint.org/">Subscribe</a>
+              <a className="h-full w-full" href="https://subscribe.newint.org/">
+                Subscribe
+              </a>
             </button>
           </div>
         </div>
@@ -167,7 +169,12 @@ const Page = () => {
                 variants={linksVariants}
                 className={`${league_gothic.className} place-self-start bg-[#c72e21] px-4 py-2 text-2xl uppercase text-white hover:bg-red-500`}
               >
-                Subscribe
+                <a
+                  className="h-full w-full"
+                  href="https://subscribe.newint.org/"
+                >
+                  Subscribe
+                </a>
               </motion.button>
             </motion.div>
           )}

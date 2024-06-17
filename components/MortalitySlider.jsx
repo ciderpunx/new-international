@@ -218,7 +218,7 @@ const Page = () => {
             32 percent to less than 10 percent
           </a>
           . Maternal mortality refers to deaths due to complications from
-          pregnancy or childbirth.
+          pregnancy or childbirth. Photo: ADDIS AEMERO.
         </div>
       </div>
     </div>

@@ -75,7 +75,7 @@ const Index = () => {
                 initial="hidden"
                 animate="show"
                 exit="exit"
-                className={`${league_gothic.className} overflow-hidden text-4xl font-[500] tracking-wide text-white md:text-7xl`}
+                className={`${league_gothic.className} overflow-hidden px-2 text-4xl font-[500] tracking-wide text-white md:text-7xl`}
               >
                 <motion.div
                   // style={{ y, skewY }}
