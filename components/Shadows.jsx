@@ -41,7 +41,7 @@ const Page = () => {
           key="shadow-1"
           alt="shadow-1"
           // sevenXL={true}
-          imageURL={Shadows_1}
+          imageURL="2024_New_Internationalist_magazine_Addis_Aemero-7 (1)d3c1.webp"
           caption=" The Ethiopia director of MSI Abebe Shibru
             warns that anti-abortion groups are trying to ‘cripple the system’
             of abortion provision. ADDIS AEMERO"
@@ -119,7 +119,7 @@ const Page = () => {
           alt="minaret"
           caption="An American Christian missionary opened the first known crisis pregnancy centre in Ethiopia in the southern city of Adama, around 100km from Addis, in 2010. ADDIS AEMERO"
           // sevenXL={true}
-          imageURL={Shadows_2}
+          imageURL="2024_New_Internationalist_magazine_Addis_Aemero-17367ed.webp"
         />
         <TitlePara
           key="dina monahan"
@@ -194,7 +194,7 @@ const Page = () => {
           caption="In 2019, the Arizona-based Mormon organization Family Watch International (FWI) appointed the celebrity surgeon Seyoum Antonios (L) as its Africa director. Antonios is pictured here with FWI founder Sharon Slater (in purple) and Ugandan President Yoweri Museveni (in white) outside Uganda's State House in April 2023 during a conference on 'family values'. NATIONAL RESISTANCE MOVEMENT."
           key="seyoum"
           alt="seyoum"
-          imageURL={Seyoum}
+          imageURL="Seyoum Antonios9af9.webp"
           bodyWidth
         />
 
@@ -366,7 +366,7 @@ const Page = () => {
         <ImageWrapper
           key="siyane"
           alt="Siyane"
-          imageURL={Siyane}
+          imageURL="siyane_replacementc263.webp"
           bodyWidth={true}
           caption="Siyane Aniley, an Ethiopian sexual and reproductive rights
             researcher, says anti-right figures on social media have accused her
@@ -382,7 +382,7 @@ const Page = () => {
           caption="Nurse Lydia Tesfay handles medication at the Family Guidance Association of Ethiopia’s clinic in the southern city of Adama. ADDIS AEMERO"
           key="abortion"
           alt="contraceptive pills"
-          imageURL={Shadows_3}
+          imageURL="2024_New_Internationalist_magazine_Addis_Aemero-1478d3c.webp"
         />
         {/* //? change aspect of this image */}
         {/* <ImageWrapper key="clinic" alt="nurse" imageURL={Shadows_4} /> */}
@@ -390,9 +390,10 @@ const Page = () => {
         <div className="relative mx-auto flex w-full max-w-5xl flex-col gap-1 md:gap-2">
           <div className="relative h-[30rem] w-full md:h-[80rem]">
             <div className="absolute h-full w-full object-cover">
-              <Image
+              <img
+                fetchPriority="auto"
                 alt="family ward"
-                src={Shadows_4}
+                src="shadow_4_replacemente19c.webp"
                 fill={true}
                 objectFit="cover"
               />
@@ -415,7 +416,7 @@ const Page = () => {
           // sevenXL={true}
           key="family ward"
           alt="family ward"
-          imageURL={Shadows_5}
+          imageURL="shadow_5_replacement3aa1.webp"
         />
         {/* //?images */}
         <TitlePara
@@ -530,7 +531,7 @@ const Page = () => {
           key="shadow-6"
           // sevenXL={true}
           alt="Aemero-6"
-          imageURL={Shadows_6}
+          imageURL="2024_New_Internationalist_magazine_Addis_Aemero-71c97e.webp"
           caption=" A health worker does her daily rounds at an MSI clinic in Addis
             Ababa. Foreign donors, including the United States, account for 70
             percent of Ethiopia's family planning budget. ADDIS AEMERO"

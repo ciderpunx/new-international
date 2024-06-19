@@ -1,7 +1,6 @@
 "use client";
 import { League_Gothic } from "next/font/google";
 import header_logo from "../public/header_logo.svg";
-import Image from "next/image";
 import {
   AnimatePresence,
   motion,
@@ -55,11 +54,12 @@ const Page = () => {
 "
             className="absolute inset-0 h-full w-full text-black"
           >
-            <Image
+            <img
               fill={true}
-              src={header_logo}
+              src="header_logo.svg"
               alt="New International logo"
               className="size-36"
+              style={{ objectFit: "cover" }}
             />
           </a>
         </div>

@@ -49,9 +49,9 @@ const Page = () => {
             {/* //image */}
             <div className="relative m-auto h-full w-full place-self-start">
               <div className="absolute inset-0 h-full w-1/2">
-                <Image
+                <img
                   fill={true}
-                  src={header_logo}
+                  src="header_logo.svg"
                   alt="New International logo"
                   //   className="size-17 md:size-64"
                 />
@@ -69,7 +69,12 @@ const Page = () => {
           <div className="bg-yellw-300 grid h-full w-full grid-cols-[30%_70%]">
             <div className="relative size-16 gap-2 self-center">
               <div className="absolute inset-0 aspect-square h-full w-auto">
-                <Image src={co_op_new} fill={true} alt="co-operative" />
+                <img
+                  src="CoopLogoblack-padding8469.webp"
+                  fill={true}
+                  alt="co-operative"
+                  fetchPriority="auto"
+                />
               </div>
             </div>
             <div

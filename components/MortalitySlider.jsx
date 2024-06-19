@@ -100,7 +100,12 @@ const Page = () => {
 
               className="absolute bottom-0 left-0 top-0 z-0 h-full w-1/2"
             >
-              <Image src={left_image} alt="black" fill="true" />
+              <img
+                src="Slider Image Left.jpg"
+                style={{ objectFit: "cover" }}
+                alt="left"
+                fill="true"
+              />
             </motion.div>
 
             {/* //? right */}
@@ -115,7 +120,12 @@ const Page = () => {
 
               className="absolute bottom-0 left-1/2 top-0 z-0 h-full w-1/2"
             >
-              <Image src={right_image} alt="black" fill="true" />
+              <img
+                src="Slider Image Right.jpg"
+                style={{ objectFit: "cover" }}
+                alt="right"
+                fill="true"
+              />
             </motion.div>
             {/* //? svg timeline overlay */}
             <div className="absolute inset-0 z-10 h-full w-full object-contain">

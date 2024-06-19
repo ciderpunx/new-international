@@ -20,11 +20,11 @@ const Page = () => {
         {/* //? image */}
         <div className="relative h-[500px] w-full max-w-sm">
           <div className="absolute inset-0 h-full w-full">
-            <Image
-              src={new_magazine_cover}
+            <img
+              src="NI550_Abortion_Cover_large.jpg"
               alt="new international magazine"
               fill="true"
-              loading="lazy"
+              fetchPriority="auto"
             />
           </div>
         </div>

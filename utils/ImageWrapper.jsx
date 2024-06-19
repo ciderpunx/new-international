@@ -24,6 +24,7 @@ const Page = ({ alt, imageURL, sevenXL, caption, originalAspect }) => {
         >
           <img
             src={imageURL}
+            fetchPriority="auto"
             style={{ objectFit: "cover" }}
             // loading="lazy"
             alt={alt}

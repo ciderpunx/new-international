@@ -8,7 +8,6 @@ import { League_Gothic, Libre_Baskerville } from "next/font/google";
 import Maxine from "../public/Maxine Betteridge-Moes47b8.webp";
 import Maya from "../public/Maya Misikir0a88.webp";
 import Bethany from "../public/Bethany Rielly0414.webp";
-import Image from "next/image";
 import { IoMailOpenOutline } from "react-icons/io5";
 
 const league_gothic = League_Gothic({
@@ -33,7 +32,7 @@ const Page = () => {
               <div className="flex items-center justify-start gap-2">
                 <div className="relative size-14 rounded-full md:size-16">
                   <div className="absolute inset-0 overflow-hidden rounded-full object-cover shadow-inner">
-                    <Image
+                    <img
                       src={x.img}
                       key={x.name}
                       alt={x.name}
@@ -101,17 +100,17 @@ export default Page;
 
 let authorData = [
   {
-    img: Bethany,
+    img: "Bethany Rielly0414.webp",
     name: "bethany rielly",
     info: "Bethany Rielly is a New Internationalist co-editor based in Barcelona. She has written about topics including refugees, migration, protest, human rights and state violence and surveillance.",
   },
   {
-    img: Maxine,
+    img: "Maxine Betteridge-Moes47b8.webp",
     name: "maxine betteridge-moes",
     info: "Maxine Betteridge-Moes is the digital editor at New Internationalist. She covers stories about human rights, conflict, global development and sexual and reproductive health and rights for numerous publications.",
   },
   {
-    img: Maya,
+    img: "Maya Misikir0a88.webp",
     name: "maya misikir",
     info: "Maya is a freelance reporter based in Addis Abeba, Ethiopia. She runs Sifter, a newsletter on Ethiopia, where she curates the week's top five stories focusing on human rights.",
   },

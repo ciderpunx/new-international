@@ -213,27 +213,3 @@ function AnimatedNumber({ value }) {
     </motion.span>
   );
 }
-
-// let dominantReligionData = [
-//   {
-//     imageURL: orthodox,
-//     id: 1,
-//     religionTitle: "Orthodox Christians",
-//     height: "h-full",
-//     percentage: 43,
-//   },
-//   {
-//     imageURL: muslims,
-//     id: 2,
-//     religionTitle: "Muslims",
-//     height: "h-2/3",
-//     percentage: 33,
-//   },
-//   {
-//     imageURL: protestants,
-//     id: 3,
-//     religionTitle: "Protestant Christians",
-//     height: "h-2/3",
-//     percentage: 20,
-//   },
-// ];
