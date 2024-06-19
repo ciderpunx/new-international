@@ -47,7 +47,8 @@ const Index = () => {
             <img
               alt="fertile ground"
               key="hero-candle-1"
-              src={Candle}
+              // src="/"
+              src="candle576c.webp"
               fill={true}
               objectFit="cover"
               priority={true}
