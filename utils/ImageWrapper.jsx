@@ -1,11 +1,7 @@
 "use client";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import localfont from "next/font/local";
-const aileron = localfont({
-  src: "../app/Aileron-Regular.woff2",
-});
-
+import { aileron } from "./Fonts";
 const Page = ({ alt, imageURL, sevenXL, caption, originalAspect }) => {
   return (
     <div
@@ -13,7 +9,7 @@ const Page = ({ alt, imageURL, sevenXL, caption, originalAspect }) => {
     >
       {/* //? image */}
       <div
-        className={`relative ${originalAspect ? "" : "aspect-4/3 md:aspect-video"} w-full`}
+        className={`relative mx-auto overflow-hidden border-2 ${originalAspect ? "" : "aspect-4/3 md:aspect-video"} w-full`}
       >
         <motion.div
           transition={{ type: "spring", bounce: 0 }}
@@ -25,10 +21,12 @@ const Page = ({ alt, imageURL, sevenXL, caption, originalAspect }) => {
           <img
             src={imageURL}
             fetchPriority="auto"
-            style={{ objectFit: "cover" }}
-            // loading="lazy"
             alt={alt}
-            fill={true}
+            height="100%"
+            width="100%"
+            className="h-full w-full object-cover"
+            // loading="lazy"
+            // fill={true}
           />
         </motion.div>
         {/* //? overlay */}

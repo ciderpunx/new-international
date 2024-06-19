@@ -7,14 +7,7 @@ import { FaXTwitter } from "react-icons/fa6";
 import { IoMailOpenOutline } from "react-icons/io5";
 import { useState } from "react";
 
-import { League_Gothic, Libre_Baskerville } from "next/font/google";
-const libre_baskerville = Libre_Baskerville({
-  subsets: ["latin"],
-  weight: ["400"],
-});
-const league_gothic = League_Gothic({
-  subsets: ["latin"],
-});
+import { league_gothic, libre_baskerville } from "@/utils/Fonts";
 const Page = () => {
   const [email, setEmail] = useState("");
   const handleSubmit = (event) => {

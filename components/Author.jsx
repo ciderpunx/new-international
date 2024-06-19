@@ -4,19 +4,12 @@ import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { FaWhatsapp } from "react-icons/fa";
 
-import { League_Gothic, Libre_Baskerville } from "next/font/google";
 import Maxine from "../public/Maxine Betteridge-Moes47b8.webp";
 import Maya from "../public/Maya Misikir0a88.webp";
 import Bethany from "../public/Bethany Rielly0414.webp";
 import { IoMailOpenOutline } from "react-icons/io5";
 
-const league_gothic = League_Gothic({
-  subsets: ["latin"],
-});
-const Libre_Baskerville_ = Libre_Baskerville({
-  subsets: ["latin"],
-  weight: ["400"],
-});
+import { league_gothic, libre_baskerville } from "@/utils/Fonts";
 const Page = () => {
   return (
     <div className="mx-auto flex w-full max-w-5xl flex-col gap-16 divide-y-4 pb-24">
@@ -49,7 +42,7 @@ const Page = () => {
                 </h3>
               </div>
               <p
-                className={`${Libre_Baskerville_.className} max-w-5xl text-base md:text-xl`}
+                className={`${libre_baskerville.className} max-w-5xl text-base md:text-xl`}
               >
                 {x.info}
               </p>

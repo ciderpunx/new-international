@@ -5,13 +5,7 @@
 // });
 
 //* use a local font
-import localfont from "next/font/local";
-const bagnard = localfont({
-  src: "../app/Bagnard.woff",
-  // weight: "400",
-  // style: "normal",
-  // display:'auto',
-});
+import { bagnard } from "./Fonts";
 
 const Page = ({ quote }) => {
   return (

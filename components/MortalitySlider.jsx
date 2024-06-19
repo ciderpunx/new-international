@@ -14,10 +14,7 @@ import { VscGrabber } from "react-icons/vsc";
 import left_image from "../public/Slider Image Left.jpg";
 import right_image from "../public/Slider Image Right.jpg";
 
-import localfont from "next/font/local";
-const aileron = localfont({
-  src: "../app/Aileron-Regular.woff2",
-});
+import { aileron } from "@/utils/Fonts";
 import { useRef, useState } from "react";
 const Page = () => {
   let ref = useRef(null);
@@ -140,7 +137,6 @@ const Page = () => {
                 background: "lightgrey",
               }}
               drag="x"
-              dragMomentum
               dragConstraints={ref}
               dragElastic={0}
               className="group absolute inset-0 z-20 m-auto h-full w-2 bg-gray-200"

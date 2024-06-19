@@ -6,14 +6,7 @@ import { motion, useSpring, useTransform } from "framer-motion";
 // import Image from "next/image";
 import TitlePara from "../utils/TitlePara";
 
-import { League_Gothic } from "next/font/google";
-import localfont from "next/font/local";
-const aileron = localfont({
-  src: "../app/Aileron-Regular.woff2",
-});
-const league_gothic = League_Gothic({
-  subsets: ["latin"],
-});
+import { league_gothic, aileron } from "@/utils/Fonts";
 
 const Page = () => {
   const [orthodoxEnter, setOrthodoxEnter] = useState(false);

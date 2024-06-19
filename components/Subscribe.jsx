@@ -2,16 +2,9 @@
 import Image from "next/image";
 // import new_international from "../public/new-international.jpg";
 import new_magazine_cover from "../public/NI550_Abortion_Cover_large.jpg";
-import { League_Gothic, Libre_Baskerville } from "next/font/google";
 import { FaLongArrowAltRight } from "react-icons/fa";
 
-const league_gothic = League_Gothic({
-  subsets: ["latin"],
-});
-const libre_baskerville = Libre_Baskerville({
-  subsets: ["latin"],
-  weight: ["400"],
-});
+import { libre_baskerville, league_gothic } from "@/utils/Fonts";
 
 const Page = () => {
   return (
@@ -25,6 +18,7 @@ const Page = () => {
               alt="new international magazine"
               fill="true"
               fetchPriority="auto"
+              className="h-full w-full object-cover"
             />
           </div>
         </div>

@@ -1,12 +1,4 @@
-import { League_Gothic, Libre_Baskerville } from "next/font/google";
-const league_gothic = League_Gothic({
-  subsets: ["latin"],
-});
-
-const libre_baskerville = Libre_Baskerville({
-  subsets: ["latin"],
-  weight: "400",
-});
+import { libre_baskerville, league_gothic } from "./Fonts";
 
 const Page = ({ title, para, text20Px, textCenter }) => {
   return (

@@ -11,27 +11,30 @@ import { motion } from "framer-motion";
 // import PrayToEnd from "../public/pray-to-enda49e.webp";
 // import Candle from "../public/candle576c.webp";
 // import Candle_two from "../public/candle576c.webp";
-import { League_Gothic, Libre_Baskerville } from "next/font/google";
 import Hyperlinks from "../utils/Hyperlinks";
 import { IoMailOpenOutline } from "react-icons/io5";
-import localfont from "next/font/local";
-const aileron = localfont({
-  src: "Aileron-Regular.woff2",
-});
 
-const libre_baskerville_italic = Libre_Baskerville({
-  subsets: ["latin"],
-  weight: ["400"],
-  style: "italic",
-});
-const libre_baskerville = Libre_Baskerville({
-  subsets: ["latin"],
-  weight: ["400"],
-});
+import {
+  aileron,
+  league_gothic,
+  libre_baskerville_italic,
+  libre_baskerville,
+} from "@/utils/Fonts";
 
-const league_gothic = League_Gothic({
-  subsets: ["latin"],
-});
+// import { League_Gothic, Libre_Baskerville } from "next/font/google";
+// const libre_baskerville_italic = Libre_Baskerville({
+//   subsets: ["latin"],
+//   weight: ["400"],
+//   style: "italic",
+// });
+// const libre_baskerville = Libre_Baskerville({
+//   subsets: ["latin"],
+//   weight: ["400"],
+// });
+
+// const league_gothic = League_Gothic({
+//   subsets: ["latin"],
+// });
 
 const Index = () => {
   return (
@@ -39,18 +42,22 @@ const Index = () => {
       {/* //? hero */}
       <div className="flex w-full flex-col gap-1 md:gap-2">
         <div className="relative mx-auto aspect-4/3 w-full overflow-hidden md:aspect-video">
-          {/* //? overlay */}
           {/* <div className="absolute z-30 h-full w-full bg-gradient-to-b from-transparent to-gray-950/50"></div> */}
+          {/* //? overlay */}
           <div className="absolute z-30 h-full w-full bg-gradient-to-b from-transparent to-black/40"></div>
+
           {/* //? image */}
-          <div className="absolute inset-0 flex h-full w-full justify-center overflow-hidden">
+          <div className="absolute inset-0 h-full w-full overflow-hidden">
             <img
               alt="fertile ground"
               key="hero-candle-1"
+              width="100%"
+              height="100%"
               // src="/"
               src="candle576c.webp"
               style={{ objectFit: "cover" }}
               fetchPriority="high"
+              className="h-full w-full object-cover"
             />
             {/* <Image
               alt="fertile ground"
@@ -173,7 +180,7 @@ const Index = () => {
       </section>
 
       {/* //? image */}
-      <div className="m-auto flex w-full max-w-4xl flex-col gap-1 md:gap-2">
+      <div className="mx-auto flex w-full max-w-4xl flex-col gap-1 md:gap-2">
         <ImageWrapper
           alt="pray-to-end"
           key="key-to-end"
@@ -199,7 +206,7 @@ const Index = () => {
             key="candle-2"
             alt="candle-2"
             // sevenXL={false}
-            imageURL="candle576c.webp"
+            imageURL="candle-21c49.webp"
           />
           <div
             className={`${aileron.className} text-5 mx-auto w-full text-left text-xs md:text-base`}

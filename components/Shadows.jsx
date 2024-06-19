@@ -10,23 +10,16 @@ import Shadows_4 from "../public/shadow_4_replacemente19c.webp";
 import Shadows_5 from "../public/shadow_5_replacement3aa1.webp";
 import Shadows_6 from "../public/2024_New_Internationalist_magazine_Addis_Aemero-71c97e.webp";
 import Seyoum from "../public/Seyoum Antonios9af9.webp";
-import { Libre_Baskerville } from "next/font/google";
 import Quote from "../utils/Quote";
 import { Hyperlinks } from "../utils/Hyperlinks";
-import localfont from "next/font/local";
 import Image from "next/image";
-const aileron = localfont({
-  src: "../app/Aileron-Regular.woff2",
-});
-const libre_baskerville = Libre_Baskerville({
-  subsets: ["latin"],
-  weight: ["400"],
-});
-const libre_baskerville_italic = Libre_Baskerville({
-  subsets: ["latin"],
-  weight: ["400"],
-  style: "italic",
-});
+
+import {
+  libre_baskerville,
+  libre_baskerville_italic,
+  aileron,
+} from "@/utils/Fonts";
+
 const Page = () => {
   return (
     <div className="mx-auto flex h-auto w-full flex-col gap-16 md:w-10/12 md:gap-24">
@@ -395,7 +388,9 @@ const Page = () => {
                 alt="family ward"
                 src="shadow_4_replacemente19c.webp"
                 fill={true}
-                objectFit="cover"
+                height="100%"
+                width="100%"
+                className="h-full w-full object-cover"
               />
             </div>
           </div>

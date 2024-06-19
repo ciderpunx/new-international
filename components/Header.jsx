@@ -1,5 +1,4 @@
 "use client";
-import { League_Gothic } from "next/font/google";
 import header_logo from "../public/header_logo.svg";
 import {
   AnimatePresence,
@@ -10,9 +9,9 @@ import {
   useTransform,
 } from "framer-motion";
 import { useState } from "react";
-const league_gothic = League_Gothic({
-  subsets: ["latin"],
-});
+
+import { league_gothic } from "@/utils/Fonts";
+
 const Page = () => {
   const [isNavbarOpen, setIsNavbarOpen] = useState(false);
   const [isScrollingDown, setIsScrollingDown] = useState(false);
@@ -52,14 +51,14 @@ const Page = () => {
             href="https://newint.org/
 
 "
-            className="absolute inset-0 h-full w-full text-black"
+            className="absolute inset-0 h-full w-full object-contain text-black"
           >
             <img
               fill={true}
               src="header_logo.svg"
               alt="New International logo"
-              className="size-36"
-              style={{ objectFit: "cover" }}
+              // className="size-36"
+              // style={{ objectFit: "cover" }}
             />
           </a>
         </div>
