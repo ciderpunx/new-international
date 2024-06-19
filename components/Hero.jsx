@@ -38,19 +38,17 @@ const Index = () => {
     <div className="mx-auto flex w-full flex-col gap-8 md:w-11/12 md:gap-16">
       {/* //? hero */}
       <div className="flex w-full flex-col gap-1 md:gap-2">
-        <div className="relative mx-auto aspect-4/3 w-full md:aspect-video">
+        <div className="relative mx-auto aspect-4/3 w-full overflow-hidden md:aspect-video">
           {/* //? overlay */}
           {/* <div className="absolute z-30 h-full w-full bg-gradient-to-b from-transparent to-gray-950/50"></div> */}
           <div className="absolute z-30 h-full w-full bg-gradient-to-b from-transparent to-black/40"></div>
           {/* //? image */}
-          <div className="absolute inset-0 flex h-full w-full justify-center overflow-hidden object-cover">
+          <div className="absolute inset-0 flex h-full w-full justify-center overflow-hidden">
             <img
               alt="fertile ground"
               key="hero-candle-1"
-              width="100%"
               // src="/"
               src="candle576c.webp"
-              fill={true}
               style={{ objectFit: "cover" }}
               fetchPriority="high"
             />
