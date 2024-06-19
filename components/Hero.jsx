@@ -16,7 +16,7 @@ import Hyperlinks from "../utils/Hyperlinks";
 import { IoMailOpenOutline } from "react-icons/io5";
 import localfont from "next/font/local";
 const aileron = localfont({
-  src: "../app/Aileron-Regular.woff2",
+  src: "Aileron-Regular.woff2",
 });
 
 const libre_baskerville_italic = Libre_Baskerville({
