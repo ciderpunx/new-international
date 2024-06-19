@@ -51,12 +51,14 @@ const Page = () => {
             href="https://newint.org/
 
 "
-            className="absolute inset-0 h-full w-full object-contain text-black"
+            className="absolute inset-0 h-full w-full text-black"
           >
             <img
-              fill={true}
               src="header_logo.svg"
               alt="New International logo"
+              height="100%"
+              width="100%"
+              className="h-full w-full object-contain"
               // className="size-36"
               // style={{ objectFit: "cover" }}
             />
