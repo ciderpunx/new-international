@@ -41,9 +41,9 @@ const Index = () => {
         <div className="relative mx-auto aspect-4/3 w-full md:aspect-video">
           {/* //? overlay */}
           {/* <div className="absolute z-30 h-full w-full bg-gradient-to-b from-transparent to-gray-950/50"></div> */}
-          <div className="absolute z-30 h-full w-full overflow-hidden bg-gradient-to-b from-transparent to-black/40"></div>
+          <div className="absolute z-30 h-full w-full bg-gradient-to-b from-transparent to-black/40"></div>
           {/* //? image */}
-          <div className="absolute inset-0 h-full w-full object-cover">
+          <div className="object-fit absolute inset-0 h-full w-full overflow-hidden">
             <img
               alt="fertile ground"
               key="hero-candle-1"
