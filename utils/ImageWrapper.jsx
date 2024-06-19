@@ -9,7 +9,7 @@ const Page = ({ alt, imageURL, sevenXL, caption, originalAspect }) => {
     >
       {/* //? image */}
       <div
-        className={`relative mx-auto overflow-hidden border-2 ${originalAspect ? "" : "aspect-4/3 md:aspect-video"} w-full`}
+        className={`relative mx-auto overflow-hidden ${originalAspect ? "" : "aspect-4/3 md:aspect-video"} w-full`}
       >
         <motion.div
           transition={{ type: "spring", bounce: 0 }}
