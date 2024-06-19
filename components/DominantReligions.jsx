@@ -1,22 +1,18 @@
 "use client";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 
-import { motion, useScroll, useSpring, useTransform } from "framer-motion";
+import { motion, useSpring, useTransform } from "framer-motion";
 
 // import Image from "next/image";
 import TitlePara from "../utils/TitlePara";
 
-import { League_Gothic, Roboto } from "next/font/google";
+import { League_Gothic } from "next/font/google";
 import localfont from "next/font/local";
 const aileron = localfont({
   src: "../app/Aileron-Regular.woff2",
 });
 const league_gothic = League_Gothic({
   subsets: ["latin"],
-});
-const roboto_light = Roboto({
-  subsets: ["latin"],
-  weight: "300",
 });
 
 const Page = () => {

@@ -1,3 +1,4 @@
+"use client";
 import TitlePara from "../utils/TitlePara";
 import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
@@ -21,20 +22,6 @@ const Page = () => {
   return (
     <div className="mx-auto flex w-full max-w-5xl flex-col gap-16 divide-y-4 pb-24">
       {/* //* 3 sections */}
-
-      {/* //? 15 links for hyperlinks - hese should appear as hyperlinks in the indicated body text, not as foot notes */}
-      {/* <section className="w-full">
-        <ol
-          type="1"
-          className="bg-orage-500 flex w-full list-inside list-decimal flex-col gap-4 text-xs hover:text-gray-900 md:text-sm"
-        >
-          {linksData.map((x, index) => (
-            <li key={index} className="indent-0">
-              {x}
-            </li>
-          ))}
-        </ol>
-      </section> */}
 
       {/* //? author heading title and  info */}
       <section className="flex w-full flex-col gap-8">

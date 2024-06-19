@@ -1,3 +1,4 @@
+'use client';
 import TitlePara from "../utils/TitlePara";
 import Quote from "../utils/Quote";
 const MaputoProtocol = () => {

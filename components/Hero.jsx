@@ -2,21 +2,16 @@
 import TitlePara from "../utils/TitlePara";
 import ImageWrapper from "../utils/ImageWrapper";
 import { GoDotFill } from "react-icons/go";
-import {
-  FaFacebookF,
-  FaInstagram,
-  FaLinkedinIn,
-  FaWhatsapp,
-} from "react-icons/fa";
+import { FaFacebookF, FaWhatsapp } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import {} from "react-icons/fa";
 
-import { motion, useScroll, useTransform, useSpring } from "framer-motion";
+import { motion } from "framer-motion";
 import Image from "next/image";
 import PrayToEnd from "../public/pray-to-end.jpeg";
 import Candle from "../public/candle.jpeg";
 import Candle_two from "../public/candle-2.jpeg";
-import { Roboto, League_Gothic, Libre_Baskerville } from "next/font/google";
+import { League_Gothic, Libre_Baskerville } from "next/font/google";
 import Hyperlinks from "../utils/Hyperlinks";
 import { IoMailOpenOutline } from "react-icons/io5";
 import localfont from "next/font/local";
@@ -36,10 +31,6 @@ const libre_baskerville = Libre_Baskerville({
 
 const league_gothic = League_Gothic({
   subsets: ["latin"],
-});
-const roboto = Roboto({
-  subsets: ["latin"],
-  weight: ["100", "300", "400", "500", "700", "900"],
 });
 
 const Index = () => {

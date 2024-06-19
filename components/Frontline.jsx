@@ -1,3 +1,4 @@
+"use client";
 import TitlePara from "../utils/TitlePara";
 import ImageWrapper from "../utils/ImageWrapper";
 import frontline_1 from "../public/frontline-1.jpg";

@@ -1,3 +1,4 @@
+"use client";
 import TitlePara from "../utils/TitlePara";
 import ImageWrapper from "../utils/ImageWrapper";
 import Siyane from "../public/siyane_replacement.jpg";
@@ -27,11 +28,6 @@ const libre_baskerville_italic = Libre_Baskerville({
   style: "italic",
 });
 const Page = () => {
-  // let [ref, { width }] = useMeasure();
-  // let length = slideData.length;
-  // const [count, setCount] = useState(0);
-  // let previous = usePrevious(count);
-  // let direction = count > previous ? 1 : -1;
   return (
     <div className="mx-auto flex h-auto w-full flex-col gap-16 md:w-10/12 md:gap-24">
       {/* //? section 1 */}

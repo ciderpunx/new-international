@@ -6,19 +6,16 @@ import {
   useMotionTemplate,
   useMotionValue,
   useTransform,
-  animate,
   useMotionValueEvent,
-  useScroll,
 } from "framer-motion";
 
 import { VscGrabber } from "react-icons/vsc";
 //? delete chairs from public
-// import chairs from "../public/chairs.jpg";
 import left_image from "../public/Slider Image Left.jpg";
 import right_image from "../public/Slider Image Right.jpg";
 
 import localfont from "next/font/local";
-const airolon = localfont({
+const aileron = localfont({
   src: "../app/Aileron-Regular.woff2",
 });
 import { useRef, useState } from "react";
@@ -28,11 +25,6 @@ const Page = () => {
   const [sliderWidth, setSliderWidth] = useState(0);
 
   let x = useMotionValue(0);
-  let grayScale = useTransform(x, [-sliderWidth / 2, sliderWidth / 2], [1, 0]);
-  let blur = useTransform(x, [-sliderWidth / 2, sliderWidth / 2], [5, 0]);
-  let bw_and_blur = useMotionTemplate`grayScale(${grayScale}) blur(${blur}px)`;
-  let scale1 = useTransform(x, [-sliderWidth / 2, 0], [1.2, 1]);
-  let scale2 = useTransform(x, [0, sliderWidth / 2], [1, 1.2]);
 
   useMotionValueEvent(x, "change", (latestX) => {
     let slider = ref?.current?.getBoundingClientRect();
@@ -166,11 +158,11 @@ const Page = () => {
                 opacity: leftNumberOpacity,
                 // scale: scale2,
               }}
-              className={`${airolon.className} absolute bottom-1 left-1 z-40 flex flex-col gap-1 text-4xl font-extrabold text-red-600 md:text-9xl`}
+              className={`${aileron.className} absolute bottom-1 left-1 z-40 flex flex-col gap-1 text-4xl font-extrabold text-red-600 md:text-9xl`}
             >
               32%
               <span
-                className={`${airolon.className}w-full bg-red-200 px-1 text-center text-[8px] leading-tight text-red-700 max-sm:h-3 md:text-lg`}
+                className={`${aileron.className}w-full bg-red-200 px-1 text-center text-[8px] leading-tight text-red-700 max-sm:h-3 md:text-lg`}
               >
                 Maternal deaths per 100,000 births
               </span>
@@ -181,33 +173,20 @@ const Page = () => {
                 opacity: rightNumberOpacity,
                 // scale: scale2,
               }}
-              className={`${airolon.className} absolute bottom-1 right-1 z-40 flex flex-col gap-1 self-end text-right text-4xl font-extrabold text-white md:text-9xl`}
+              className={`${aileron.className} absolute bottom-1 right-1 z-40 flex flex-col gap-1 self-end text-right text-4xl font-extrabold text-white md:text-9xl`}
             >
               &lt;10%
               <span
-                className={`${airolon.className} w-full bg-gray-700 px-1 text-center text-[8px] leading-tight text-white max-sm:h-3 md:text-lg`}
+                className={`${aileron.className} w-full bg-gray-700 px-1 text-center text-[8px] leading-tight text-white max-sm:h-3 md:text-lg`}
               >
                 Maternal deaths per 100,000 births
               </span>
             </motion.div>
           </div>
-          {/* info */}
-          {/* <div className="flex w-full max-w-7xl items-center justify-between">
-            <span
-              className={`${airolon.className} text-left text-xs text-gray-500 md:text-sm`}
-            >
-              Maternal deaths per 100,000 births
-            </span>
-            <span
-              className={`${airolon.className} text-right text-xs text-gray-500 md:text-sm`}
-            >
-              Maternal deaths per 100,000 births
-            </span>
-          </div> */}
         </div>
 
         <div
-          className={`${airolon.className} w-full max-w-7xl text-xs text-gray-500 md:text-base`}
+          className={`${aileron.className} w-full max-w-7xl text-xs text-gray-500 md:text-base`}
         >
           Within a decade of the 2005 abortion law being passed, maternal
           mortality rates linked to unsafe abortion dropped from{" "}

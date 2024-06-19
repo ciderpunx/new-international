@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 // import new_international from "../public/new-international.jpg";
 import new_magazine_cover from "../public/NI550_Abortion_Cover_large.jpg";
@@ -15,9 +16,9 @@ const libre_baskerville = Libre_Baskerville({
 const Page = () => {
   return (
     <div className="grid h-auto min-h-[100svh] w-full place-items-center bg-[#fbeaea] py-16 md:min-h-[70svh]">
-      <section className="border-5 divide-y- flex w-full max-w-5xl flex-col gap-8 border-red-600 px-4 md:flex-row">
+      <section className="divide-y- flex w-full max-w-5xl flex-col gap-8 px-4 md:flex-row">
         {/* //? image */}
-        <div className="relative h-[500px] w-full max-w-sm bg-red-500">
+        <div className="relative h-[500px] w-full max-w-sm">
           <div className="absolute inset-0 h-full w-full">
             <Image
               src={new_magazine_cover}

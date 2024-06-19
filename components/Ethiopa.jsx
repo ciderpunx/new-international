@@ -1,3 +1,4 @@
+"use client";
 import Hyperlinks from "../utils/Hyperlinks";
 // import loop_video from '../public/Map Loop Animation.mp4';
 
@@ -10,33 +11,9 @@ import InteractiveMap from "../components/InteractiveMap";
 const Page = () => {
   return (
     <section className="mx-auto flex w-full max-w-7xl flex-col gap-8 md:gap-12">
-      {/* <TitlePara
-        key="maputo protocol Ratification Map"
-        textCenter
-        title="maputo protocol Ratification Map"
-      />
-      <div className="relative aspect-video w-full md:aspect-video">
-        <div className="absolute inset-0">
-          <video
-            autoPlay
-            loop
-            // poster='/'
-            controls
-            // contloop='true'
-            mutedrols="true"
-            muted
-            width="100%"
-            height="100%"
-          >
-            <source src="Map Loop Animation.mp4" type="video/mp4" />
-          </video>
-        </div>
-      </div> */}
-      {/* <MaputoProtocol /> */}
       <InteractiveMap />
       <TitlePara
         key="campaigners"
-        // title="The Struggle for safe abortion in Ethiopa"
         para={
           <>
             Campaigners wanted a change for one reason: to end the epidemic of
