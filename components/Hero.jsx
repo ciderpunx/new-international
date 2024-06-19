@@ -1,16 +1,12 @@
 "use client";
 import TitlePara from "../utils/TitlePara";
 import ImageWrapper from "../utils/ImageWrapper";
-import { GoDotFill } from "react-icons/go";
 import { FaFacebookF, FaWhatsapp } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import {} from "react-icons/fa";
 
 import { motion } from "framer-motion";
-// import Image from "next/image";
-// import PrayToEnd from "../public/pray-to-enda49e.webp";
-// import Candle from "../public/candle576c.webp";
-// import Candle_two from "../public/candle576c.webp";
+
 import Hyperlinks from "../utils/Hyperlinks";
 import { IoMailOpenOutline } from "react-icons/io5";
 
@@ -20,21 +16,6 @@ import {
   libre_baskerville_italic,
   libre_baskerville,
 } from "@/utils/Fonts";
-
-// import { League_Gothic, Libre_Baskerville } from "next/font/google";
-// const libre_baskerville_italic = Libre_Baskerville({
-//   subsets: ["latin"],
-//   weight: ["400"],
-//   style: "italic",
-// });
-// const libre_baskerville = Libre_Baskerville({
-//   subsets: ["latin"],
-//   weight: ["400"],
-// });
-
-// const league_gothic = League_Gothic({
-//   subsets: ["latin"],
-// });
 
 const Index = () => {
   return (

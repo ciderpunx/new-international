@@ -1,12 +1,9 @@
 "use client";
-import header_logo from "../public/header_logo.svg";
 import {
   AnimatePresence,
   motion,
   useMotionValueEvent,
   useScroll,
-  useSpring,
-  useTransform,
 } from "framer-motion";
 import { useState } from "react";
 

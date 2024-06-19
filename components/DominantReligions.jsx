@@ -3,7 +3,6 @@ import { useEffect, useState } from "react";
 
 import { motion, useSpring, useTransform } from "framer-motion";
 
-// import Image from "next/image";
 import TitlePara from "../utils/TitlePara";
 
 import { league_gothic, aileron } from "@/utils/Fonts";
@@ -22,7 +21,7 @@ const Page = () => {
       />
       <div className="flex w-full flex-col gap-4">
         <section
-          className={`${league_gothic.className} flex h-auto w-full flex-col items-center gap-16 border-yellow-600 max-sm:divide-y-2 max-sm:divide-yellow-600 md:aspect-video md:flex-row md:border-4`}
+          className={`${league_gothic.className} flex h-auto w-full flex-col items-center gap-16 rounded-3xl border-yellow-600 max-sm:divide-y-2 max-sm:divide-yellow-600 md:aspect-video md:flex-row md:border-4 md:shadow-sm md:shadow-yellow-900`}
         >
           {/* //? orthodox */}
           <motion.div className="grid h-[50vh] w-full grid-rows-[10%_70%_20%]">

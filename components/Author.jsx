@@ -4,9 +4,6 @@ import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { FaWhatsapp } from "react-icons/fa";
 
-import Maxine from "../public/Maxine Betteridge-Moes47b8.webp";
-import Maya from "../public/Maya Misikir0a88.webp";
-import Bethany from "../public/Bethany Rielly0414.webp";
 import { IoMailOpenOutline } from "react-icons/io5";
 
 import { league_gothic, libre_baskerville } from "@/utils/Fonts";

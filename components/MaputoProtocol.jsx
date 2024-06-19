@@ -1,6 +1,5 @@
-'use client';
+"use client";
 import TitlePara from "../utils/TitlePara";
-import Quote from "../utils/Quote";
 const MaputoProtocol = () => {
   return (
     <section className="mx-auto flex w-full max-w-6xl flex-col gap-8 md:gap-12">

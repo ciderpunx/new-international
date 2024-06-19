@@ -4,8 +4,6 @@ import Hyperlinks from "../utils/Hyperlinks";
 
 import TitlePara from "../utils/TitlePara";
 import Quote from "../utils/Quote";
-import Maputo from "../components/MaputoProtocol";
-import MaputoProtocol from "../components/MaputoProtocol";
 import InteractiveMap from "../components/InteractiveMap";
 
 const Page = () => {

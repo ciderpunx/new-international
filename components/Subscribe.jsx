@@ -1,7 +1,4 @@
 "use client";
-import Image from "next/image";
-// import new_international from "../public/new-international.jpg";
-import new_magazine_cover from "../public/NI550_Abortion_Cover_large.jpg";
 import { FaLongArrowAltRight } from "react-icons/fa";
 
 import { libre_baskerville, league_gothic } from "@/utils/Fonts";
@@ -14,7 +11,7 @@ const Page = () => {
         <div className="relative h-[500px] w-full max-w-sm">
           <div className="absolute inset-0 h-full w-full">
             <img
-              src="NI550_Abortion_Cover_large.jpg"
+              src="NI550_Abortion_Cover_largef87d.webp"
               alt="new international magazine"
               fill="true"
               fetchPriority="auto"
