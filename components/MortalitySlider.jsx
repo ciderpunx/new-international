@@ -98,7 +98,7 @@ const Page = () => {
               className="absolute bottom-0 left-0 top-0 z-0 h-full w-1/2"
             >
               <img
-                src="Slider Image Left.jpg"
+                src="Slider Image Left5d35.webp"
                 style={{ objectFit: "cover" }}
                 alt="left"
                 fill="true"
@@ -118,7 +118,7 @@ const Page = () => {
               className="absolute bottom-0 left-1/2 top-0 z-0 h-full w-1/2"
             >
               <img
-                src="Slider Image Right.jpg"
+                src="Slider Image Right4a1c.webp"
                 style={{ objectFit: "cover" }}
                 alt="right"
                 fill="true"
