@@ -50,7 +50,7 @@ const Index = () => {
               // src="/"
               src="candle576c.webp"
               fill={true}
-              objectFit="cover"
+              // objectFit="cover"
               priority={true}
               // width={200}
               // height={500}
