@@ -44,7 +44,7 @@ const Index = () => {
           <div className="absolute z-30 h-full w-full bg-gradient-to-b from-transparent to-black/40"></div>
           {/* //? image */}
           <div className="absolute inset-0 h-full w-full object-cover">
-            <Image
+            <img
               alt="fertile ground"
               key="hero-candle-1"
               src={Candle}
@@ -54,6 +54,16 @@ const Index = () => {
               // width={200}
               // height={500}
             />
+            {/* <Image
+              alt="fertile ground"
+              key="hero-candle-1"
+              src={Candle}
+              fill={true}
+              objectFit="cover"
+              priority={true}
+              // width={200}
+              // height={500}
+            /> */}
             <motion.div
               variants={parentVariant}
               initial="hidden"
