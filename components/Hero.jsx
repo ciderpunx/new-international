@@ -83,7 +83,7 @@ const Index = () => {
                   animate="show"
                   exit="exit"
                 >
-                  CATS ARE AWESOME
+                  FERTILE GROUND
                 </motion.div>
               </motion.h1>
             </motion.div>
