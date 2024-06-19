@@ -43,10 +43,12 @@ const Index = () => {
           {/* <div className="absolute z-30 h-full w-full bg-gradient-to-b from-transparent to-gray-950/50"></div> */}
           <div className="absolute z-30 h-full w-full bg-gradient-to-b from-transparent to-black/40"></div>
           {/* //? image */}
-          <div className="absolute inset-0 h-full w-full overflow-hidden object-bottom">
+          <div className="absolute inset-0 h-full w-full overflow-hidden object-contain">
             <img
               alt="fertile ground"
               key="hero-candle-1"
+              width="100%"
+              height="100%"
               // src="/"
               src="candle576c.webp"
               fill={true}
