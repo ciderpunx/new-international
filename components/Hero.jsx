@@ -51,8 +51,7 @@ const Index = () => {
               // src="/"
               src="candle576c.webp"
               fill={true}
-              // objectFit="cover"
-
+              style={{ objectFit: "cover" }}
               fetchPriority="high"
             />
             {/* <Image
