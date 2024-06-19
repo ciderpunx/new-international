@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import header_logo from "../public/header_logo.svg";
-import co_op_new from "../public/CoopLogoblack-padding.png";
+import co_op_new from "../public/CoopLogoblack-padding8469.webp";
 import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { IoMailOpenOutline } from "react-icons/io5";

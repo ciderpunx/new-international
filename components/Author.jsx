@@ -5,9 +5,9 @@ import { FaXTwitter } from "react-icons/fa6";
 import { FaWhatsapp } from "react-icons/fa";
 
 import { League_Gothic, Libre_Baskerville } from "next/font/google";
-import Maxine from "../public/Maxine Betteridge-Moes.png";
-import Maya from "../public/Maya Misikir.png";
-import Bethany from "../public/Bethany Rielly.jpg";
+import Maxine from "../public/Maxine Betteridge-Moes47b8.webp";
+import Maya from "../public/Maya Misikir0a88.webp";
+import Bethany from "../public/Bethany Rielly0414.webp";
 import Image from "next/image";
 import { IoMailOpenOutline } from "react-icons/io5";
 

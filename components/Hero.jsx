@@ -8,9 +8,9 @@ import {} from "react-icons/fa";
 
 import { motion } from "framer-motion";
 import Image from "next/image";
-import PrayToEnd from "../public/pray-to-end.jpeg";
-import Candle from "../public/candle.jpeg";
-import Candle_two from "../public/candle-2.jpeg";
+import PrayToEnd from "../public/pray-to-enda49e.webp";
+import Candle from "../public/candle576c.webp";
+import Candle_two from "../public/candle576c.webp";
 import { League_Gothic, Libre_Baskerville } from "next/font/google";
 import Hyperlinks from "../utils/Hyperlinks";
 import { IoMailOpenOutline } from "react-icons/io5";

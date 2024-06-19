@@ -1,15 +1,15 @@
 "use client";
 import TitlePara from "../utils/TitlePara";
 import ImageWrapper from "../utils/ImageWrapper";
-import Siyane from "../public/siyane_replacement.jpg";
-import Shadows_1 from "../public/2024_New_Internationalist_magazine_Addis_Aemero-7 (1).jpg";
-import Shadows_2 from "../public/2024_New_Internationalist_magazine_Addis_Aemero-173.jpg";
-import Shadows_3 from "../public/2024_New_Internationalist_magazine_Addis_Aemero-147.jpg";
+import Siyane from "../public/siyane_replacementc263.webp";
+import Shadows_1 from "../public/2024_New_Internationalist_magazine_Addis_Aemero-7 (1)d3c1.webp";
+import Shadows_2 from "../public/2024_New_Internationalist_magazine_Addis_Aemero-17367ed.webp";
+import Shadows_3 from "../public/2024_New_Internationalist_magazine_Addis_Aemero-1478d3c.webp";
 // ? shadow 4 replaced
-import Shadows_4 from "../public/shadow_4_replacement.jpg";
-import Shadows_5 from "../public/shadow_5_replacement.jpg";
-import Shadows_6 from "../public/2024_New_Internationalist_magazine_Addis_Aemero-71.jpg";
-import Seyoum from "../public/Seyoum Antonios.jpeg";
+import Shadows_4 from "../public/shadow_4_replacemente19c.webp";
+import Shadows_5 from "../public/shadow_5_replacement3aa1.webp";
+import Shadows_6 from "../public/2024_New_Internationalist_magazine_Addis_Aemero-71c97e.webp";
+import Seyoum from "../public/Seyoum Antonios9af9.webp";
 import { Libre_Baskerville } from "next/font/google";
 import Quote from "../utils/Quote";
 import { Hyperlinks } from "../utils/Hyperlinks";

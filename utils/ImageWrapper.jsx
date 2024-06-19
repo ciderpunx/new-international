@@ -22,10 +22,10 @@ const Page = ({ alt, imageURL, sevenXL, caption, originalAspect }) => {
           viewport={{ amount: "some" }}
           className="absolute inset-0 h-full w-full"
         >
-          <Image
+          <img
             src={imageURL}
             style={{ objectFit: "cover" }}
-            loading="lazy"
+            // loading="lazy"
             alt={alt}
             fill={true}
           />
