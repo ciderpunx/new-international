@@ -16,6 +16,7 @@ export default function RootLayout({ children }) {
       <Head>
         <script>
           {(function (w, d, s, l, i) {
+            if(w===null || d === null) {return;}
             w[l] = w[l] || [];
             w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
             var f = d.getElementsByTagName(s)[0],
@@ -24,7 +25,9 @@ export default function RootLayout({ children }) {
             j.async = true;
             j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
             f.parentNode.insertBefore(j, f);
-          })(window, document, "script", "dataLayer", "GTM-KD6ZVR")}
+          })(typeof window!=="undefined" ? window : null, 
+             typeof document !== "undefined" ? document : null, 
+             "script", "dataLayer", "GTM-KD6ZVR")}
         </script>
       </Head>
       <title>
