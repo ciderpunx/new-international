@@ -13,7 +13,7 @@ const inter = Inter({ subsets: ["latin"] });
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <Head>
+      <head>
         <script>
           {(function (w, d, s, l, i) {
             w[l] = w[l] || [];
@@ -26,7 +26,7 @@ export default function RootLayout({ children }) {
             f.parentNode.insertBefore(j, f);
           })(window, document, "script", "dataLayer", "GTM-KD6ZVR")}
         </script>
-      </Head>
+      </head>
       <title>
         Fertile Ground - The Rising Anti-Abortion Movement in Ethiopia: A Threat
         to Women&apos;s Rights
